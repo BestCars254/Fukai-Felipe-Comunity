@@ -1,0 +1,23 @@
+# Netlify configuration for UNIÃO LP
+# Deploy: drag /lp folder to https://app.netlify.com/drop
+# or connect via GitHub
+
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Netlify Forms auto-detects <form data-netlify="true">
+# Form submissions land in: https://app.netlify.com/sites/[your-site]/forms
+# Free tier: 100 submissions/month (enough for Waitlist Phase 1)
