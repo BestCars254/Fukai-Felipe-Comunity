@@ -73,6 +73,34 @@
   font-size: 14px;
   line-height: 2;
 }
+.thanks-line {
+  text-align: left;
+  background: rgba(6, 199, 85, 0.08);
+  border: 1px solid rgba(6, 199, 85, 0.35);
+  padding: 24px 28px;
+  border-radius: 6px;
+  margin: 0 0 40px 0;
+}
+.thanks-line.is-requested { border-color: #06C755; }
+.thanks-line h3 {
+  font-size: 16px;
+  color: var(--ff-white);
+  margin: 0 0 8px 0;
+}
+.thanks-line p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--ff-white-muted);
+  margin: 0 0 16px 0;
+}
+.thanks-link-line {
+  display: inline-block;
+  background: #06C755;
+  border-color: #06C755;
+  color: #fff;
+  font-weight: 700;
+}
+.thanks-link-line:hover { background: #05b34c; border-color: #05b34c; color: #fff; }
 .thanks-actions {
   display: flex;
   gap: 12px;
@@ -102,18 +130,24 @@
     <h1 class="thanks-h1">ご登録ありがとうございます。</h1>
     <p class="thanks-lead">
       あなたは UNIÃO Founding Member 100名の候補リストに入りました。<br />
-      11月9日のローンチまでの間、Felipe からの直接メッセージと、<br />
+      11月27日(ブラックフライデー)のローンチまでの間、Felipe からの直接メッセージと、<br />
       UNIÃO の中身プレビューをお届けします。
     </p>
 
     <div class="thanks-benefits">
       <h3>あなたが得た 4つの権利</h3>
       <ul>
-        <li>生涯価格ロック ¥7,480/月 適用権</li>
-        <li>11/8(日) 10:00 24時間先行購入枠</li>
-        <li>ローンチ前 Q&Aライブ #0 限定視聴</li>
+        <li>Waitlist 限定価格・生涯ロック適用権(価格は 11/23 のライブで先行公開)</li>
+        <li>11/26(木) 10:00 24時間先行購入枠</li>
+        <li>11/23(月) Q&Aライブ #0 限定視聴</li>
         <li>Founding Member 100名枠への応募権</li>
       </ul>
+    </div>
+
+    <div class="thanks-line" id="thanks-line" hidden>
+      <h3 id="thanks-line-title">LINE 公式アカウントを追加</h3>
+      <p id="thanks-line-text">登録者限定の情報(価格の先行公開・先行購入リンク・Q&Aライブ #0 の案内)を LINE で即時にお届けします。</p>
+      <a id="thanks-line-btn" href="#" target="_blank" rel="noopener" class="thanks-link thanks-link-line">LINE で友だち追加</a>
     </div>
 
     <p class="thanks-lead">
@@ -127,5 +161,22 @@
     </div>
   </div>
 </div>
+<script>
+  // LINE 公式アカウントの友だち追加 URL（例: https://lin.ee/xxxxxxx）。
+  // 空のままだと LINE ブロックは表示されません。
+  var LINE_URL = '';
+  (function () {
+    if (!LINE_URL) return;
+    var box = document.getElementById('thanks-line');
+    var btn = document.getElementById('thanks-line-btn');
+    btn.href = LINE_URL;
+    if (/[?&]line=1/.test(window.location.search)) {
+      document.getElementById('thanks-line-title').textContent = 'LINE 追加をご希望の方へ';
+      document.getElementById('thanks-line-text').textContent = '下のボタンから LINE 公式アカウントを友だち追加してください。登録者限定の情報(価格の先行公開・先行購入リンク・Q&Aライブ #0 の案内)を即時にお届けします。';
+      box.classList.add('is-requested');
+    }
+    box.hidden = false;
+  })();
+</script>
 </body>
 </html>

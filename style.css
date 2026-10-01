@@ -751,11 +751,91 @@ section {
   letter-spacing: 0.08em;
 }
 
+.footer-operator {
+  text-align: center;
+  font-size: 12px;
+  color: var(--ff-white-muted);
+  margin: 0 0 8px 0;
+}
+.inline-link {
+  color: var(--kagayaki-gold);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .form-error {
   margin: 16px 0 0 0;
   color: #ff8a80;
   font-size: 14px;
   line-height: 1.7;
+}
+
+/* ---------- First content callout / misc ---------- */
+.first-content {
+  background: var(--ff-black);
+  color: var(--ff-white);
+  border-left: 3px solid var(--laurel-red);
+  border-radius: 6px;
+  padding: 32px;
+  margin: 0 0 32px 0;
+}
+.first-content-label {
+  display: inline-block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--kagayaki-gold);
+  margin-bottom: 10px;
+}
+.first-content-title {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  font-size: clamp(20px, 2.6vw, 26px);
+  line-height: 1.5;
+  margin: 0 0 12px 0;
+}
+.first-content p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--ff-white-muted);
+  margin: 0 0 16px 0;
+}
+.text-link {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--kagayaki-gold);
+  border-bottom: 1px solid rgba(212, 169, 79, 0.4);
+  padding-bottom: 2px;
+}
+.text-link:hover { border-bottom-color: var(--kagayaki-gold); }
+.pricing-amount.pricing-date { font-size: 40px; }
+.pricing-amount.pricing-date .pricing-per { font-size: 16px; margin-left: 6px; }
+.founding-highlight { border-left-color: var(--laurel-red); }
+.founding-tba {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--ff-white-dim);
+}
+.note-ref {
+  font-size: 0.55em;
+  vertical-align: super;
+  color: var(--kagayaki-gold);
+}
+.footer-note {
+  text-align: center;
+  font-size: 11px;
+  color: var(--ff-white-dim);
+  margin: 0 0 12px 0;
+  line-height: 1.7;
+}
+.waitlist-form .checkbox small {
+  display: block;
+  font-size: 12px;
+  color: var(--ff-white-dim);
+  margin-top: 2px;
 }
 
 /* ---------- Section photos ---------- */
