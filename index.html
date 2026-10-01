@@ -31,7 +31,6 @@
   <input type="text" name="training-years" />
   <input type="text" name="goal" />
   <input type="text" name="concern" />
-  <input type="text" name="line-optin" />
   <input type="text" name="source" />
 </form>
 
@@ -330,15 +329,10 @@
         <input type="text" name="concern" placeholder="例:背中のトレーニングでいつも僧帽ばかり効いてしまう" />
       </label>
 
-      <label class="checkbox">
-        <input type="checkbox" name="line-optin" value="yes" />
-        <span>LINE 公式アカウントも追加する(登録者限定情報の即時通知)<br /><small>※ 送信後のページに LINE 追加ボタンが表示されます</small></span>
-      </label>
-
       <input type="hidden" name="source" value="lp-direct" />
 
-      <button type="submit" class="cta cta-primary cta-large">Founding Member 事前登録を確定する</button>
-      <p class="form-microcopy">送信をもって、<a href="/privacy.html" target="_blank" rel="noopener" class="inline-link">プライバシーポリシー</a>とローンチ通知メールの受信に同意したものとします。</p>
+      <button type="submit" class="cta cta-primary cta-large"><span class="nowrap">Founding Member</span>&nbsp;&nbsp;<span class="nowrap">事前登録を確定する</span></button>
+      <p class="form-microcopy">登録者限定の情報(価格の先行公開・先行購入リンク・Q&Aライブ #0 の案内)は、ご登録のメールアドレスにお届けします。<br />送信をもって、<a href="/privacy.html" target="_blank" rel="noopener" class="inline-link">プライバシーポリシー</a>とローンチ通知メールの受信に同意したものとします。</p>
     </form>
   </div>
 </section>
@@ -477,7 +471,7 @@
     const button = form.querySelector('button[type="submit"]');
     if (!button) return;
 
-    const originalLabel = button.textContent;
+    const originalLabel = button.innerHTML;
     const errorEl = document.createElement('p');
     errorEl.className = 'form-error';
     errorEl.setAttribute('role', 'alert');
@@ -487,7 +481,7 @@
     function restore() {
       button.disabled = false;
       button.classList.remove('is-loading');
-      button.textContent = originalLabel;
+      button.innerHTML = originalLabel;
     }
 
     form.addEventListener('submit', function (e) {
@@ -503,8 +497,7 @@
         body: new URLSearchParams(new FormData(form)).toString()
       }).then(function (res) {
         if (!res.ok) throw new Error('HTTP ' + res.status);
-        const wantsLine = form.querySelector('input[name="line-optin"]');
-        window.location.href = '/thanks.html' + (wantsLine && wantsLine.checked ? '?line=1' : '');
+        window.location.href = '/thanks.html';
       }).catch(function () {
         restore();
         errorEl.textContent = '送信できませんでした。通信環境をご確認のうえ、もう一度お試しください。';
