@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>コンテンツスケジュール — UNIÃO ｜ Felipe Fukai</title>
+<meta name="description" content="UNIÃO のローンチ前後のコンテンツスケジュール。11/27 ブラックフライデーにオープン。最初の1ヶ月は「背中」に全集中。" />
+<meta property="og:title" content="UNIÃO コンテンツスケジュール" />
+<meta property="og:description" content="11/27 ブラックフライデーにオープン。最初の1ヶ月は「背中」に全集中。" />
+<meta property="og:image" content="https://felipe-comunity-training.netlify.app/assets/og-image.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Barlow+Condensed:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<link rel="stylesheet" href="style.css" />
+<style>
+.sched-header {
+  padding: 48px 0 40px;
+  border-bottom: 1px solid var(--gray-line);
+}
+.sched-header .container { display: flex; flex-direction: column; gap: 20px; }
+.sched-brand { display: flex; align-items: center; gap: 14px; }
+.sched-brand img { height: 48px; width: auto; }
+.sched-brand span {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--kagayaki-gold);
+}
+.sched-h1 {
+  font-family: 'Playfair Display', 'Noto Sans JP', serif;
+  font-weight: 900;
+  font-size: clamp(30px, 5vw, 48px);
+  line-height: 1.25;
+  margin: 0;
+}
+.sched-lead { font-size: 15px; line-height: 1.9; color: var(--ff-white-muted); margin: 0; max-width: 640px; }
+.sched-note {
+  display: inline-block;
+  font-size: 12px;
+  color: var(--ff-white-dim);
+  border: 1px solid var(--gray-line);
+  border-radius: 4px;
+  padding: 6px 10px;
+}
+
+.timeline { padding: 72px 0; }
+.tl-phase { margin-bottom: 56px; }
+.tl-phase:last-child { margin-bottom: 0; }
+.tl-phase-head {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--gray-line);
+}
+.tl-when {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  letter-spacing: 0.04em;
+  color: var(--kagayaki-gold);
+}
+.tl-what {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0;
+}
+.tl-tag {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: rgba(156, 48, 46, 0.18);
+  color: #ff9a97;
+}
+.tl-tag.gold { background: rgba(212, 169, 79, 0.15); color: var(--kagayaki-gold); }
+.tl-tag.dim { background: rgba(255,255,255,0.06); color: var(--ff-white-muted); }
+.tl-items { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.tl-items li {
+  padding: 16px 20px;
+  background: var(--ff-black-soft);
+  border-left: 3px solid var(--laurel-red);
+  border-radius: 0 4px 4px 0;
+  font-size: 15px;
+  line-height: 1.8;
+}
+.tl-items li strong { color: var(--ff-white); }
+.tl-items li span { color: var(--ff-white-muted); }
+.tl-items.gold li { border-left-color: var(--kagayaki-gold); }
+.tl-items.dim li { border-left-color: rgba(255,255,255,0.18); color: var(--ff-white-muted); }
+.tl-focus {
+  margin: 0 0 20px 0;
+  padding: 24px 28px;
+  background: var(--laurel-red);
+  border-radius: 6px;
+  font-size: 15px;
+  line-height: 1.9;
+}
+.tl-focus strong { font-size: 18px; display: block; margin-bottom: 6px; }
+
+.sched-cta { padding: 72px 0; border-top: 1px solid var(--gray-line); text-align: center; }
+.sched-cta p { color: var(--ff-white-muted); margin: 0 0 24px 0; font-size: 15px; line-height: 1.9; }
+.sched-back { display: inline-block; margin-top: 20px; font-size: 13px; color: var(--ff-white-muted); }
+.sched-back:hover { color: var(--kagayaki-gold); }
+
+@media (max-width: 768px) {
+  .timeline, .sched-cta { padding: 48px 0; }
+  .tl-when { font-size: 22px; }
+  .tl-what { font-size: 17px; }
+}
+</style>
+</head>
+<body>
+
+<header class="sched-header">
+  <div class="container">
+    <a href="/" class="sched-brand">
+      <img src="assets/logo-ff-dark-sm.png" alt="Felipe Fukai" width="160" height="126" />
+      <span>UNIÃO / Content Schedule</span>
+    </a>
+    <h1 class="sched-h1">コンテンツスケジュール</h1>
+    <p class="sched-lead">
+      UNIÃO は 2026年11月27日(金)、ブラックフライデーにオープン。<br />
+      ローンチ前から、最初の1ヶ月の中身まで、何がいつ届くかをまとめました。
+    </p>
+    <span class="sched-note">※ 予定は変更になる場合があります。最新情報は Waitlist 登録者に優先してお知らせします。</span>
+  </div>
+</header>
+
+<section class="timeline section-dark">
+  <div class="container">
+
+    <div class="tl-phase">
+      <div class="tl-phase-head">
+        <span class="tl-when">11月中旬</span>
+        <h2 class="tl-what">ローンチ前 — Waitlist 限定</h2>
+        <span class="tl-tag gold">Waitlist only</span>
+      </div>
+      <ul class="tl-items gold">
+        <li><strong>Felipe からの直接メッセージ</strong><br /><span>UNIÃO に込めた想いと、中身のプレビューを週1回配信。</span></li>
+        <li><strong>Q&Aライブ #0(90分)</strong><br /><span>ローンチ前週に開催。Waitlist 登録者だけが視聴でき、買う前に UNIÃO を体験できます。</span></li>
+        <li><strong>11/26(木) 10:00 — Waitlist 限定価格の先行公開 & 24時間先行購入</strong><br /><span>Founding Member 100名枠に、一般公開より1日早くアクセス。価格は生涯固定。</span></li>
+      </ul>
+    </div>
+
+    <div class="tl-phase">
+      <div class="tl-phase-head">
+        <span class="tl-when">11/27(金) 10:00</span>
+        <h2 class="tl-what">ブラックフライデー — UNIÃO オープン</h2>
+        <span class="tl-tag">Launch</span>
+      </div>
+      <ul class="tl-items">
+        <li><strong>一般公開・正式価格の発表</strong><br /><span>Founding Member 100名枠が埋まり次第、通常会員(一般価格)での募集に切り替わります。</span></li>
+        <li><strong>ローンチ時点で 20本以上の動画をストック済み</strong><br /><span>入会した日から、すぐに学び始められます。</span></li>
+      </ul>
+    </div>
+
+    <div class="tl-phase">
+      <div class="tl-phase-head">
+        <span class="tl-when">MONTH 1</span>
+        <h2 class="tl-what">11/27 〜 12月末 — テーマ「背中」</h2>
+        <span class="tl-tag">Focus</span>
+      </div>
+      <div class="tl-focus">
+        <strong>最初の1ヶ月は、背中に全集中。</strong>
+        「僧帽ばかり効く」「広がりが出ない」「厚みが出ない」— いちばん悩みの多い部位を、Felipe の最強部位である背中から始めます。
+      </div>
+      <ul class="tl-items">
+        <li><strong>種目解説動画 3〜4本</strong><br /><span>背中の解剖と「効かせる」の正体 / ラットプルダウン・ロウ系のフォーム徹底解説 / 「僧帽ばかり効く」問題の解決 / 広がりと厚みの作り分け</span></li>
+        <li><strong>メニュー設計動画 2本</strong><br /><span>骨格・弱点別の背中メニュー設計ケーススタディ。「その人に今何が必要か」の見極め方。</span></li>
+        <li><strong>PRO の判断 1本</strong><br /><span>Felipe が「なぜこの重量・回数・頻度か」を語る、専門判断の可視化。</span></li>
+        <li><strong>短尺 Tips 3本</strong><br /><span>すぐ次のトレーニングで試せる、背中の小さな修正ポイント。</span></li>
+        <li><strong>Q&Aライブ #1(90分)</strong><br /><span>ローンチ翌週に開催。Founding Member は優先質問枠あり。過去回はアーカイブで永久視聴可能。</span></li>
+        <li><strong>Road to World Stage</strong><br /><span>Felipe の世界挑戦を内側から見る挑戦ドキュメント。随時更新。</span></li>
+      </ul>
+    </div>
+
+    <div class="tl-phase">
+      <div class="tl-phase-head">
+        <span class="tl-when">MONTH 2 〜</span>
+        <h2 class="tl-what">2027年1月以降 — 次のテーマ</h2>
+        <span class="tl-tag dim">Coming soon</span>
+      </div>
+      <ul class="tl-items dim">
+        <li><strong>次の部位は、Waitlist のみなさんの「最大の悩み」から決定</strong><br /><span>事前登録フォームで寄せられた悩みを集計し、最も多い部位を次のテーマにします。</span></li>
+        <li><strong>月1回の Q&Aライブ + 毎月の新規コンテンツ</strong><br /><span>種目解説 3〜4本 / メニュー設計 2本 / PRO の判断 1本 / 短尺 Tips 3本のペースで継続。</span></li>
+        <li><strong>Founding Member 限定 — 身体評価 & 骨格別トレーニングプラン(抽選)</strong><br /><span>100名の中から数名を抽選で選出。詳細は後日発表します。</span></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section class="sched-cta section-dark">
+  <div class="container container-narrow">
+    <p>Waitlist に登録すると、Q&Aライブ #0 と価格の先行公開、24時間先行購入枠が手に入ります。</p>
+    <a href="/#waitlist" class="cta cta-primary cta-large">Founding Member 事前登録</a><br />
+    <a href="/" class="sched-back">← トップに戻る</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-brand">Felipe Fukai ｜ UNIÃO Training Education Community</p>
+    <p class="footer-copy">© 2026 Felipe Fukai. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
