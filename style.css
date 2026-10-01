@@ -331,6 +331,16 @@ section {
   color: var(--kagayaki-gold);
   font-weight: 700;
 }
+.about-edge {
+  margin: 0 0 32px 0;
+  padding: 18px 22px;
+  border: 1px solid rgba(212, 169, 79, 0.35);
+  border-radius: 4px;
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--ff-white-muted);
+}
+.about-edge strong { color: var(--kagayaki-gold); }
 .about-signature {
   font-family: 'Playfair Display', serif;
   font-size: 22px;
