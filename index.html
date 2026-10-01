@@ -456,26 +456,45 @@
     targets.forEach(function (el) { revealObserver.observe(el); });
   })();
 
-  // ---- Form submit loading state ----
+  // ---- Form submit (AJAX to Netlify Forms, then go to thanks page) ----
   (function () {
     const form = document.querySelector('form[name="uniao-waitlist"]:not([hidden])');
-    if (!form) return;
+    if (!form || !window.fetch || !window.URLSearchParams) return;
     const button = form.querySelector('button[type="submit"]');
     if (!button) return;
 
     const originalLabel = button.textContent;
-    form.addEventListener('submit', function () {
+    const errorEl = document.createElement('p');
+    errorEl.className = 'form-error';
+    errorEl.setAttribute('role', 'alert');
+    errorEl.hidden = true;
+    button.insertAdjacentElement('afterend', errorEl);
+
+    function restore() {
+      button.disabled = false;
+      button.classList.remove('is-loading');
+      button.textContent = originalLabel;
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      errorEl.hidden = true;
       button.disabled = true;
       button.classList.add('is-loading');
       button.textContent = '送信中…';
-      // Fallback restore in case navigation is blocked
-      setTimeout(function () {
-        if (button.disabled) {
-          button.disabled = false;
-          button.classList.remove('is-loading');
-          button.textContent = originalLabel;
-        }
-      }, 15000);
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
+      }).then(function (res) {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        window.location.href = '/thanks.html';
+      }).catch(function () {
+        restore();
+        errorEl.textContent = '送信できませんでした。通信環境をご確認のうえ、もう一度お試しください。';
+        errorEl.hidden = false;
+      });
     });
   })();
 

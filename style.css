@@ -751,6 +751,13 @@ section {
   letter-spacing: 0.08em;
 }
 
+.form-error {
+  margin: 16px 0 0 0;
+  color: #ff8a80;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
 /* ---------- Section photos ---------- */
 .about-layout {
   display: grid;
