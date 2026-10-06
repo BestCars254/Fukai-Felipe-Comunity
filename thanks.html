@@ -74,34 +74,67 @@
   font-size: 14px;
   line-height: 2;
 }
-.thanks-line {
+.thanks-mail {
   text-align: left;
-  background: rgba(6, 199, 85, 0.08);
-  border: 1px solid rgba(6, 199, 85, 0.35);
+  background: var(--ff-black-soft);
+  border: 1px solid var(--gray-line);
   padding: 24px 28px;
   border-radius: 6px;
   margin: 0 0 40px 0;
 }
-.thanks-line.is-requested { border-color: #06C755; }
-.thanks-line h3 {
+.thanks-mail h3 {
   font-size: 16px;
   color: var(--ff-white);
   margin: 0 0 8px 0;
 }
-.thanks-line p {
+.thanks-mail p {
   font-size: 14px;
-  line-height: 1.8;
+  line-height: 1.9;
+  color: var(--ff-white-muted);
+  margin: 0;
+}
+.thanks-mail p + p { margin-top: 8px; }
+.thanks-mail small { color: var(--ff-white-dim); font-size: 12px; }
+.thanks-channel {
+  text-align: left;
+  background: linear-gradient(135deg, rgba(156, 48, 46, 0.22), rgba(212, 169, 79, 0.10));
+  border: 1px solid rgba(212, 169, 79, 0.45);
+  padding: 24px 28px;
+  border-radius: 6px;
+  margin: 0 0 40px 0;
+}
+.thanks-channel-label {
+  display: inline-block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  color: var(--kagayaki-gold);
+  margin-bottom: 6px;
+}
+.thanks-channel h3 {
+  font-size: 17px;
+  color: var(--ff-white);
+  margin: 0 0 8px 0;
+}
+.thanks-channel p {
+  font-size: 14px;
+  line-height: 1.9;
   color: var(--ff-white-muted);
   margin: 0 0 16px 0;
 }
-.thanks-link-line {
+.thanks-channel .thanks-channel-note {
+  font-size: 12px;
+  color: var(--ff-white-dim);
+  margin: 12px 0 0 0;
+}
+.thanks-link-channel {
   display: inline-block;
-  background: #06C755;
-  border-color: #06C755;
+  background: var(--laurel-red);
+  border-color: var(--laurel-red);
   color: #fff;
   font-weight: 700;
 }
-.thanks-link-line:hover { background: #05b34c; border-color: #05b34c; color: #fff; }
+.thanks-link-channel:hover { background: var(--laurel-red-hover); border-color: var(--laurel-red-hover); color: #fff; }
 .thanks-actions {
   display: flex;
   gap: 12px;
@@ -145,16 +178,19 @@
       </ul>
     </div>
 
-    <div class="thanks-line" id="thanks-line" hidden>
-      <h3 id="thanks-line-title">LINE 公式アカウントを追加</h3>
-      <p id="thanks-line-text">登録者限定の情報(価格の先行公開・先行購入リンク・Q&Aライブ #0 の案内)を LINE で即時にお届けします。</p>
-      <a id="thanks-line-btn" href="#" target="_blank" rel="noopener" class="thanks-link thanks-link-line">LINE で友だち追加</a>
+    <div class="thanks-channel">
+      <span class="thanks-channel-label">NEXT STEP — 必ずご参加ください</span>
+      <h3>Instagram チャンネル「UNIÃO」に参加して、新情報を待つ</h3>
+      <p>ローンチまでの新情報は、すべてこのチャンネルで発信します。Felipe からの直接メッセージ、UNIÃO 準備の裏側、Q&Aライブ #0 や先行購入の案内も、まずここに届きます。</p>
+      <a href="https://www.instagram.com/channel/1ZZUqmmWjPWNe0Y3/" target="_blank" rel="noopener" class="thanks-link thanks-link-channel">「UNIÃO」チャンネルに参加する</a>
+      <p class="thanks-channel-note">※ 参加するには、Felipe の Instagram アカウントのフォローが必要です。</p>
     </div>
 
-    <p class="thanks-lead">
-      まずは Instagram で Felipe をフォローして、<br />
-      これから毎週配信される UNIÃO 準備の裏側をご覧ください。
-    </p>
+    <div class="thanks-mail">
+      <h3>大事なリンクは、メールでもお届けします</h3>
+      <p>Q&Aライブ #0 の視聴リンク(11/23)と 24時間先行購入リンク(11/26)は、チャンネルに加えて、ご登録のメールアドレスにもお送りします。</p>
+      <p><small>※ 届かない場合は、迷惑メールフォルダもご確認ください。</small></p>
+    </div>
 
     <div class="thanks-actions">
       <a href="https://www.instagram.com/ffpro_classic_9/" target="_blank" rel="noopener" class="thanks-link">Instagram をフォロー</a>
@@ -163,22 +199,5 @@
     </div>
   </div>
 </div>
-<script>
-  // LINE 公式アカウントの友だち追加 URL（例: https://lin.ee/xxxxxxx）。
-  // 空のままだと LINE ブロックは表示されません。
-  var LINE_URL = '';
-  (function () {
-    if (!LINE_URL) return;
-    var box = document.getElementById('thanks-line');
-    var btn = document.getElementById('thanks-line-btn');
-    btn.href = LINE_URL;
-    if (/[?&]line=1/.test(window.location.search)) {
-      document.getElementById('thanks-line-title').textContent = 'LINE 追加をご希望の方へ';
-      document.getElementById('thanks-line-text').textContent = '下のボタンから LINE 公式アカウントを友だち追加してください。登録者限定の情報(価格の先行公開・先行購入リンク・Q&Aライブ #0 の案内)を即時にお届けします。';
-      box.classList.add('is-requested');
-    }
-    box.hidden = false;
-  })();
-</script>
 </body>
 </html>
