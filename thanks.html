@@ -95,6 +95,46 @@
 }
 .thanks-mail p + p { margin-top: 8px; }
 .thanks-mail small { color: var(--ff-white-dim); font-size: 12px; }
+.thanks-channel {
+  text-align: left;
+  background: linear-gradient(135deg, rgba(156, 48, 46, 0.22), rgba(212, 169, 79, 0.10));
+  border: 1px solid rgba(212, 169, 79, 0.45);
+  padding: 24px 28px;
+  border-radius: 6px;
+  margin: 0 0 40px 0;
+}
+.thanks-channel-label {
+  display: inline-block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  color: var(--kagayaki-gold);
+  margin-bottom: 6px;
+}
+.thanks-channel h3 {
+  font-size: 17px;
+  color: var(--ff-white);
+  margin: 0 0 8px 0;
+}
+.thanks-channel p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--ff-white-muted);
+  margin: 0 0 16px 0;
+}
+.thanks-channel .thanks-channel-note {
+  font-size: 12px;
+  color: var(--ff-white-dim);
+  margin: 12px 0 0 0;
+}
+.thanks-link-channel {
+  display: inline-block;
+  background: var(--laurel-red);
+  border-color: var(--laurel-red);
+  color: #fff;
+  font-weight: 700;
+}
+.thanks-link-channel:hover { background: var(--laurel-red-hover); border-color: var(--laurel-red-hover); color: #fff; }
 .thanks-actions {
   display: flex;
   gap: 12px;
@@ -144,10 +184,13 @@
       <p><small>※ 届かない場合は、迷惑メールフォルダもご確認ください。</small></p>
     </div>
 
-    <p class="thanks-lead">
-      まずは Instagram で Felipe をフォローして、<br />
-      これから毎週配信される UNIÃO 準備の裏側をご覧ください。
-    </p>
+    <div class="thanks-channel">
+      <span class="thanks-channel-label">NEXT STEP</span>
+      <h3>Felipe の Instagram チャンネルに参加</h3>
+      <p>Felipe からの直接メッセージ、UNIÃO 準備の裏側、背中トレーニングのヒントを、Instagram のブロードキャストチャンネルで毎週配信します。</p>
+      <a href="https://www.instagram.com/channel/1ZZUqmmWjPWNe0Y3/" target="_blank" rel="noopener" class="thanks-link thanks-link-channel">チャンネルに参加する</a>
+      <p class="thanks-channel-note">※ 参加するには、Felipe の Instagram アカウントのフォローが必要です。</p>
+    </div>
 
     <div class="thanks-actions">
       <a href="https://www.instagram.com/ffpro_classic_9/" target="_blank" rel="noopener" class="thanks-link">Instagram をフォロー</a>
