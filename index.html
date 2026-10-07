@@ -125,7 +125,9 @@
     <span class="section-eyebrow gold">BEFORE / AFTER</span>
     <h2 class="section-h2">Felipe の指導で、身体はここまで変わる。</h2>
     <p class="results-lead">Felipe のオンラインコーチングを受けた受講生の変化。年齢も目的もバラバラですが、共通しているのは「普通のことを正しく、高いレベルで」積み上げたこと。この判断基準を、UNIÃO で学べます。</p>
-    <div class="results-grid">
+    <div class="results-carousel">
+      <button type="button" class="results-nav results-prev" aria-label="前へ">‹</button>
+      <div class="results-track" tabindex="0" aria-label="受講生の変化（横にスワイプ）">
       <figure class="result-card">
         <picture>
           <source type="image/webp" srcset="assets/result-1.webp" />
@@ -226,7 +228,10 @@
         </div>
         </figcaption>
       </figure>
+      </div>
+      <button type="button" class="results-nav results-next" aria-label="次へ">›</button>
     </div>
+    <div class="results-dots" aria-hidden="true"></div>
     <p class="results-note">※ 掲載写真は Felipe の個別オンラインコーチング受講生の実例です。UNIÃO は教育コミュニティであり、個別の食事・トレーニング指導は含まれません。結果には個人差があります。</p>
   </div>
 </section>
@@ -616,6 +621,49 @@
         errorEl.hidden = false;
       });
     });
+  })();
+
+  // ---- Results carousel (scroll-snap + arrows + dots) ----
+  (function () {
+    const track = document.querySelector('.results-track');
+    if (!track) return;
+    const cards = Array.from(track.children);
+    const prev = document.querySelector('.results-prev');
+    const next = document.querySelector('.results-next');
+    const dotsBox = document.querySelector('.results-dots');
+    const dots = cards.map(function (_, i) {
+      const d = document.createElement('button');
+      d.type = 'button'; d.className = 'results-dot'; d.setAttribute('aria-label', (i + 1) + '枚目');
+      d.addEventListener('click', function () { scrollToCard(i); });
+      dotsBox.appendChild(d);
+      return d;
+    });
+    let idx = 0, settle = null;
+    function current() {
+      const x = track.scrollLeft;
+      let best = 0, bestD = Infinity;
+      cards.forEach(function (c, i) { const d = Math.abs(c.offsetLeft - 16 - x); if (d < bestD) { bestD = d; best = i; } });
+      return best;
+    }
+    function scrollToCard(i) {
+      idx = Math.max(0, Math.min(cards.length - 1, i));
+      track.scrollTo({ left: cards[idx].offsetLeft - 16, behavior: 'smooth' });
+      update();
+    }
+    function update() {
+      dots.forEach(function (d, k) { d.classList.toggle('is-active', k === idx); });
+      prev.disabled = idx === 0;
+      next.disabled = idx === cards.length - 1;
+    }
+    prev.addEventListener('click', function () { scrollToCard(idx - 1); });
+    next.addEventListener('click', function () { scrollToCard(idx + 1); });
+    // After a user swipe settles, sync idx with the snapped card
+    track.addEventListener('scroll', function () {
+      clearTimeout(settle);
+      settle = setTimeout(function () { idx = current(); update(); }, 120);
+    });
+    window.addEventListener('resize', update);
+    update();
   })();
 
   // ---- Respect prefers-reduced-motion ----
