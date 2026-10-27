@@ -208,6 +208,20 @@ src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
     var cta = document.getElementById('register');
     if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
     if (location.hash) { history.replaceState(null, '', location.pathname + location.search); window.scrollTo(0, 0); }
+    // In-app browsers (Instagram/Facebook) can auto-focus the email field and scroll to it.
+    // For the first 2.5s after load, undo any scroll/focus the user did not cause.
+    (function () {
+      var touched = false, stop = Date.now() + 2500;
+      ['touchstart', 'wheel', 'keydown', 'pointerdown'].forEach(function (ev) { window.addEventListener(ev, function () { touched = true; }, { passive: true, once: true }); });
+      var email = document.querySelector('form.go-form input[type="email"]');
+      var guard = setInterval(function () {
+        if (touched || Date.now() > stop) { clearInterval(guard); return; }
+        if (document.activeElement && document.activeElement !== document.body) document.activeElement.blur();
+        if (window.scrollY > 0) window.scrollTo(0, 0);
+      }, 80);
+      if (email) email.addEventListener('focus', function () { if (!touched) { email.blur(); window.scrollTo(0, 0); } });
+      window.addEventListener('pageshow', function () { if (!touched) window.scrollTo(0, 0); });
+    })();
     if (bar && cta) {
       bar.querySelector('a').addEventListener('click', function (e) { e.preventDefault(); cta.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
       var ctaVisible = false;
