@@ -26,3 +26,14 @@
 # Netlify Forms auto-detects <form data-netlify="true">
 # Form submissions land in: https://app.netlify.com/sites/[your-site]/forms
 # Free tier: 100 submissions/month (enough for Waitlist Phase 1)
+
+# Ad landing page: /go -> go.html (keeps the URL short in ads)
+[[redirects]]
+  from = "/go"
+  to = "/go.html"
+  status = 200
+
+[[redirects]]
+  from = "/go/"
+  to = "/go.html"
+  status = 200
