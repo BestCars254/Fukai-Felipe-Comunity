@@ -127,6 +127,23 @@
   color: var(--ff-white-dim);
   margin: 12px 0 0 0;
 }
+.thanks-price { margin: 28px 0 0; padding: 22px 20px 16px; background: var(--ff-black-soft); border: 1px solid var(--kagayaki-gold); border-radius: 10px; text-align: left; }
+.thanks-price-label { display: block; font-size: 12px; letter-spacing: 0.22em; color: var(--kagayaki-gold); margin-bottom: 8px; }
+.thanks-price h3 { font-size: 19px; color: var(--ff-white); margin: 0 0 14px; }
+.thanks-tier { display: grid; grid-template-columns: 1fr auto; grid-template-areas: "tag amt" "name amt" "sub amt"; align-items: center; column-gap: 12px; padding: 12px 14px; border-radius: 6px; margin-bottom: 8px; }
+.thanks-tier-tag { grid-area: tag; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+.thanks-tier-name { grid-area: name; font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 700; letter-spacing: 0.08em; line-height: 1.1; }
+.thanks-tier-sub { grid-area: sub; font-size: 12px; opacity: 0.85; margin-top: 2px; }
+.thanks-tier-amt { grid-area: amt; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; line-height: 1; text-align: right; white-space: nowrap; }
+.thanks-tier-amt small { font-family: 'Noto Sans JP', sans-serif; font-size: 12px; font-weight: 700; margin-left: 2px; }
+.thanks-tier-1 { background: var(--kagayaki-gold); color: #16110F; padding: 16px 14px; }
+.thanks-tier-1 .thanks-tier-tag { color: #9C302E; font-size: 13px; }
+.thanks-tier-1 .thanks-tier-amt { font-size: 38px; }
+.thanks-tier-2 { background: rgba(255,255,255,0.06); color: var(--ff-white); border: 1px solid rgba(255,255,255,0.14); }
+.thanks-tier-2 .thanks-tier-amt { font-size: 28px; }
+.thanks-tier-3 { color: var(--ff-white-muted); border: 1px dashed rgba(255,255,255,0.18); }
+.thanks-tier-3 .thanks-tier-amt { font-size: 24px; }
+.thanks-price p { font-size: 13px; line-height: 1.8; color: var(--ff-white-muted); margin: 10px 0 0; }
 .thanks-video {
   margin: 28px 0 0;
   padding: 24px;
@@ -214,6 +231,27 @@ src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
         <li>11/23(月) Q&Aライブ #0 限定視聴</li>
         <li>Founding Member 100名枠への応募権</li>
       </ul>
+    </div>
+
+    <div class="thanks-price">
+      <span class="thanks-price-label">MEMBER PRICING — 登録者限定公開</span>
+      <h3>UNIÃO の参加価格</h3>
+      <div class="thanks-tier thanks-tier-1">
+        <span class="thanks-tier-tag">先着20名限定</span>
+        <span class="thanks-tier-name">FOUNDING MEMBER</span>
+        <span class="thanks-tier-amt">¥5,500<small>/月相当</small></span>
+        <span class="thanks-tier-sub">年額 ¥66,000 ※年払いのみ・先着50名とは別枠</span>
+      </div>
+      <div class="thanks-tier thanks-tier-2">
+        <span class="thanks-tier-tag">先着50名</span>
+        <span class="thanks-tier-amt">¥6,980<small>/月</small></span>
+      </div>
+      <div class="thanks-tier thanks-tier-3">
+        <span class="thanks-tier-tag">51名以降</span>
+        <span class="thanks-tier-sub">通常価格</span>
+        <span class="thanks-tier-amt">¥7,980<small>/月</small></span>
+      </div>
+      <p>登録者が増えるにつれて、参加価格も段階的に上がります。事前登録者から順番に、11/26（木）10:00 の24時間先行購入枠でご案内します。</p>
     </div>
 
     <div class="thanks-video">

@@ -66,22 +66,6 @@
 .go-form textarea { width: 100%; padding: 14px 16px; background: var(--ff-black-soft); border: 1px solid rgba(255,255,255,0.18); border-radius: 4px; color: var(--ff-white); font-family: 'Noto Sans JP', sans-serif; font-size: 15px; line-height: 1.6; resize: vertical; }
 .go-form textarea::placeholder { color: var(--ff-white-dim); }
 .go-form textarea:focus-visible { outline: 2px solid var(--kagayaki-gold); outline-offset: 0; border-color: var(--kagayaki-gold); }
-.go-price { margin: 0 0 22px; padding: 18px 16px 14px; border: 1px solid var(--gray-line); border-radius: 6px; background: var(--ff-black-soft); }
-.go-price-lead { font-size: 14px; font-weight: 700; color: var(--ff-white); margin: 0 0 14px; line-height: 1.7; }
-.go-tier { display: grid; grid-template-columns: 1fr auto; grid-template-areas: "tag amt" "name amt" "sub amt"; align-items: center; column-gap: 12px; padding: 12px 14px; border-radius: 4px; margin-bottom: 8px; }
-.go-tier-tag { grid-area: tag; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
-.go-tier-name { grid-area: name; font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 700; letter-spacing: 0.08em; line-height: 1.1; }
-.go-tier-sub { grid-area: sub; font-size: 12px; opacity: 0.85; margin-top: 2px; }
-.go-tier-amt { grid-area: amt; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; line-height: 1; text-align: right; white-space: nowrap; }
-.go-tier-amt small { font-family: 'Noto Sans JP', sans-serif; font-size: 12px; font-weight: 700; margin-left: 2px; }
-.go-tier-1 { background: var(--kagayaki-gold); color: #16110F; border: 2px solid var(--kagayaki-gold); padding: 16px 14px; }
-.go-tier-1 .go-tier-tag { color: #9C302E; font-size: 13px; }
-.go-tier-1 .go-tier-amt { font-size: 38px; }
-.go-tier-2 { background: rgba(255,255,255,0.06); color: var(--ff-white); border: 1px solid rgba(255,255,255,0.14); }
-.go-tier-2 .go-tier-amt { font-size: 28px; }
-.go-tier-3 { background: transparent; color: var(--ff-white-muted); border: 1px dashed rgba(255,255,255,0.18); }
-.go-tier-3 .go-tier-amt { font-size: 24px; }
-.go-price-note { font-size: 12px; line-height: 1.8; color: var(--ff-white-muted); margin: 10px 0 0; }
 .go-form { display: grid; gap: 10px; }
 .go-form input[type="email"] { width: 100%; padding: 16px; background: var(--ff-black-soft); border: 1px solid rgba(255,255,255,0.18); border-radius: 4px; color: var(--ff-white); font-family: 'Noto Sans JP', sans-serif; font-size: 16px; }
 .go-form input[type="email"]::placeholder { color: var(--ff-white-dim); }
@@ -186,25 +170,7 @@ src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
       <p class="go-live-h">Instagram ライブで、あなたの問題に直接答えます</p>
       <p>登録者から集めた悩みを、Felipe がライブで取り上げます。骨格、筋肉の走行、マシンの使い方。あなたの身体に合わせて、その場で解決します。</p>
     </div>
-    <div class="go-price">
-      <p class="go-price-lead">事前登録者には、一般公開より先に参加案内をお送りします。</p>
-      <div class="go-tier go-tier-1">
-        <span class="go-tier-tag">先着20名限定</span>
-        <span class="go-tier-name">FOUNDING MEMBER</span>
-        <span class="go-tier-amt">¥5,500<small>/月相当</small></span>
-        <span class="go-tier-sub">年額 ¥66,000 ※年払いのみ・先着50名とは別枠</span>
-      </div>
-      <div class="go-tier go-tier-2">
-        <span class="go-tier-tag">先着50名</span>
-        <span class="go-tier-amt">¥6,980<small>/月</small></span>
-      </div>
-      <div class="go-tier go-tier-3">
-        <span class="go-tier-tag">51名以降</span>
-        <span class="go-tier-amt">¥7,980<small>/月</small></span>
-        <span class="go-tier-sub">通常価格</span>
-      </div>
-      <p class="go-price-note">登録者が増えるにつれて、参加価格も段階的に上がります。<br />事前登録者から順番に、先行して参加案内をお送りします。</p>
-    </div>
+    <p class="go-perk">参加価格は、登録後の画面でご案内します。登録者には一般公開より先に参加案内が届きます。</p>
 
     <form name="uniao-waitlist" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="go-form" action="/thanks.html">
       <input type="hidden" name="form-name" value="uniao-waitlist" />
@@ -231,7 +197,10 @@ src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
   (function () {
     var bar = document.getElementById('go-bar');
     var cta = document.getElementById('register');
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    if (location.hash) { history.replaceState(null, '', location.pathname + location.search); window.scrollTo(0, 0); }
     if (bar && cta) {
+      bar.querySelector('a').addEventListener('click', function (e) { e.preventDefault(); cta.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
       var ctaVisible = false;
       function update() {
         var show = window.scrollY > 200 && !ctaVisible;
