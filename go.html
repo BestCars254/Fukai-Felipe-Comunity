@@ -26,12 +26,13 @@
 
 .go-hero { padding: 18px 0 8px; }
 .go-hero h1 { font-weight: 900; font-size: clamp(28px, 7.6vw, 44px); line-height: 1.25; margin: 0 0 6px; }
-.go-hero h1 small { display: block; font-size: 0.5em; font-weight: 700; color: var(--kagayaki-gold); letter-spacing: 0.04em; margin-bottom: 8px; }
+.go-hook { font-size: clamp(15px, 4.2vw, 19px); font-weight: 700; line-height: 1.6; color: var(--kagayaki-gold); margin: 0 0 10px; }
 .go-hero p { font-size: 15px; line-height: 1.8; color: rgba(255,255,255,0.78); margin: 0 0 16px; }
-.go-video { position: relative; width: 100%; padding-top: 56.25%; background: #000; border-radius: 6px; overflow: hidden; box-shadow: 0 18px 50px rgba(0,0,0,0.6); }
-.go-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.go-video { display: block; position: relative; width: 100%; padding: 0; padding-top: 56.25%; background: #000; border: 0; border-radius: 6px; overflow: hidden; box-shadow: 0 18px 50px rgba(0,0,0,0.6); cursor: pointer; }
+.go-video img, .go-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; object-fit: cover; }
+.go-video:focus-visible { outline: 2px solid var(--kagayaki-gold); outline-offset: 3px; }
 .go-under { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--ff-white-dim); margin-top: 10px; }
-.go-under a { color: var(--kagayaki-gold); }
+.go-under a { color: var(--ff-white-dim); text-decoration: underline; font-size: 11px; }
 
 .go-toc { padding: 28px 0 8px; }
 .go-h2 { font-size: 13px; letter-spacing: 0.16em; color: var(--kagayaki-gold); font-weight: 700; margin: 0 0 12px; }
@@ -54,6 +55,7 @@
 .go-next li { font-size: 14px; line-height: 1.6; color: var(--ff-white); padding-left: 16px; position: relative; }
 .go-next li::before { content: ""; position: absolute; left: 0; top: 0.65em; width: 6px; height: 6px; background: var(--kagayaki-gold); transform: rotate(45deg); }
 .go-next li.soon { color: var(--ff-white-muted); }
+.go-perk { font-size: 14px; font-weight: 700; color: var(--kagayaki-gold); margin: -8px 0 16px; padding-left: 14px; border-left: 2px solid var(--kagayaki-gold); line-height: 1.7; }
 .go-form { display: grid; gap: 10px; }
 .go-form input[type="email"] { width: 100%; padding: 16px; background: var(--ff-black-soft); border: 1px solid rgba(255,255,255,0.18); border-radius: 4px; color: var(--ff-white); font-family: 'Noto Sans JP', sans-serif; font-size: 16px; }
 .go-form input[type="email"]::placeholder { color: var(--ff-white-dim); }
@@ -100,12 +102,16 @@ src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
   </header>
 
   <section class="go-hero">
-    <h1><small>コミュニティ動画 #01 ｜ 13分</small>ベントオーバーロー<br />徹底解説</h1>
+    <p class="go-hook">トレーニングの重量は伸びている。<br />でも背中が変わらない人へ。</p>
+    <h1>ベントオーバーロー<br />徹底解説</h1>
     <p>背中に効かない理由と、負荷が逃げる瞬間。僕が大事にしている8つのポイントを、1本まるごと話しています。</p>
-    <div class="go-video">
-      <iframe src="https://www.youtube-nocookie.com/embed/rT5gMiIWaYE?rel=0&modestbranding=1" title="ベントオーバーロー 徹底解説" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-    </div>
-    <div class="go-under"><span>登録なしでそのまま見られます</span><a href="https://youtu.be/rT5gMiIWaYE" target="_blank" rel="noopener">YouTube で開く</a></div>
+    <button type="button" class="go-video" id="go-video" aria-label="動画を再生する">
+      <picture>
+        <source srcset="/assets/go-poster.webp" type="image/webp" />
+        <img src="/assets/go-poster.jpg" alt="ベントオーバーロー 徹底解説 ― 中級者が伸びない8つの原因（13分）" width="1280" height="720" fetchpriority="high" />
+      </picture>
+    </button>
+    <div class="go-under"><span>登録なしでそのまま見られます（13分）</span><a href="https://youtu.be/rT5gMiIWaYE" target="_blank" rel="noopener">YouTube で見る</a></div>
   </section>
 
   <section class="go-toc">
@@ -135,7 +141,7 @@ src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
   </section>
 
   <section class="go-cta" id="register">
-    <h2>事前登録して、<br />他の種目の徹底解説も見る</h2>
+    <h2>背中を厚く、広くするために。<br />無料登録して、次の徹底解説を見る</h2>
     <p>UNIÃO のオープン（11月27日）まで、登録した人だけに毎週1本、同じ形式で先行公開します。次に出すのはこの種目です。</p>
     <ul class="go-next">
       <li>クローズグリップ ラットプル</li>
@@ -147,6 +153,7 @@ src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
       <li>デッドリフト</li>
       <li class="soon">以降、毎週1本</li>
     </ul>
+    <p class="go-perk">登録した人だけに、オープン時の割引価格をご案内します。</p>
 
     <form name="uniao-waitlist" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="go-form" action="/thanks.html">
       <input type="hidden" name="form-name" value="uniao-waitlist" />
@@ -156,7 +163,7 @@ src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
         <span class="sr-only">メールアドレス</span>
         <input type="email" name="email" required autocomplete="email" inputmode="email" placeholder="メールアドレス" />
       </label>
-      <button type="submit" class="cta">事前登録して、次の種目を受け取る</button>
+      <button type="submit" class="cta">無料で登録して、次の種目を見る</button>
     </form>
     <p class="go-note">30秒で完了。スパムなし、いつでも配信停止できます。登録者には価格の先行公開（11/23）と 24時間先行購入（11/26）の案内も届きます。</p>
   </section>
@@ -167,7 +174,7 @@ src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
   </footer>
 </div>
 
-<div class="go-bar" id="go-bar" aria-hidden="true"><a href="#register">事前登録して、他の種目も見る</a></div>
+<div class="go-bar" id="go-bar" aria-hidden="true"><a href="#register">無料登録して、次の徹底解説を見る</a></div>
 
 <script>
   (function () {
@@ -180,6 +187,17 @@ src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
       new IntersectionObserver(function (es) { pastHero = !es[0].isIntersecting && es[0].boundingClientRect.top < 0; update(); }, { threshold: 0 }).observe(hero);
       new IntersectionObserver(function (es) { ctaVisible = es[0].isIntersecting; update(); }, { threshold: 0.15 }).observe(cta);
     }
+
+    var v = document.getElementById('go-video');
+    if (v) v.addEventListener('click', function () {
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/rT5gMiIWaYE?rel=0&modestbranding=1&autoplay=1&playsinline=1';
+      f.title = 'ベントオーバーロー 徹底解説';
+      f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      f.allowFullscreen = true;
+      v.innerHTML = ''; v.appendChild(f); v.style.cursor = 'default';
+      if (window.fbq) fbq('trackCustom', 'PlayVideo', {content_name: 'go-bentover'});
+    }, { once: true });
 
     var form = document.querySelector('form.go-form');
     if (!form || !window.fetch || !window.URLSearchParams) return;
