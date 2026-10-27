@@ -38,7 +38,21 @@
 .thanks-price-h em { font-style: normal; color: var(--kagayaki-gold); }
 .thanks-price-d { font-size: 14px; line-height: 1.9; color: rgba(255,255,255,0.85); margin: 0; }
 .thanks-price-d b { color: var(--ff-white); font-weight: 700; }
-.thanks-price-d small { display: block; font-size: 12px; color: var(--ff-white-dim); margin-top: 4px; }
+.thanks-price-d { margin-bottom: 16px !important; }
+.thanks-tier { display: grid; grid-template-columns: 1fr auto; grid-template-areas: "tag amt" "name amt" "sub amt"; align-items: center; column-gap: 12px; padding: 12px 14px; border-radius: 6px; margin-bottom: 8px; }
+.thanks-tier-tag { grid-area: tag; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+.thanks-tier-name { grid-area: name; font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 700; letter-spacing: 0.08em; line-height: 1.1; }
+.thanks-tier-sub { grid-area: sub; font-size: 12px; opacity: 0.85; margin-top: 2px; }
+.thanks-tier-amt { grid-area: amt; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; line-height: 1; text-align: right; white-space: nowrap; }
+.thanks-tier-amt small { font-family: 'Noto Sans JP', sans-serif; font-size: 12px; font-weight: 700; margin-left: 2px; }
+.thanks-tier-1 { background: var(--kagayaki-gold); color: #16110F; padding: 16px 14px; }
+.thanks-tier-1 .thanks-tier-tag { color: #9C302E; font-size: 13px; }
+.thanks-tier-1 .thanks-tier-amt { font-size: 34px; }
+.thanks-tier-2 { background: rgba(255,255,255,0.06); color: var(--ff-white); border: 1px solid rgba(255,255,255,0.14); }
+.thanks-tier-2 .thanks-tier-amt { font-size: 26px; }
+.thanks-tier-3 { color: var(--ff-white-muted); border: 1px dashed rgba(255,255,255,0.18); }
+.thanks-tier-3 .thanks-tier-amt { font-size: 22px; }
+.thanks-price-n { font-size: 12px; line-height: 1.9; color: var(--ff-white-dim); margin: 12px 0 0; }
 .thanks-foot { margin: 28px 0 0; font-size: 13px; line-height: 1.8; color: var(--ff-white-muted); }
 .thanks-foot small { display: block; font-size: 12px; color: var(--ff-white-dim); margin-top: 6px; }
 .thanks-foot a { color: var(--ff-white-dim); }
@@ -89,8 +103,24 @@ src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
     </section>
 
     <section class="thanks-price">
-      <p class="thanks-price-h">1日約183円で、IFBB PRO の<em>“トレーニングの考え方”</em>を学ぶ。</p>
-      <p class="thanks-price-d"><b>先着20名限定｜年額 66,000円</b><br />（月あたり 5,500円／1日約183円相当）<small>※ 年払いのみ。参加案内は 11/26（木）10:00 から、事前登録者へ順番にお送りします。</small></p>
+      <p class="thanks-price-h">1日約181円で、<br />IFBB PRO の<em>「判断基準」</em>を学ぶ。</p>
+      <p class="thanks-price-d">種目を知るだけではなく、<br />フォーム、重量設定、種目選びまで。<br />「なぜそうするのか」を学べる UNIÃO。</p>
+      <div class="thanks-tier thanks-tier-1">
+        <span class="thanks-tier-tag">先着20名限定</span>
+        <span class="thanks-tier-name">FOUNDING MEMBER</span>
+        <span class="thanks-tier-amt">¥66,000<small>/年</small></span>
+        <span class="thanks-tier-sub">月あたり 5,500円（1日約181円）</span>
+      </div>
+      <div class="thanks-tier thanks-tier-2">
+        <span class="thanks-tier-tag">先着50名</span>
+        <span class="thanks-tier-amt">¥6,980<small>/月</small></span>
+      </div>
+      <div class="thanks-tier thanks-tier-3">
+        <span class="thanks-tier-tag">51名以降</span>
+        <span class="thanks-tier-sub">通常価格</span>
+        <span class="thanks-tier-amt">¥7,980<small>/月</small></span>
+      </div>
+      <p class="thanks-price-n">※ 年払いのみ<br />※ 先着20名終了後は参加価格が上がります<br />※ 事前登録者には一般公開より先に参加案内をお送りします</p>
     </section>
 
     <p class="thanks-foot">次回の徹底解説はメールでお届けします。<small>※ メールが届かない場合は、迷惑メールフォルダもご確認ください。</small><small><a href="/">トップに戻る</a></small></p>

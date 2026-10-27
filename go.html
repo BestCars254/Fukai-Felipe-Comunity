@@ -58,7 +58,11 @@
 .go-next li { font-size: 14px; line-height: 1.6; color: var(--ff-white); padding-left: 16px; position: relative; }
 .go-next li::before { content: ""; position: absolute; left: 0; top: 0.65em; width: 6px; height: 6px; background: var(--kagayaki-gold); transform: rotate(45deg); }
 .go-next li.soon { color: var(--ff-white-muted); }
-.go-perk { font-size: 14px; font-weight: 700; color: var(--kagayaki-gold); margin: -8px 0 16px; padding-left: 14px; border-left: 2px solid var(--kagayaki-gold); line-height: 1.7; }
+.go-offer { margin: 0 0 18px; padding: 18px 18px 4px; border-left: 2px solid var(--kagayaki-gold); }
+.go-offer p { font-size: 15px; line-height: 1.85; color: rgba(255,255,255,0.86); margin: 0 0 14px; }
+.go-offer b { color: var(--kagayaki-gold); font-weight: 700; }
+.go-offer-note { font-size: 12px !important; color: var(--ff-white-dim) !important; line-height: 1.8 !important; }
+.go-offer-cta { font-weight: 700; color: var(--ff-white) !important; }
 .go-live { margin: 0 0 16px; padding: 16px 18px; border: 1px solid var(--gray-line); border-radius: 6px; background: var(--ff-black-soft); }
 .go-live-h { font-size: 15px; font-weight: 700; color: var(--ff-white); margin: 0 0 6px; }
 .go-live p { font-size: 14px; line-height: 1.8; color: var(--ff-white-muted); margin: 0; }
@@ -170,7 +174,12 @@ src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
       <p class="go-live-h">Instagram ライブで、あなたの問題に直接答えます</p>
       <p>登録者から集めた悩みを、Felipe がライブで取り上げます。骨格、筋肉の走行、マシンの使い方。あなたの身体に合わせて、その場で解決します。</p>
     </div>
-    <p class="go-perk">参加価格は、登録後の画面でご案内します。登録者には一般公開より先に参加案内が届きます。</p>
+    <div class="go-offer">
+      <p>事前登録者には、<br />一般公開より先に UNIÃO への参加案内をお送りします。</p>
+      <p>先着20名限定で、<br /><b>1日約181円相当</b>で IFBB PRO の「トレーニングの考え方」を学べる<br /><b>FOUNDING MEMBER 枠</b>をご用意しています。</p>
+      <p class="go-offer-note">※ 年払いのみ<br />※ 先着20名終了後は参加価格が段階的に上がります</p>
+      <p class="go-offer-cta">まずは無料で、<br />次回の徹底解説を受け取ってください。</p>
+    </div>
 
     <form name="uniao-waitlist" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="go-form" action="/thanks.html">
       <input type="hidden" name="form-name" value="uniao-waitlist" />
