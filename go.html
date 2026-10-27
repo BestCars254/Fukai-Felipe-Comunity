@@ -231,18 +231,24 @@ src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
   (function () {
     var bar = document.getElementById('go-bar');
     var cta = document.getElementById('register');
-    if (bar && cta && 'IntersectionObserver' in window) {
-      var hero = document.querySelector('.go-hero');
-      var pastHero = false, ctaVisible = false;
-      function update() { var show = pastHero && !ctaVisible; bar.classList.toggle('show', show); bar.setAttribute('aria-hidden', show ? 'false' : 'true'); }
-      new IntersectionObserver(function (es) { pastHero = !es[0].isIntersecting && es[0].boundingClientRect.top < 0; update(); }, { threshold: 0 }).observe(hero);
-      new IntersectionObserver(function (es) { ctaVisible = es[0].isIntersecting; update(); }, { threshold: 0.15 }).observe(cta);
+    if (bar && cta) {
+      var ctaVisible = false;
+      function update() {
+        var show = window.scrollY > 200 && !ctaVisible;
+        bar.classList.toggle('show', show);
+        bar.setAttribute('aria-hidden', show ? 'false' : 'true');
+      }
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (es) { ctaVisible = es[0].isIntersecting; update(); }, { threshold: 0.1 }).observe(cta);
+      }
+      window.addEventListener('scroll', update, { passive: true });
+      update();
     }
 
     var v = document.getElementById('go-video');
     if (v) v.addEventListener('click', function () {
       var f = document.createElement('iframe');
-      f.src = 'https://www.youtube-nocookie.com/embed/rT5gMiIWaYE?rel=0&modestbranding=1&autoplay=1&playsinline=1';
+      f.src = 'https://www.youtube-nocookie.com/embed/vNz1KK12BYE?rel=0&modestbranding=1&autoplay=1&playsinline=1';
       f.title = 'ベントオーバーロー 徹底解説';
       f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
       f.allowFullscreen = true;
