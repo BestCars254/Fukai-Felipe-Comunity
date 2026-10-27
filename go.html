@@ -56,6 +56,13 @@
 .go-next li::before { content: ""; position: absolute; left: 0; top: 0.65em; width: 6px; height: 6px; background: var(--kagayaki-gold); transform: rotate(45deg); }
 .go-next li.soon { color: var(--ff-white-muted); }
 .go-perk { font-size: 14px; font-weight: 700; color: var(--kagayaki-gold); margin: -8px 0 16px; padding-left: 14px; border-left: 2px solid var(--kagayaki-gold); line-height: 1.7; }
+.go-live { margin: 0 0 16px; padding: 16px 18px; border: 1px solid var(--gray-line); border-radius: 6px; background: var(--ff-black-soft); }
+.go-live-h { font-size: 15px; font-weight: 700; color: var(--ff-white); margin: 0 0 6px; }
+.go-live p { font-size: 14px; line-height: 1.8; color: var(--ff-white-muted); margin: 0; }
+.go-label { display: block; font-size: 12px; color: var(--ff-white-muted); margin: 4px 0 6px; }
+.go-form textarea { width: 100%; padding: 14px 16px; background: var(--ff-black-soft); border: 1px solid rgba(255,255,255,0.18); border-radius: 4px; color: var(--ff-white); font-family: 'Noto Sans JP', sans-serif; font-size: 15px; line-height: 1.6; resize: vertical; }
+.go-form textarea::placeholder { color: var(--ff-white-dim); }
+.go-form textarea:focus-visible { outline: 2px solid var(--kagayaki-gold); outline-offset: 0; border-color: var(--kagayaki-gold); }
 .go-form { display: grid; gap: 10px; }
 .go-form input[type="email"] { width: 100%; padding: 16px; background: var(--ff-black-soft); border: 1px solid rgba(255,255,255,0.18); border-radius: 4px; color: var(--ff-white); font-family: 'Noto Sans JP', sans-serif; font-size: 16px; }
 .go-form input[type="email"]::placeholder { color: var(--ff-white-dim); }
@@ -111,7 +118,7 @@ src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
         <img src="/assets/go-poster.jpg" alt="ベントオーバーロー 徹底解説 ― 中級者が伸びない8つの原因（13分）" width="1280" height="720" fetchpriority="high" />
       </picture>
     </button>
-    <div class="go-under"><span>登録なしでそのまま見られます（13分）</span><a href="https://youtu.be/rT5gMiIWaYE" target="_blank" rel="noopener">YouTube で見る</a></div>
+    <div class="go-under"><span>登録なしで、このページでそのまま見られます（13分）</span></div>
   </section>
 
   <section class="go-toc">
@@ -130,14 +137,14 @@ src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
 
   <section class="go-why">
     <h2>重量は上がった。<br />でも、背中は変わっていない。</h2>
-    <p>もしこれが2年以上続いているなら、原因は努力の量ではなく、<strong>1レップの質</strong>にあると僕は考えています。たとえば、</p>
+    <p>もしこれが2年以上続いているなら、原因は努力の量ではないと僕は考えています。<strong>1レップの質</strong>と、もう1つ。多くの人が、自分の身体と道具を見ずにトレーニングしています。</p>
     <ul>
-      <li>ロウで、背中より先に腰が疲れる</li>
-      <li>重くなるほど、上体が起きてくる</li>
-      <li>肩がすくんで、僧帽筋ばかりが張る</li>
-      <li>「伸ばすほど効く」と信じて、負荷を逃がしている</li>
+      <li>自分の骨格の弱点と強みを知らないまま、同じフォームを真似している</li>
+      <li>筋肉がどこからどこへ走っているかを無視して、「とにかく引く」</li>
+      <li>マシンの軌道や構造を見ずに、全部同じ使い方をしている</li>
+      <li>ロウで背中より先に腰が疲れる。重くなるほど上体が起きる</li>
     </ul>
-    <p>どれか1つでも当てはまるなら、重量を足す前に直すところがあります。動画の中で、1つずつ話しています。</p>
+    <p>どれか1つでも当てはまるなら、重量を足す前に見直すところがあります。この動画では、ベントオーバーローを使ってその見方を話しています。</p>
   </section>
 
   <section class="go-cta" id="register">
@@ -153,6 +160,10 @@ src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
       <li>デッドリフト</li>
       <li class="soon">以降、毎週1本</li>
     </ul>
+    <div class="go-live">
+      <p class="go-live-h">Instagram ライブで、あなたの問題に直接答えます</p>
+      <p>登録時に書いてくれた悩みを、Felipe がライブで取り上げます。骨格、筋肉の走行、マシンの使い方。あなたの身体に合わせて、その場で解決します。</p>
+    </div>
     <p class="go-perk">登録した人だけに、オープン時の割引価格をご案内します。</p>
 
     <form name="uniao-waitlist" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="go-form" action="/thanks.html">
@@ -162,6 +173,10 @@ src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
       <label>
         <span class="sr-only">メールアドレス</span>
         <input type="email" name="email" required autocomplete="email" inputmode="email" placeholder="メールアドレス" />
+      </label>
+      <label>
+        <span class="go-label">今いちばん困っていること（任意・ライブで答えます）</span>
+        <textarea name="concern" rows="2" maxlength="300" placeholder="例：ロウで腰ばかり疲れる。背中に入る感覚がない。"></textarea>
       </label>
       <button type="submit" class="cta">無料で登録して、次の種目を見る</button>
     </form>
