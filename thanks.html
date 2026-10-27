@@ -12,185 +12,30 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
 <link rel="stylesheet" href="style.css" />
 <style>
-.thanks-wrap {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 40px 24px;
-}
-.thanks-inner {
-  max-width: 640px;
-}
-.thanks-logo {
-  height: 96px;
-  width: auto;
-  margin: 0 auto 32px auto;
-  display: inline-block;
-}
-.thanks-h1 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 900;
-  font-size: clamp(32px, 5vw, 48px);
-  color: var(--ff-white);
-  margin: 0 0 24px 0;
-}
-.thanks-eyebrow {
-  font-family: 'Barlow Condensed', sans-serif;
-  color: var(--kagayaki-gold);
-  font-size: 14px;
-  letter-spacing: 0.24em;
-  margin-bottom: 20px;
-  display: inline-block;
-  text-transform: uppercase;
-}
-.thanks-lead {
-  font-size: 16px;
-  line-height: 2;
-  color: var(--ff-white-muted);
-  margin: 0 0 40px 0;
-}
-.thanks-benefits {
-  text-align: left;
-  background: var(--ff-black-soft);
-  border-left: 3px solid var(--kagayaki-gold);
-  padding: 24px 28px;
-  border-radius: 0 6px 6px 0;
-  margin: 0 0 40px 0;
-}
-.thanks-benefits h3 {
-  font-size: 14px;
-  color: var(--kagayaki-gold);
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  margin: 0 0 16px 0;
-  font-family: 'Barlow Condensed', sans-serif;
-}
-.thanks-benefits ul {
-  padding-left: 20px;
-  margin: 0;
-  color: var(--ff-white);
-  font-size: 14px;
-  line-height: 2;
-}
-.thanks-mail {
-  text-align: left;
-  background: var(--ff-black-soft);
-  border: 1px solid var(--gray-line);
-  padding: 24px 28px;
-  border-radius: 6px;
-  margin: 0 0 40px 0;
-}
-.thanks-mail h3 {
-  font-size: 16px;
-  color: var(--ff-white);
-  margin: 0 0 8px 0;
-}
-.thanks-mail p {
-  font-size: 14px;
-  line-height: 1.9;
-  color: var(--ff-white-muted);
-  margin: 0;
-}
-.thanks-mail p + p { margin-top: 8px; }
-.thanks-mail small { color: var(--ff-white-dim); font-size: 12px; }
-.thanks-channel {
-  text-align: left;
-  background: linear-gradient(135deg, rgba(156, 48, 46, 0.22), rgba(212, 169, 79, 0.10));
-  border: 1px solid rgba(212, 169, 79, 0.45);
-  padding: 24px 28px;
-  border-radius: 6px;
-  margin: 0 0 40px 0;
-}
-.thanks-channel-label {
-  display: inline-block;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 12px;
-  letter-spacing: 0.22em;
-  color: var(--kagayaki-gold);
-  margin-bottom: 6px;
-}
-.thanks-channel h3 {
-  font-size: 17px;
-  color: var(--ff-white);
-  margin: 0 0 8px 0;
-}
-.thanks-channel p {
-  font-size: 14px;
-  line-height: 1.9;
-  color: var(--ff-white-muted);
-  margin: 0 0 16px 0;
-}
-.thanks-channel .thanks-channel-note {
-  font-size: 12px;
-  color: var(--ff-white-dim);
-  margin: 12px 0 0 0;
-}
-.thanks-price { margin: 28px 0 0; padding: 22px 20px 16px; background: var(--ff-black-soft); border: 1px solid var(--kagayaki-gold); border-radius: 10px; text-align: left; }
-.thanks-price-label { display: block; font-size: 12px; letter-spacing: 0.22em; color: var(--kagayaki-gold); margin-bottom: 8px; }
-.thanks-price h3 { font-size: 19px; color: var(--ff-white); margin: 0 0 14px; }
-.thanks-tier { display: grid; grid-template-columns: 1fr auto; grid-template-areas: "tag amt" "name amt" "sub amt"; align-items: center; column-gap: 12px; padding: 12px 14px; border-radius: 6px; margin-bottom: 8px; }
-.thanks-tier-tag { grid-area: tag; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
-.thanks-tier-name { grid-area: name; font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 700; letter-spacing: 0.08em; line-height: 1.1; }
-.thanks-tier-sub { grid-area: sub; font-size: 12px; opacity: 0.85; margin-top: 2px; }
-.thanks-tier-amt { grid-area: amt; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; line-height: 1; text-align: right; white-space: nowrap; }
-.thanks-tier-amt small { font-family: 'Noto Sans JP', sans-serif; font-size: 12px; font-weight: 700; margin-left: 2px; }
-.thanks-tier-1 { background: var(--kagayaki-gold); color: #16110F; padding: 16px 14px; }
-.thanks-tier-1 .thanks-tier-tag { color: #9C302E; font-size: 13px; }
-.thanks-tier-1 .thanks-tier-amt { font-size: 38px; }
-.thanks-tier-2 { background: rgba(255,255,255,0.06); color: var(--ff-white); border: 1px solid rgba(255,255,255,0.14); }
-.thanks-tier-2 .thanks-tier-amt { font-size: 28px; }
-.thanks-tier-3 { color: var(--ff-white-muted); border: 1px dashed rgba(255,255,255,0.18); }
-.thanks-tier-3 .thanks-tier-amt { font-size: 24px; }
-.thanks-price p { font-size: 13px; line-height: 1.8; color: var(--ff-white-muted); margin: 10px 0 0; }
-.thanks-video {
-  margin: 28px 0 0;
-  padding: 24px;
-  background: var(--ff-black-soft);
-  border: 1px solid var(--kagayaki-gold);
-  border-radius: 10px;
-  text-align: left;
-}
-.thanks-video-label {
-  display: block;
-  font-size: 12px;
-  letter-spacing: 0.22em;
-  color: var(--kagayaki-gold);
-  margin-bottom: 8px;
-}
-.thanks-video h3 { font-size: 19px; color: var(--ff-white); margin: 0 0 6px; }
-.thanks-video p { font-size: 14px; line-height: 1.75; color: var(--ff-white-muted); margin: 0 0 16px; }
-.thanks-video-frame { position: relative; width: 100%; padding-top: 56.25%; background: #000; border-radius: 8px; overflow: hidden; }
-.thanks-video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-.thanks-video .thanks-link { margin-top: 16px; display: inline-block; }
-.thanks-link-channel {
-  display: inline-block;
-  background: var(--laurel-red);
-  border-color: var(--laurel-red);
-  color: #fff;
-  font-weight: 700;
-}
-.thanks-link-channel:hover { background: var(--laurel-red-hover); border-color: var(--laurel-red-hover); color: #fff; }
-.thanks-actions {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.thanks-link {
-  padding: 14px 28px;
-  border: 1px solid rgba(255,255,255,0.18);
-  border-radius: 4px;
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 14px;
-  color: var(--ff-white);
-  transition: all 0.2s ease;
-}
-.thanks-link:hover {
-  border-color: var(--kagayaki-gold);
-  color: var(--kagayaki-gold);
-}
+.thanks-wrap { min-height: 100svh; display: flex; align-items: flex-start; justify-content: center; padding: 36px 20px 56px; }
+.thanks-inner { max-width: 560px; width: 100%; }
+.thanks-logo { height: 72px; width: auto; display: block; margin: 0 0 28px; }
+.thanks-done { display: inline-flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; color: var(--kagayaki-gold); margin-bottom: 14px; }
+.thanks-done::before { content: ""; width: 18px; height: 18px; border-radius: 50%; background: var(--kagayaki-gold); -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M4 10.5l4 4 8-9' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M4 10.5l4 4 8-9' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat; }
+.thanks-h1 { font-family: 'Noto Sans JP', sans-serif; font-weight: 900; font-size: clamp(26px, 7vw, 34px); line-height: 1.3; color: var(--ff-white); margin: 0 0 18px; }
+.thanks-lead { font-size: 15px; line-height: 1.9; color: rgba(255,255,255,0.85); margin: 0 0 12px; }
+.thanks-lead strong { color: var(--ff-white); font-weight: 700; }
+.thanks-next { margin: 36px 0 0; padding-top: 28px; border-top: 1px solid var(--gray-line); }
+.thanks-next h2 { font-size: 13px; letter-spacing: 0.16em; color: var(--kagayaki-gold); font-weight: 700; margin: 0 0 10px; }
+.thanks-next > p { font-size: 15px; line-height: 1.85; color: rgba(255,255,255,0.8); margin: 0 0 20px; }
+.thanks-ch { display: block; padding: 20px 18px; border-radius: 8px; background: var(--ff-black-soft); border: 1px solid var(--gray-line); margin-bottom: 12px; text-decoration: none; color: var(--ff-white); }
+.thanks-ch-main { border-color: var(--laurel-red); box-shadow: 0 0 0 1px var(--laurel-red); }
+.thanks-ch h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; letter-spacing: 0.1em; font-weight: 700; margin: 0 0 6px; color: var(--ff-white); }
+.thanks-ch p { font-size: 14px; line-height: 1.75; color: var(--ff-white-muted); margin: 0 0 14px; }
+.thanks-ch span { display: block; text-align: center; padding: 14px; border-radius: 4px; font-size: 15px; font-weight: 700; }
+.thanks-ch-main span { background: var(--laurel-red); color: var(--ff-white); }
+.thanks-ch-sub span { border: 1px solid rgba(255,255,255,0.28); color: var(--ff-white); }
+.thanks-ch:hover .thanks-ch-main span, .thanks-ch-main:hover span { background: var(--laurel-red-hover); }
+.thanks-ch-sub:hover span { border-color: var(--kagayaki-gold); color: var(--kagayaki-gold); }
+.thanks-ch:focus-visible { outline: 2px solid var(--kagayaki-gold); outline-offset: 2px; }
+.thanks-foot { margin: 28px 0 0; font-size: 13px; line-height: 1.8; color: var(--ff-white-muted); }
+.thanks-foot small { display: block; font-size: 12px; color: var(--ff-white-dim); margin-top: 6px; }
+.thanks-foot a { color: var(--ff-white-dim); }
 </style>
 <!-- Meta Pixel Code -->
 <script>
@@ -212,78 +57,33 @@ src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
 <!-- End Meta Pixel Code -->
 </head>
 <body>
-<div class="thanks-wrap">
+<main class="thanks-wrap">
   <div class="thanks-inner">
     <img src="assets/logo-ff-dark.png" alt="Felipe Fukai" class="thanks-logo" width="480" height="377" />
-    <span class="thanks-eyebrow">WELCOME TO WAITLIST</span>
-    <h1 class="thanks-h1">ご登録ありがとうございます。</h1>
-    <p class="thanks-lead">
-      あなたは UNIÃO Founding Member 100名の候補リストに入りました。<br />
-      11月27日(ブラックフライデー)のローンチまでの間、Felipe からの直接メッセージと、<br />
-      UNIÃO の中身プレビューをお届けします。
-    </p>
+    <p class="thanks-done">登録が完了しました</p>
+    <h1 class="thanks-h1">事前登録ありがとうございます。</h1>
+    <p class="thanks-lead">次回の徹底解説は、<strong>登録いただいたメールアドレス</strong>へお送りします。</p>
+    <p class="thanks-lead">UNIÃO オープンまで、登録者限定でトレーニングの解説を先行公開していきます。</p>
 
-    <div class="thanks-benefits">
-      <h3>あなたが得た 4つの権利</h3>
-      <ul>
-        <li>Waitlist 限定価格・生涯ロック適用権(価格は 11/23 のライブで先行公開)</li>
-        <li>11/26(木) 10:00 24時間先行購入枠</li>
-        <li>11/23(月) Q&Aライブ #0 限定視聴</li>
-        <li>Founding Member 100名枠への応募権</li>
-      </ul>
-    </div>
+    <section class="thanks-next">
+      <h2>次の動画を待つ間に</h2>
+      <p>Instagram・YouTube では、1分ほどでトレーニングに活かせるアドバイスを発信しています。フォーム、重量設定、種目選びなど、次のトレーニングからすぐ使える内容です。</p>
 
-    <div class="thanks-price">
-      <span class="thanks-price-label">MEMBER PRICING — 登録者限定公開</span>
-      <h3>UNIÃO の参加価格</h3>
-      <div class="thanks-tier thanks-tier-1">
-        <span class="thanks-tier-tag">先着20名限定</span>
-        <span class="thanks-tier-name">FOUNDING MEMBER</span>
-        <span class="thanks-tier-amt">¥5,500<small>/月相当</small></span>
-        <span class="thanks-tier-sub">年額 ¥66,000 ※年払いのみ・先着50名とは別枠</span>
-      </div>
-      <div class="thanks-tier thanks-tier-2">
-        <span class="thanks-tier-tag">先着50名</span>
-        <span class="thanks-tier-amt">¥6,980<small>/月</small></span>
-      </div>
-      <div class="thanks-tier thanks-tier-3">
-        <span class="thanks-tier-tag">51名以降</span>
-        <span class="thanks-tier-sub">通常価格</span>
-        <span class="thanks-tier-amt">¥7,980<small>/月</small></span>
-      </div>
-      <p>登録者が増えるにつれて、参加価格も段階的に上がります。事前登録者から順番に、11/26（木）10:00 の24時間先行購入枠でご案内します。</p>
-    </div>
+      <a class="thanks-ch thanks-ch-main" href="https://www.instagram.com/ffpro_classic_9/" target="_blank" rel="noopener">
+        <h3>INSTAGRAM</h3>
+        <p>1分で学べるトレーニング解説と、UNIÃO の最新情報、Instagram Live の案内を発信しています。</p>
+        <span>Instagram をフォローする</span>
+      </a>
 
-    <div class="thanks-video">
-      <span class="thanks-video-label">COMMUNITY PREVIEW #01 — 事前登録者限定</span>
-      <h3>ベントオーバーロー 徹底解説（13分）</h3>
-      <p>UNIÃO で全種目をこうやって解説していきます。背中に効かない理由と、負荷が逃げる瞬間。僕が大事にしている8つのポイントを、まず1本まるごとお届けします。</p>
-      <div class="thanks-video-frame">
-        <iframe src="https://www.youtube-nocookie.com/embed/vNz1KK12BYE?rel=0" title="ベントオーバーロー 徹底解説" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-      </div>
-      <a href="https://youtu.be/vNz1KK12BYE" target="_blank" rel="noopener" class="thanks-link">YouTube で開く</a>
-    </div>
+      <a class="thanks-ch thanks-ch-sub" href="https://www.youtube.com/@fe.fukai2025?sub_confirmation=1" target="_blank" rel="noopener">
+        <h3>YOUTUBE</h3>
+        <p>短時間で学べる解説から、より詳しい徹底解説まで公開しています。</p>
+        <span>YouTube をチャンネル登録する</span>
+      </a>
+    </section>
 
-    <div class="thanks-channel">
-      <span class="thanks-channel-label">NEXT STEP — 必ずご参加ください</span>
-      <h3>Instagram チャンネル「UNIÃO」に参加して、新情報を待つ</h3>
-      <p>ローンチまでの新情報は、すべてこのチャンネルで発信します。Felipe からの直接メッセージ、UNIÃO 準備の裏側、Q&Aライブ #0 や先行購入の案内も、まずここに届きます。</p>
-      <a href="https://www.instagram.com/channel/1ZZUqmmWjPWNe0Y3/" target="_blank" rel="noopener" class="thanks-link thanks-link-channel">「UNIÃO」チャンネルに参加する</a>
-      <p class="thanks-channel-note">※ 参加するには、Felipe の Instagram アカウントのフォローが必要です。</p>
-    </div>
-
-    <div class="thanks-mail">
-      <h3>大事なリンクは、メールでもお届けします</h3>
-      <p>Q&Aライブ #0 の視聴リンク(11/23)と 24時間先行購入リンク(11/26)は、チャンネルに加えて、ご登録のメールアドレスにもお送りします。</p>
-      <p><small>※ 届かない場合は、迷惑メールフォルダもご確認ください。</small></p>
-    </div>
-
-    <div class="thanks-actions">
-      <a href="https://www.instagram.com/ffpro_classic_9/" target="_blank" rel="noopener" class="thanks-link">Instagram をフォロー</a>
-      <a href="https://www.youtube.com/@fe.fukai2025" target="_blank" rel="noopener" class="thanks-link">YouTube を見る</a>
-      <a href="/" class="thanks-link">トップに戻る</a>
-    </div>
+    <p class="thanks-foot">次回の徹底解説はメールでお届けします。<small>※ メールが届かない場合は、迷惑メールフォルダもご確認ください。</small><small><a href="/">トップに戻る</a></small></p>
   </div>
-</div>
+</main>
 </body>
 </html>
