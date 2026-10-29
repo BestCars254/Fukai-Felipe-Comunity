@@ -20,13 +20,15 @@
 <style>
 .go { background: var(--ff-black); color: var(--ff-white); }
 .go-wrap { max-width: 680px; margin: 0 auto; padding: 0 20px; }
-.go-top { display: flex; align-items: center; justify-content: space-between; padding: 18px 0 6px; }
-.go-top img { width: 92px; height: auto; }
+.go-top { display: flex; align-items: center; justify-content: space-between; padding: 12px 0 0; }
+.go-top img { width: 72px; height: auto; }
 .go-top span { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 0.18em; color: var(--ff-white-dim); }
 
-.go-hero { padding: 18px 0 8px; }
-.go-hero h1 { font-weight: 900; font-size: clamp(27px, 7.4vw, 46px); line-height: 1.22; margin: 0; letter-spacing: -0.01em; }
-.go-free { font-size: 13px; font-weight: 700; letter-spacing: 0.1em; color: var(--kagayaki-gold); margin: 0 0 10px; }
+.go-hero { padding: 10px 0 8px; }
+.go-hero h1 { font-weight: 900; font-size: clamp(25px, 6.9vw, 44px); line-height: 1.2; margin: 0; letter-spacing: -0.01em; }
+.go-badges { display: flex; gap: 6px; margin: 0 0 6px; }
+.go-badges span { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; color: #16110F; background: var(--kagayaki-gold); padding: 4px 10px; border-radius: 999px; }
+.go-open { font-size: 11px; letter-spacing: 0.04em; color: var(--ff-white-dim); margin: 0 0 8px; }
 .go-title { font-size: 15px; font-weight: 700; color: rgba(255,255,255,0.85); margin: 0 0 2px; }
 .go-by { font-size: 12px; color: var(--ff-white-muted); margin: 0 0 16px; }
 .go-hero p { font-size: 15px; line-height: 1.8; color: rgba(255,255,255,0.78); margin: 0 0 16px; }
@@ -114,14 +116,14 @@
 .go-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px)); background: rgba(14,11,10,0.92); backdrop-filter: blur(8px); border-top: 1px solid var(--gray-line); transform: translateY(110%); transition: transform 0.25s ease; }
 .go-bar.show { transform: none; }
 .go-bar a { display: block; text-align: center; background: var(--laurel-red); color: var(--ff-white); font-weight: 700; font-size: 15px; padding: 14px; border-radius: 4px; text-decoration: none; }
-.go-sub { font-size: 15px; line-height: 1.75; color: rgba(255,255,255,0.86); margin: 10px 0 14px; }
-.go-cred { display: flex; align-items: center; gap: 12px; margin: 0 0 14px; }
-.go-cred img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; object-position: 50% 20%; border: 2px solid var(--kagayaki-gold); }
+.go-sub { font-size: 14px; line-height: 1.65; color: rgba(255,255,255,0.86); margin: 8px 0 10px; }
+.go-cred { display: flex; align-items: center; gap: 10px; margin: 0 0 10px; }
+.go-cred img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; object-position: 50% 20%; border: 2px solid var(--kagayaki-gold); }
 .go-cred b { display: block; font-size: 15px; color: var(--ff-white); }
 .go-cred span { display: block; font-size: 12px; line-height: 1.5; color: var(--kagayaki-gold); font-weight: 700; }
 .go-cred span + span { color: var(--ff-white-muted); font-weight: 500; }
-.go-poster { position: relative; border-radius: 6px; overflow: hidden; margin: 0 0 14px; box-shadow: 0 14px 40px rgba(0,0,0,0.6); }
-.go-poster img { display: block; width: 100%; height: auto; }
+.go-poster { position: relative; border-radius: 6px; overflow: hidden; margin: 0 0 10px; box-shadow: 0 14px 40px rgba(0,0,0,0.6); aspect-ratio: 2 / 1; }
+.go-poster img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
 .go-poster-lock { position: absolute; right: 10px; bottom: 10px; background: rgba(14,11,10,0.9); color: var(--ff-white); font-size: 12px; font-weight: 700; padding: 6px 10px; border-radius: 999px; border: 1px solid var(--kagayaki-gold); }
 .go-hero-form .go-form { gap: 8px; }
 .go-trust { display: flex; flex-wrap: wrap; gap: 6px 14px; list-style: none; margin: 10px 0 0; padding: 0; }
@@ -136,10 +138,11 @@
 .go-why-num b { display: block; font-family: 'Barlow Condensed', sans-serif; font-size: 56px; font-weight: 700; line-height: 1; color: var(--kagayaki-gold); }
 .go-why-num b small { font-size: 20px; font-family: 'Noto Sans JP', sans-serif; margin-left: 4px; }
 .go-why-num span { display: block; font-size: 12px; color: var(--ff-white-dim); margin-top: 4px; }
-.go-outcomes li.veil { color: var(--ff-white-dim); filter: blur(2.5px); user-select: none; }
+.go-outcomes li.lock { color: var(--ff-white-dim); }
+.go-outcomes li.lock::before { content: "🔒"; font-size: 15px; color: inherit; }
 .go-get-more { font-size: 14px; font-weight: 700; color: var(--kagayaki-gold); margin: 10px 0 14px; }
 .go-limited { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; color: var(--ff-white); background: var(--laurel-red); padding: 6px 12px; border-radius: 4px; margin: 0 0 12px; }
-.go-next-wrap { margin: 24px 0 0; padding-top: 18px; border-top: 1px solid var(--gray-line); }
+.go-next-wrap { margin: 0 0 18px; }
 .go-offer-s { font-size: 13px; line-height: 1.8; color: var(--ff-white-muted); margin: 16px 0 0; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 @media (min-width: 720px) { .go-top { padding-top: 28px; } .go-top img { width: 116px; } .go-hero { padding-top: 28px; } }
@@ -173,7 +176,8 @@ src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
   </header>
 
   <section class="go-hero">
-    <p class="go-free">無料｜登録後すぐ視聴｜13分</p>
+    <p class="go-badges"><span>無料</span><span>13分</span><span>すぐ視聴</span></p>
+    <p class="go-open">11/27 UNIÃO OPEN｜事前登録者限定で先行公開中</p>
     <h1 class="go-h1">重量は伸びる。<br />でも、身体が変わらない。</h1>
     <p class="go-sub">あなたのベントオーバーローに「狙った背中へ負荷が乗らない原因」がないか、IFBB PRO 深井フェリペが13分で解説。</p>
     <div class="go-cred">
@@ -195,7 +199,7 @@ src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
         <label><span class="sr-only">メールアドレス</span><input type="email" name="email" required autocomplete="email" inputmode="email" placeholder="メールアドレス" /></label>
         <button type="submit" class="cta">13分の無料動画を見る</button>
       </form>
-      <ul class="go-trust"><li>無料</li><li>30秒で登録</li><li>登録後すぐ再生</li><li>クレジットカード不要</li></ul>
+      <ul class="go-trust"><li>無料</li><li>30秒で完了</li><li>登録後すぐ再生</li><li>クレジットカード不要</li></ul>
     </div>
   </section>
 
@@ -231,7 +235,7 @@ src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
   </section>
 
   <section class="go-cause">
-    <h2 class="go-h2">重量が伸びても、身体が変わらない3つの理由</h2>
+    <h2 class="go-h2">重量が伸びても身体が変わらない人が、見落としやすい3つのポイント</h2>
     <div class="go-cause-item"><h3>骨格</h3><p>腕の長さ、肩幅、股関節の形で「効く軌道」は人によって違う。トップ選手の真似が、あなたには合っていないことがある。</p></div>
     <div class="go-cause-item"><h3>筋肉の走行</h3><p>広背筋は腕から骨盤へ斜めに走る。その線から外れた引き方は、負荷が僧帽筋と腕に逃げる。</p></div>
     <div class="go-cause-item"><h3>マシンの構造</h3><p>支点、シートの高さ、ハンドルの角度。マシンの軌道と自分の軌道が合わなければ、狙った筋肉には届かない。</p></div>
@@ -244,27 +248,21 @@ src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
       <li>広背筋ではなく、脊柱起立筋や腕で代償していないか</li>
       <li>動作中に上体が起きて、負荷が逃げていないか</li>
       <li>自分の骨格に、グリップ幅と握る位置が合っているか</li>
-      <li class="veil">ヒップヒンジが崩れる原因は、ハムか、ラットパッキングか</li>
-      <li class="veil">腰が先に疲れるのは、重量・角度・体幹・持久力のどれか</li>
+      <li class="lock">ヒップヒンジが崩れる原因</li>
+      <li class="lock">腰が先に疲れる理由</li>
+      <li class="lock">チーティングの1回は同じ刺激か</li>
+      <li class="lock">グリップと肘の軌道</li>
+      <li class="lock">メニューのどこに入れるか</li>
     </ol>
-    <p class="go-get-more">＋ 残り5項目を、13分で解説</p>
+    <p class="go-get-more">＋ 残り5項目は、13分の動画で解説</p>
     <p class="go-get-p">8つとも「できている」なら、重量を足していい。1つでも引っかかるなら、そこが伸びなかった理由です。</p>
   </section>
 
   <section class="go-cta" id="register">
     <p class="go-limited">UNIÃO OPEN（11/27）まで、登録者限定で先行公開中</p>
-    <h2>無料登録して、<br />自分のベントオーバーローを確認する</h2>
-    <p>登録した直後の画面で、すぐに再生できます。</p>
-    <form name="uniao-waitlist" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="go-form" action="/thanks.html">
-        <input type="hidden" name="form-name" value="uniao-waitlist" />
-        <input type="hidden" name="source" value="meta-go-bottom" />
-        <p class="hidden-honeypot"><label>Don't fill this out: <input name="bot-field" /></label></p>
-        <label><span class="sr-only">メールアドレス</span><input type="email" name="email" required autocomplete="email" inputmode="email" placeholder="メールアドレス" /></label>
-        <button type="submit" class="cta">無料登録して、自分のフォームを確認する</button>
-      </form>
-    <ul class="go-trust"><li>無料</li><li>30秒で登録</li><li>登録後すぐ再生</li><li>クレジットカード不要</li></ul>
+    <h2>今登録すると、13分の動画に加えて<br />次の解説も順次受け取れます</h2>
     <div class="go-next-wrap">
-      <p class="go-h2">登録者限定で、次の解説も順次公開</p>
+      <p class="go-h2">次回公開予定</p>
       <ul class="go-next">
         <li>クローズグリップ ラットプル</li>
         <li>シングルアーム ハイロウ</li>
@@ -272,6 +270,14 @@ src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
         <li class="soon">以降、毎週1本</li>
       </ul>
     </div>
+    <form name="uniao-waitlist" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="go-form" action="/thanks.html">
+        <input type="hidden" name="form-name" value="uniao-waitlist" />
+        <input type="hidden" name="source" value="meta-go-bottom" />
+        <p class="hidden-honeypot"><label>Don't fill this out: <input name="bot-field" /></label></p>
+        <label><span class="sr-only">メールアドレス</span><input type="email" name="email" required autocomplete="email" inputmode="email" placeholder="メールアドレス" /></label>
+        <button type="submit" class="cta">13分の無料動画を見る</button>
+      </form>
+    <ul class="go-trust"><li>無料</li><li>30秒で完了</li><li>登録後すぐ再生</li><li>クレジットカード不要</li></ul>
     <p class="go-offer-s">事前登録者には、一般公開より先に UNIÃO への参加案内をお送りします。先着枠と参加条件は、登録者だけにご案内します。</p>
   </section>
 
@@ -324,15 +330,17 @@ src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
     })();
     if (bar && cta) {
       bar.querySelector('a').addEventListener('click', function (e) { e.preventDefault(); cta.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
-      var ctaVisible = false;
+      var ctaVisible = false, heroFormVisible = true;
+      var heroForm = document.querySelector('.go-hero-form');
       function update() {
-        var show = window.scrollY > 200 && !ctaVisible;
+        var show = !heroFormVisible && !ctaVisible;
         bar.classList.toggle('show', show);
         bar.setAttribute('aria-hidden', show ? 'false' : 'true');
       }
       if ('IntersectionObserver' in window) {
         new IntersectionObserver(function (es) { ctaVisible = es[0].isIntersecting; update(); }, { threshold: 0.1 }).observe(cta);
-      }
+        if (heroForm) new IntersectionObserver(function (es) { heroFormVisible = es[0].isIntersecting; update(); }, { threshold: 0 }).observe(heroForm);
+      } else { heroFormVisible = false; }
       window.addEventListener('scroll', update, { passive: true });
       update();
     }
