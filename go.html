@@ -31,30 +31,42 @@
 .go-title { font-size: 15px; font-weight: 700; color: rgba(255,255,255,0.85); margin: 0 0 2px; }
 .go-by { font-size: 12px; color: var(--ff-white-muted); margin: 0 0 16px; }
 .go-hero p { font-size: 15px; line-height: 1.8; color: rgba(255,255,255,0.78); margin: 0 0 16px; }
-.go-video { display: block; position: relative; width: 100%; padding: 0; padding-top: 56.25%; background: #000; border: 0; border-radius: 6px; overflow: hidden; box-shadow: 0 18px 50px rgba(0,0,0,0.6); cursor: pointer; }
-.go-video img, .go-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; object-fit: cover; }
-.go-video:focus-visible { outline: 2px solid var(--kagayaki-gold); outline-offset: 3px; }
-.go-video-wrap { position: relative; }
-.go-gate { position: absolute; inset: 0; z-index: 2; display: flex; flex-direction: column; justify-content: center; padding: 16px 18px; background: rgba(14,11,10,0.94); border-radius: 6px; text-align: center; }
-.go-gate[hidden] { display: none; }
-.go-gate-h { font-size: clamp(16px, 4.6vw, 20px); font-weight: 900; color: var(--ff-white); margin: 0 0 6px; }
-.go-gate-p { font-size: 12px; line-height: 1.6; color: var(--ff-white-muted); margin: 0 0 10px; }
-.go-gate-n { font-size: 11px; color: var(--ff-white-dim); margin: 8px 0 0; }
-.go-form-gate { gap: 8px; }
-.go-form-gate input[type="email"] { padding: 12px 14px; font-size: 15px; }
-.go-form-gate .cta { padding: 13px 16px; font-size: 15px; }
-@media (max-width: 420px) { .go-gate-p { display: none; } }
-.go-h2-n { font-weight: 500; letter-spacing: 0; color: var(--ff-white-dim); font-size: 12px; }
-.go-toc li.lock { color: var(--ff-white-muted); }
-.go-toc li.lock::after { content: "🔒"; font-size: 13px; margin-left: 6px; }
 .go-under { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--ff-white-dim); margin-top: 10px; }
 .go-under a { color: var(--ff-white-dim); text-decoration: underline; font-size: 11px; }
 
-.go-toc { padding: 28px 0 8px; }
 .go-h2 { font-size: 13px; letter-spacing: 0.16em; color: var(--kagayaki-gold); font-weight: 700; margin: 0 0 12px; }
-.go-toc ol { list-style: none; margin: 0; padding: 0; counter-reset: ch; border-top: 1px solid var(--gray-line); }
-.go-toc li { counter-increment: ch; display: grid; grid-template-columns: 44px 1fr; align-items: baseline; gap: 10px; padding: 12px 0; border-bottom: 1px solid var(--gray-line); font-size: 15px; line-height: 1.5; }
-.go-toc li::before { content: counter(ch, decimal-leading-zero); font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 700; color: var(--laurel-red-hover); }
+.go-mirror { padding: 26px 0 6px; }
+.go-check { list-style: none; margin: 0 0 16px; padding: 0; }
+.go-check li { position: relative; padding: 10px 0 10px 34px; border-bottom: 1px solid var(--gray-line); font-size: 15px; line-height: 1.5; }
+.go-check li::before { content: ""; position: absolute; left: 0; top: 11px; width: 18px; height: 18px; border: 2px solid var(--kagayaki-gold); border-radius: 3px; }
+.go-check li::after { content: ""; position: absolute; left: 6px; top: 13px; width: 6px; height: 10px; border: solid var(--kagayaki-gold); border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.go-mirror-p { font-size: 15px; line-height: 1.85; color: var(--ff-white); font-weight: 700; margin: 0; }
+.go-cause { padding: 32px 0 8px; }
+.go-cause-item { padding: 14px 0; border-top: 1px solid var(--gray-line); }
+.go-cause-item h3 { font-size: 17px; font-weight: 900; color: var(--ff-white); margin: 0 0 6px; }
+.go-cause-item p { font-size: 14px; line-height: 1.85; color: rgba(255,255,255,0.8); margin: 0; }
+.go-cause-close { margin: 14px 0 0; padding: 16px 18px; border-left: 3px solid var(--laurel-red); font-size: 15px; line-height: 1.8; color: var(--ff-white); }
+.go-cause-close strong { color: var(--kagayaki-gold); }
+.go-get { padding: 32px 0 8px; }
+.go-get-media { position: relative; border-radius: 6px; overflow: hidden; margin: 0 0 14px; box-shadow: 0 18px 50px rgba(0,0,0,0.6); }
+.go-get-media img { display: block; width: 100%; height: auto; filter: saturate(0.85) brightness(0.8); }
+.go-get-lock { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); background: rgba(14,11,10,0.9); color: var(--ff-white); font-size: 13px; font-weight: 700; padding: 10px 16px; border-radius: 999px; border: 1px solid var(--kagayaki-gold); white-space: nowrap; }
+.go-outcomes { list-style: none; margin: 0 0 14px; padding: 0; counter-reset: oc; }
+.go-outcomes li { counter-increment: oc; display: grid; grid-template-columns: 34px 1fr; gap: 8px; padding: 10px 0; border-bottom: 1px solid var(--gray-line); font-size: 14px; line-height: 1.6; color: var(--ff-white); }
+.go-outcomes li::before { content: counter(oc, decimal-leading-zero); font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 700; color: var(--laurel-red-hover); }
+.go-get-p { font-size: 15px; line-height: 1.8; color: rgba(255,255,255,0.85); margin: 0; }
+.go-get-p strong { color: var(--kagayaki-gold); }
+.go-who { padding: 32px 0 8px; }
+.go-who-card { display: grid; grid-template-columns: 112px 1fr; gap: 16px; padding: 18px; background: var(--ff-black-soft); border: 1px solid var(--gray-line); border-radius: 8px; }
+.go-who-photo img { display: block; width: 100%; height: auto; border-radius: 6px; }
+.go-who-name { font-size: 17px; font-weight: 900; color: var(--ff-white); margin: 0 0 8px; }
+.go-who-name span { display: block; font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 0.12em; color: var(--kagayaki-gold); font-weight: 700; margin-top: 2px; }
+.go-who-body ul { list-style: none; margin: 0 0 10px; padding: 0; }
+.go-who-body li { font-size: 13px; line-height: 1.7; color: rgba(255,255,255,0.85); padding-left: 12px; position: relative; }
+.go-who-body li::before { content: ""; position: absolute; left: 0; top: 0.7em; width: 5px; height: 5px; background: var(--kagayaki-gold); transform: rotate(45deg); }
+.go-who-body > p { font-size: 13px; line-height: 1.7; color: var(--ff-white-muted); margin: 0; }
+@media (max-width: 420px) { .go-who-card { grid-template-columns: 88px 1fr; gap: 12px; padding: 14px; } }
+
 
 .go-why { margin: 32px 0 0; padding: 28px 22px; background: var(--ff-black-soft); border-left: 3px solid var(--laurel-red); }
 .go-why h2 { font-size: clamp(22px, 5.6vw, 28px); font-weight: 900; line-height: 1.35; margin: 0 0 14px; }
@@ -129,63 +141,84 @@ src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
   </header>
 
   <section class="go-hero">
-    <p class="go-free">13分の徹底解説｜冒頭は登録なしで</p>
-    <h1 class="go-h1">重量は伸びる。<br />でも、背中が変わらない。</h1>
+    <p class="go-free">無料公開｜13分の解説動画</p>
+    <h1 class="go-h1">重量は伸びる。<br />でも、身体が変わらない。</h1>
     <p class="go-sub">中級者がハマる8つの原因</p>
     <p class="go-title">ベントオーバーロー徹底解説</p>
-    <p class="go-by">現役IFBB PRO 深井フェリペによる無料徹底解説</p>
-    <div class="go-video-wrap">
-      <button type="button" class="go-video" id="go-video" aria-label="動画を再生する">
-        <picture>
-          <source srcset="/assets/go-poster.webp" type="image/webp" />
-          <img src="/assets/go-poster.jpg" alt="ベントオーバーロー 徹底解説 ― 中級者が伸びない8つの原因（13分）" width="1280" height="720" fetchpriority="high" />
-        </picture>
-      </button>
-      <div class="go-gate" id="go-gate" hidden>
-        <p class="go-gate-h">ここから先は、登録者限定です</p>
-        <p class="go-gate-p">残り約10分。ヒップヒンジ、腰の疲労、手幅、チーティング、グリップ、メニューの位置。無料登録すると、すぐに続きが見られます。</p>
-        <form name="uniao-waitlist" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="go-form go-form-gate" action="/thanks.html">
-          <input type="hidden" name="form-name" value="uniao-waitlist" />
-          <input type="hidden" name="source" value="meta-go-bentover-gate" />
-          <p class="hidden-honeypot"><label>Don't fill this out: <input name="bot-field" /></label></p>
-          <label><span class="sr-only">メールアドレス</span><input type="email" name="email" required autocomplete="email" inputmode="email" placeholder="メールアドレス" /></label>
-          <button type="submit" class="cta">無料登録して、続きを見る</button>
-        </form>
-        <p class="go-gate-n">30秒で完了・スパムなし</p>
-      </div>
-    </div>
-    <div class="go-under"><span>最初の 2分30秒 はそのまま見られます。続きは無料登録後すぐに。</span></div>
+    <p class="go-by">現役IFBB PRO 深井フェリペ</p>
   </section>
 
-  <section class="go-toc">
-    <h2 class="go-h2">この動画で話していること <span class="go-h2-n">（🔒 は登録後に公開）</span></h2>
-    <ol>
-      <li>なぜベントオーバーローなのか</li>
-      <li>中級者がやりがちなミス</li>
-      <li class="lock">ヒップヒンジが保てない人へ</li>
-      <li class="lock">腰が先に疲れて引けなくなる人へ</li>
-      <li class="lock">手の幅と、握る位置</li>
-      <li class="lock">チーティングはいつ使っていいのか</li>
-      <li class="lock">オーバーグリップか、アンダーか</li>
-      <li class="lock">メニューのどこに入れるのか</li>
-    </ol>
+  <section class="go-mirror">
+    <h2 class="go-h2">こんな人へ</h2>
+    <ul class="go-check">
+      <li>筋トレ歴 2年以上</li>
+      <li>食事も変えた</li>
+      <li>セット数も増やした</li>
+      <li>重量はちゃんと伸びている</li>
+      <li>トップ選手の動画を見て、同じフォームを真似している</li>
+    </ul>
+    <p class="go-mirror-p">それなのに、去年の写真とほとんど変わらない。<br />3つ以上当てはまるなら、この動画はあなたのために作りました。</p>
   </section>
 
   <section class="go-why">
-    <h2>重量は上がった。<br />でも、背中は変わっていない。</h2>
-    <p>もしこれが2年以上続いているなら、原因は努力の量ではないと僕は考えています。<strong>1レップの質</strong>と、もう1つ。多くの人が、自分の身体と道具を見ずにトレーニングしています。</p>
-    <ul>
-      <li>自分の骨格の弱点と強みを知らないまま、同じフォームを真似している</li>
-      <li>筋肉がどこからどこへ走っているかを無視して、「とにかく引く」</li>
-      <li>マシンの軌道や構造を見ずに、全部同じ使い方をしている</li>
-      <li>ロウで背中より先に腰が疲れる。重くなるほど上体が起きる</li>
-    </ul>
-    <p>どれか1つでも当てはまるなら、重量を足す前に見直すところがあります。この動画では、ベントオーバーローを使ってその見方を話しています。</p>
+    <h2>問題は、変わらないことではなく、<br />変わらないまま時間が過ぎること。</h2>
+    <p>週4回、1回90分。1年で約300時間。狙った筋肉に負荷が乗っていないレップは、その時間を「体力づくり」に変えてしまいます。</p>
+    <p>去年と同じ身体なら、来年も同じになりやすい。重量が伸びているぶん、腰と肩の負担だけが増えていく。</p>
+    <p>努力が足りないのではないと、僕は考えています。足りないのは <strong>1レップの質</strong>と、<strong>自分の身体を見る目</strong>です。</p>
+  </section>
+
+  <section class="go-cause">
+    <h2 class="go-h2">重量が伸びても、身体が変わらない3つの理由</h2>
+    <div class="go-cause-item"><h3>骨格</h3><p>上腕の長さ、肩幅、股関節の形で、同じ種目でも「効く軌道」は人によって違います。トップ選手の真似が、あなたの骨格には合っていないことがある。</p></div>
+    <div class="go-cause-item"><h3>筋肉の走行</h3><p>広背筋は腕から骨盤へ斜めに走っています。引く方向がその線から外れると、負荷は僧帽筋と腕に逃げる。</p></div>
+    <div class="go-cause-item"><h3>マシンの構造</h3><p>ケーブルの支点、シートの高さ、ハンドルの角度。マシンが決める軌道と自分の身体の軌道が合っていないと、どれだけ頑張っても狙った筋肉には届かない。</p></div>
+    <p class="go-cause-close">重量が伸びても身体が変わらないのは、<strong>強くなった筋肉が、狙った筋肉ではなかった</strong>から。</p>
+  </section>
+
+  <section class="go-get">
+    <h2 class="go-h2">この動画を見終わると、次のトレーニングで</h2>
+    <div class="go-get-media">
+      <picture>
+        <source srcset="/assets/go-poster.webp" type="image/webp" />
+        <img src="/assets/go-poster.jpg" alt="ベントオーバーロー 徹底解説（13分）" width="1280" height="720" loading="lazy" />
+      </picture>
+      <span class="go-get-lock">🔒 登録後すぐに再生</span>
+    </div>
+    <ol class="go-outcomes">
+      <li>なぜ最初にベントオーバーローなのか、自分の目的で説明できる</li>
+      <li>自分がどのミスをしているか、動画で見比べて特定できる</li>
+      <li>ヒップヒンジが保てない原因が「ハム」か「ラットパッキング」か切り分けられる</li>
+      <li>腰が先に疲れる理由を、重量・角度・体幹・持久力の4つで確認できる</li>
+      <li>手幅と握る位置を、上背部狙いか広背筋狙いかで決められる</li>
+      <li>チーティングを使うか使わないか、自分で判断できる</li>
+      <li>オーバーかアンダーか、肘の軌道から選べる</li>
+      <li>メニューのどこに入れるかを、厚み優先か広がり優先かで決められる</li>
+    </ol>
+    <p class="go-get-p">「正しいフォーム」を覚えるのではなく、<strong>自分の身体で判断する</strong>ための13分です。</p>
+  </section>
+
+  <section class="go-who">
+    <h2 class="go-h2">誰が話すのか</h2>
+    <div class="go-who-card">
+      <picture class="go-who-photo">
+        <source srcset="/assets/about-felipe-600.webp" type="image/webp" />
+        <img src="/assets/about-felipe-600.jpg" alt="Felipe Fukai" width="600" height="750" loading="lazy" />
+      </picture>
+      <div class="go-who-body">
+        <p class="go-who-name">深井フェリペ<span>IFBB PRO ｜ Classic Physique</span></p>
+        <ul>
+          <li>2026年 IFBB PRO カード取得。日本在住の現役プロ</li>
+          <li>2026年 TAIWAN PRO 5位。プロデビュー戦</li>
+          <li>次の目標は OLYMPIA TOP 6</li>
+        </ul>
+        <p>「僕が PRO になるまでに学んだことを、同じ場所で止まっている人に先に渡したい。」</p>
+      </div>
+    </div>
   </section>
 
   <section class="go-cta" id="register">
-    <h2>次回の徹底解説を<br />無料で受け取る</h2>
-    <p>UNIÃO オープンまで、登録者限定で毎週1本ずつ先行公開します。<br />さらに、事前登録者には一般公開より先に UNIÃO への参加案内をお送りします。</p>
+    <h2>無料登録して、<br />13分の徹底解説を受け取る</h2>
+    <p>登録した直後の画面で、すぐに再生できます。<br />UNIÃO オープンまで、登録者限定で毎週1本ずつ、同じ形式で先行公開します。</p>
     <p class="go-h2" style="margin-top:4px">次回以降の公開予定</p>
     <ul class="go-next">
       <li>クローズグリップ ラットプル</li>
@@ -202,10 +235,11 @@ src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
       <p>登録者から集めた悩みを、Felipe がライブで取り上げます。骨格、筋肉の走行、マシンの使い方。あなたの身体に合わせて、その場で解決します。</p>
     </div>
     <div class="go-offer">
-      <p>事前登録者には、<br />一般公開より先に UNIÃO への参加案内をお送りします。</p>
+      <p>UNIÃO は、種目のやり方を増やす場所ではありません。<br />「なぜそうするのか」を、自分の身体で判断できるようになる場所です。</p>
+      <p>この判断基準を持っている人と、持っていない人。<br /><b>1年後の差は、努力の量では埋まりません。</b></p>
       <p>先着20名限定で、<br /><b>1日約181円相当</b>で IFBB PRO の「トレーニングの考え方」を学べる<br /><b>FOUNDING MEMBER 枠</b>をご用意しています。</p>
       <p class="go-offer-note">※ 年払いのみ<br />※ 先着20名終了後は参加価格が段階的に上がります</p>
-      <p class="go-offer-cta">まずは無料で、<br />次回の徹底解説を受け取ってください。</p>
+      <p class="go-offer-cta">次のトレーニングを、また同じやり方でやる前に。<br />まずは無料で、13分だけ見てください。</p>
     </div>
 
     <form name="uniao-waitlist" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="go-form" action="/thanks.html">
@@ -216,7 +250,7 @@ src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
         <span class="sr-only">メールアドレス</span>
         <input type="email" name="email" required autocomplete="email" inputmode="email" placeholder="メールアドレス" />
       </label>
-      <button type="submit" class="cta">次回の徹底解説を無料で受け取る</button>
+      <button type="submit" class="cta">無料登録して、動画を受け取る</button>
     </form>
     <p class="go-note">30秒で完了<br />スパムなし・いつでも配信停止できます。</p>
   </section>
@@ -227,7 +261,7 @@ src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
   </footer>
 </div>
 
-<div class="go-bar" id="go-bar" aria-hidden="true"><a href="#register">次回の徹底解説を無料で受け取る</a></div>
+<div class="go-bar" id="go-bar" aria-hidden="true"><a href="#register">無料登録して、13分の解説を見る</a></div>
 
 <script>
   (function () {
@@ -263,38 +297,6 @@ src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
       window.addEventListener('scroll', update, { passive: true });
       update();
     }
-
-    var FREE_SECONDS = 150; // 無料で見せる秒数（章の切れ目に合わせて調整）
-    var v = document.getElementById('go-video'), gate = document.getElementById('go-gate'), player = null, gated = false;
-    function showGate() {
-      if (gated) return; gated = true;
-      try { player.pauseVideo(); } catch (e) {}
-      gate.hidden = false;
-      if (window.fbq) fbq('trackCustom', 'VideoGate', {content_name: 'go-bentover', seconds: FREE_SECONDS});
-    }
-    function startPlayer() {
-      var host = document.createElement('div'); host.id = 'go-yt';
-      v.innerHTML = ''; v.appendChild(host); v.style.cursor = 'default';
-      player = new YT.Player('go-yt', {
-        videoId: 'vNz1KK12BYE', host: 'https://www.youtube-nocookie.com',
-        playerVars: { autoplay: 1, playsinline: 1, rel: 0, modestbranding: 1, end: FREE_SECONDS, controls: 1 },
-        events: {
-          onStateChange: function (e) {
-            if (e.data === YT.PlayerState.ENDED) showGate();
-            if (e.data === YT.PlayerState.PLAYING) {
-              clearInterval(window.__goTick);
-              window.__goTick = setInterval(function () { if (player.getCurrentTime && player.getCurrentTime() >= FREE_SECONDS - 0.3) { clearInterval(window.__goTick); showGate(); } }, 250);
-            }
-          }
-        }
-      });
-      if (window.fbq) fbq('trackCustom', 'PlayVideo', {content_name: 'go-bentover'});
-    }
-    if (v) v.addEventListener('click', function () {
-      if (window.YT && YT.Player) return startPlayer();
-      window.onYouTubeIframeAPIReady = startPlayer;
-      var tag = document.createElement('script'); tag.src = 'https://www.youtube.com/iframe_api'; document.head.appendChild(tag);
-    }, { once: true });
 
     if (!window.fetch || !window.URLSearchParams) return;
     document.querySelectorAll('form.go-form').forEach(function (form) {
