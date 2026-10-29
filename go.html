@@ -383,6 +383,13 @@ src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
       update();
     }
 
+    // Tag the lead with its traffic source (meta / ig bio / other) so Netlify Forms can be split by channel.
+    try {
+      var q = new URLSearchParams(location.search);
+      var src = (q.get('utm_source') || (document.referrer.indexOf('instagram') > -1 ? 'ig' : 'direct')).toLowerCase();
+      var tag = 'go-v3-' + src + (q.get('utm_content') ? '-' + q.get('utm_content') : '');
+      document.querySelectorAll('form.go-form input[name="source"]').forEach(function (i) { i.value = tag.slice(0, 60); });
+    } catch (e) {}
     if (!window.fetch || !window.URLSearchParams) return;
     document.querySelectorAll('form.go-form').forEach(function (form) {
 
