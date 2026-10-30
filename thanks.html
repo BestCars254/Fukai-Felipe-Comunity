@@ -20,6 +20,22 @@
 .thanks-h1 { font-family: 'Noto Sans JP', sans-serif; font-weight: 900; font-size: clamp(26px, 7vw, 34px); line-height: 1.3; color: var(--ff-white); margin: 0 0 18px; }
 .thanks-lead { font-size: 15px; line-height: 1.9; color: rgba(255,255,255,0.85); margin: 0 0 12px; }
 .thanks-lead strong { color: var(--ff-white); font-weight: 700; }
+.thanks-q { margin: 24px 0 0; padding: 18px 18px 16px; background: var(--ff-black-soft); border: 1px solid var(--gray-line); border-radius: 10px; }
+.thanks-q-h { font-size: 15px; font-weight: 700; color: var(--ff-white); margin: 0 0 4px; }
+.thanks-q-p { font-size: 13px; color: var(--ff-white-muted); margin: 0 0 14px; line-height: 1.6; }
+.thanks-q label { display: block; font-size: 12px; color: var(--ff-white-muted); margin: 10px 0 6px; }
+.thanks-q select, .thanks-q textarea { width: 100%; padding: 12px 14px; background: var(--ff-black); border: 1px solid rgba(255,255,255,0.18); border-radius: 4px; color: var(--ff-white); font-family: 'Noto Sans JP', sans-serif; font-size: 15px; }
+.thanks-q select option { background: var(--ff-black); }
+.thanks-q textarea { resize: vertical; min-height: 72px; line-height: 1.6; }
+.thanks-q select:focus-visible, .thanks-q textarea:focus-visible, .thanks-chip input:focus-visible + span { outline: 2px solid var(--kagayaki-gold); outline-offset: 0; }
+.thanks-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.thanks-chip { cursor: pointer; }
+.thanks-chip input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.thanks-chip span { display: inline-block; padding: 8px 12px; border: 1px solid rgba(255,255,255,0.22); border-radius: 999px; font-size: 13px; color: var(--ff-white); }
+.thanks-chip input:checked + span { background: var(--kagayaki-gold); color: #16110F; border-color: var(--kagayaki-gold); font-weight: 700; }
+.thanks-q .cta { width: 100%; margin-top: 14px; padding: 14px; font-size: 15px; background: transparent; border: 1px solid var(--kagayaki-gold); color: var(--kagayaki-gold); }
+.thanks-q .cta:hover { background: var(--kagayaki-gold); color: #16110F; }
+.thanks-q-done { font-size: 14px; color: var(--kagayaki-gold); font-weight: 700; margin: 0; }
 .thanks-full { margin: 24px 0 0; }
 .thanks-full-h { font-size: 13px; letter-spacing: 0.16em; color: var(--kagayaki-gold); font-weight: 700; margin: 0 0 10px; }
 .thanks-full-v { position: relative; width: 100%; padding-top: 56.25%; background: #000; border-radius: 6px; overflow: hidden; }
@@ -90,6 +106,37 @@ src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
     <p class="thanks-lead">次回の徹底解説は、<strong>登録いただいたメールアドレス</strong>へお送りします。</p>
     <p class="thanks-lead">UNIÃO オープンまで、登録者限定でトレーニングの解説を先行公開していきます。</p>
 
+    <section class="thanks-q" id="profile-q">
+      <form name="uniao-profile" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" id="profile-form">
+        <input type="hidden" name="form-name" value="uniao-profile" />
+        <input type="hidden" name="email" id="profile-email" value="" />
+        <p class="hidden-honeypot"><label>Don't fill this out: <input name="bot-field" /></label></p>
+        <p class="thanks-q-h">動画を見る前に、30秒だけ教えてください（任意）</p>
+        <p class="thanks-q-p">Felipe が次に出す解説と、Instagram ライブで取り上げる悩みを決めるのに使います。</p>
+        <label for="pq-years">筋トレ歴</label>
+        <select name="training-years" id="pq-years">
+          <option value="">選択してください</option>
+          <option value="under-1yr">1年未満</option>
+          <option value="1-3yr">1〜3年</option>
+          <option value="3-5yr">3〜5年</option>
+          <option value="over-5yr">5年以上</option>
+        </select>
+        <label>伸び悩んでいる部位（複数可）</label>
+        <div class="thanks-chips">
+          <label class="thanks-chip"><input type="checkbox" name="part" value="背中" /><span>背中</span></label>
+          <label class="thanks-chip"><input type="checkbox" name="part" value="胸" /><span>胸</span></label>
+          <label class="thanks-chip"><input type="checkbox" name="part" value="肩" /><span>肩</span></label>
+          <label class="thanks-chip"><input type="checkbox" name="part" value="腕" /><span>腕</span></label>
+          <label class="thanks-chip"><input type="checkbox" name="part" value="脚" /><span>脚</span></label>
+          <label class="thanks-chip"><input type="checkbox" name="part" value="全体" /><span>全体のサイズ</span></label>
+          <label class="thanks-chip"><input type="checkbox" name="part" value="絞り" /><span>絞り・カット</span></label>
+        </div>
+        <label for="pq-concern">今いちばんの悩み</label>
+        <textarea name="concern" id="pq-concern" maxlength="300" placeholder="例：ロウで腰ばかり疲れて、背中に入る感覚がない"></textarea>
+        <button type="submit" class="cta">送信する</button>
+      </form>
+    </section>
+
     <section class="thanks-full">
       <h2 class="thanks-full-h">続きはこちら｜ベントオーバーロー 徹底解説（13分）</h2>
       <div class="thanks-full-v"><iframe src="https://www.youtube-nocookie.com/embed/vNz1KK12BYE?rel=0&modestbranding=1&playsinline=1" title="ベントオーバーロー 徹底解説" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div>
@@ -137,5 +184,20 @@ src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
     <p class="thanks-foot">次回の徹底解説はメールでお届けします。<small>※ メールが届かない場合は、迷惑メールフォルダもご確認ください。</small><small><a href="/">トップに戻る</a></small></p>
   </div>
 </main>
+<script>
+  (function () {
+    var f = document.getElementById('profile-form'); if (!f) return;
+    try { var em = sessionStorage.getItem('uniao_email'); if (em) document.getElementById('profile-email').value = em; } catch (e) {}
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var data = new FormData(f);
+      var parts = data.getAll('part'); data.delete('part'); data.set('part', parts.join('、'));
+      var btn = f.querySelector('button'); btn.disabled = true; btn.textContent = '送信中…';
+      fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(data).toString() })
+        .then(function (r) { if (!r.ok) throw new Error(r.status); document.getElementById('profile-q').innerHTML = '<p class="thanks-q-done">ありがとうございます。Felipe に届けました。</p>'; })
+        .catch(function () { btn.disabled = false; btn.textContent = '送信する'; alert('送信できませんでした。もう一度お試しください。'); });
+    });
+  })();
+</script>
 </body>
 </html>
