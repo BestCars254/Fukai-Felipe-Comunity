@@ -411,6 +411,7 @@ src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
           body: new URLSearchParams(new FormData(form)).toString()
         }).then(function (res) {
           if (!res.ok) throw new Error('HTTP ' + res.status);
+          try { sessionStorage.setItem('uniao_email', form.querySelector('input[name="email"]').value); } catch (e) {}
           window.location.href = '/thanks.html';
         }).catch(function () {
           button.disabled = false;
