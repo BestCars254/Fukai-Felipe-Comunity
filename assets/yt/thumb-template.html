@@ -3,7 +3,10 @@
 @font-face{font-family:"BC";src:url("../fonts/node_modules/@fontsource/barlow-condensed/files/barlow-condensed-latin-700-normal.woff2") format("woff2");font-weight:700}
 *{margin:0;padding:0;box-sizing:border-box}html,body{width:1280px;height:720px;overflow:hidden;background:#000}
 body{font-family:"NS",sans-serif;color:#fff;position:relative}
-.bg{position:absolute;inset:0;background:url(frame.jpg) 68% 88%/auto 124% no-repeat;filter:saturate(1.35) contrast(1.25) brightness(1.05)}
+.bg{position:absolute;inset:0;background:url(roar.jpg) 44% 28%/auto 142% no-repeat;filter:saturate(1.25) contrast(1.15)}
+.dim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,0) 72%,rgba(0,0,0,.75) 100%)}
+.face{position:absolute;left:228px;top:446px;width:126px;height:126px;border-radius:50%;background:url(facec.jpg) center/cover;border:6px solid #000;box-shadow:0 0 0 5px #ffd600,8px 8px 0 #000;transform:rotate(-4deg)}
+.face::after{content:"GYM";position:absolute;left:50%;bottom:-16px;transform:translateX(-50%);background:#ff1f1f;color:#fff;font-family:"BC",sans-serif;font-size:20px;letter-spacing:.14em;padding:2px 10px}
 .vig{position:absolute;inset:0;background:radial-gradient(80% 80% at 60% 45%,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%)}
 .stripe{position:absolute;left:-60px;top:0;width:620px;height:720px;background:linear-gradient(72deg,rgba(255,214,0,.97) 0 60%,rgba(255,214,0,0) 60.2%);}
 .stripe2{position:absolute;left:-60px;top:0;width:640px;height:720px;background:linear-gradient(72deg,transparent 0 60%,#ff1f1f 60.2% 63.2%,transparent 63.3%)}
@@ -17,11 +20,12 @@ body{font-family:"NS",sans-serif;color:#fff;position:relative}
 .pro small{display:block;font-size:22px;letter-spacing:.3em;color:#fff;text-align:right;margin-top:2px}
 .nocut{position:absolute;left:50px;bottom:40px;background:#000;color:#ffd600;font-size:30px;font-weight:900;padding:10px 20px;border:3px solid #000;box-shadow:6px 6px 0 #ff1f1f}
 </style></head><body>
-<div class="bg"></div><div class="vig"></div>
+<div class="bg"></div><div class="dim"></div><div class="vig"></div>
 <div class="stripe"></div><div class="stripe2"></div>
 <p class="k">重量は伸びる。<br>でも身体が<br>変わらない？<br><em>だったら見ろ。</em></p>
 <p class="h">UPPER<span>DAY</span></p>
 <div class="part">PART<b>__PART__</b></div>
 <p class="nocut">全部見せる｜種目・重量・判断</p>
+<div class="face"></div>
 <p class="pro">IFBB PRO<small>CLASSIC PHYSIQUE</small></p>
 </body></html>
