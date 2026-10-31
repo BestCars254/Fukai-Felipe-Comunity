@@ -1,31 +1,27 @@
 <!doctype html><html lang="ja"><head><meta charset="utf-8"><style>
 @font-face{font-family:"NS";src:url("../fonts/node_modules/@fontsource/noto-sans-jp/files/noto-sans-jp-japanese-900-normal.woff2") format("woff2");font-weight:900}
-@font-face{font-family:"NS";src:url("../fonts/node_modules/@fontsource/noto-sans-jp/files/noto-sans-jp-japanese-700-normal.woff2") format("woff2");font-weight:700}
 @font-face{font-family:"BC";src:url("../fonts/node_modules/@fontsource/barlow-condensed/files/barlow-condensed-latin-700-normal.woff2") format("woff2");font-weight:700}
-*{margin:0;padding:0;box-sizing:border-box}html,body{width:1280px;height:720px;overflow:hidden;background:#070707}
+*{margin:0;padding:0;box-sizing:border-box}html,body{width:1280px;height:720px;overflow:hidden;background:#000}
 body{font-family:"NS",sans-serif;color:#fff;position:relative}
-.bg{position:absolute;inset:0;background:url(frame.jpg) 68% 88%/auto 124% no-repeat;filter:saturate(1.1) contrast(1.08)}
-.shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,7,7,.96) 0%,rgba(7,7,7,.9) 34%,rgba(7,7,7,.35) 56%,rgba(7,7,7,.05) 80%)}
-.bar{position:absolute;left:0;top:0;width:16px;height:720px;background:#d4262e}
-.tag{position:absolute;left:64px;top:56px;background:#d4262e;font-size:26px;font-weight:900;letter-spacing:.14em;padding:10px 20px;transform:skew(-8deg)}
-.tag span{display:inline-block;transform:skew(8deg)}
-.wrap{position:absolute;left:64px;top:150px;width:760px}
-.k{font-size:40px;font-weight:900;line-height:1.2;text-shadow:0 4px 0 #000,0 8px 24px rgba(0,0,0,.9)}
-.h{margin-top:10px;font-family:"BC",sans-serif;font-size:168px;font-weight:700;line-height:.95;letter-spacing:.01em;color:#f0d26a;text-shadow:0 6px 0 #7a5a00,0 12px 30px rgba(0,0,0,.9)}
-.sub{margin-top:22px;font-size:34px;font-weight:700;color:#eee;text-shadow:0 2px 10px rgba(0,0,0,.9)}
-.part{position:absolute;right:56px;top:56px;width:190px;height:190px;border-radius:50%;background:#f0d26a;color:#111;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(8deg);box-shadow:0 14px 40px rgba(0,0,0,.6)}
-.part small{font-family:"BC",sans-serif;font-size:30px;letter-spacing:.14em;line-height:1}.part b{font-family:"BC",sans-serif;font-size:96px;line-height:1}
-.who{position:absolute;left:64px;bottom:40px;font-family:"BC",sans-serif;font-size:24px;letter-spacing:.3em;color:#cfcfcf}
-.ep{position:absolute;right:36px;bottom:34px;background:rgba(0,0,0,.8);font-family:"BC",sans-serif;font-size:26px;letter-spacing:.1em;padding:8px 16px;border-radius:6px;border:1px solid #f0d26a;color:#f0d26a}
+.bg{position:absolute;inset:0;background:url(frame.jpg) 68% 88%/auto 124% no-repeat;filter:saturate(1.35) contrast(1.25) brightness(1.05)}
+.vig{position:absolute;inset:0;background:radial-gradient(80% 80% at 60% 45%,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%)}
+.stripe{position:absolute;left:-60px;top:0;width:620px;height:720px;background:linear-gradient(72deg,rgba(255,214,0,.97) 0 60%,rgba(255,214,0,0) 60.2%);}
+.stripe2{position:absolute;left:-60px;top:0;width:640px;height:720px;background:linear-gradient(72deg,transparent 0 60%,#ff1f1f 60.2% 63.2%,transparent 63.3%)}
+.k{position:absolute;left:50px;top:48px;font-size:34px;font-weight:900;line-height:1.2;color:#000;letter-spacing:-.01em;width:300px}
+.k em{font-style:normal;background:#000;color:#ffd600;padding:0 12px;display:inline-block;line-height:1.3}
+.h{position:absolute;left:44px;top:318px;font-family:"BC",sans-serif;font-size:164px;font-weight:700;line-height:.88;letter-spacing:-.01em;color:#000;transform:skew(-6deg)}
+.h span{display:block;font-size:108px;letter-spacing:.06em}
+.part{position:absolute;right:54px;top:48px;background:#ff1f1f;color:#fff;font-family:"BC",sans-serif;font-size:60px;font-weight:700;letter-spacing:.06em;padding:8px 26px;transform:rotate(-3deg);box-shadow:8px 8px 0 #000}
+.part b{font-size:120px;line-height:.9;display:block;text-align:center}
+.pro{position:absolute;right:54px;bottom:46px;font-family:"BC",sans-serif;font-size:44px;font-weight:700;letter-spacing:.18em;color:#ffd600;text-shadow:3px 3px 0 #000,0 0 24px rgba(0,0,0,.9)}
+.pro small{display:block;font-size:22px;letter-spacing:.3em;color:#fff;text-align:right;margin-top:2px}
+.nocut{position:absolute;left:50px;bottom:40px;background:#000;color:#ffd600;font-size:30px;font-weight:900;padding:10px 20px;border:3px solid #000;box-shadow:6px 6px 0 #ff1f1f}
 </style></head><body>
-<div class="bg"></div><div class="shade"></div><div class="bar"></div>
-<p class="tag"><span>IFBB PRO が全部話す</span></p>
-<div class="wrap">
-<p class="k">プロの上半身の日、<br>ノーカット</p>
-<p class="h">UPPER DAY</p>
-<p class="sub">種目・重量・考え方まで</p>
-</div>
-<div class="part"><small>PART</small><b>__PART__</b></div>
-<p class="who">FELIPE FUKAI ｜ IFBB PRO</p>
-<p class="ep">TRAINING VLOG #01</p>
+<div class="bg"></div><div class="vig"></div>
+<div class="stripe"></div><div class="stripe2"></div>
+<p class="k">重量は伸びる。<br>でも身体が<br>変わらない？<br><em>だったら見ろ。</em></p>
+<p class="h">UPPER<span>DAY</span></p>
+<div class="part">PART<b>__PART__</b></div>
+<p class="nocut">全部見せる｜種目・重量・判断</p>
+<p class="pro">IFBB PRO<small>CLASSIC PHYSIQUE</small></p>
 </body></html>
