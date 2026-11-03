@@ -39,6 +39,17 @@
   to = "/go.html"
   status = 200
 
+# Free lesson page (J3-style: lesson unlocks on the page after email)
+[[redirects]]
+  from = "/lesson"
+  to = "/lesson.html"
+  status = 200
+
+[[redirects]]
+  from = "/lesson/"
+  to = "/lesson.html"
+  status = 200
+
 # Full UNIÃO explanation page (former top page)
 [[redirects]]
   from = "/uniao"
