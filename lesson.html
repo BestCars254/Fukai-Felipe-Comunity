@@ -103,7 +103,7 @@ fbq('track', 'ViewContent', {content_name: 'lesson-joints'});
   <!-- ===== LOCKED ===== -->
   <main id="locked">
     <p class="eyebrow">ベントオーバーロー ｜ 原因の特定</p>
-    <h1 class="h1">関節ばかり疲れて、<br /><u>狙った筋肉は</u><br /><u>効いていない。</u></h1>
+    <h1 class="h1" id="h1-locked">関節ばかり疲れて、<br /><u>狙った筋肉は</u><br /><u>効いていない。</u></h1>
     <p class="lead">腰と腕が先に疲れて、背中が変わらない。その原因は、<strong>ベントオーバーローを見れば分かります</strong>。IFBB PRO Felipe Fukai が、負荷が関節や腰に逃げる瞬間を8つのチェックで特定します。13分。</p>
 
     <div class="vid" id="vid-locked">
@@ -153,7 +153,7 @@ fbq('track', 'ViewContent', {content_name: 'lesson-joints'});
     </div>
 
     <section class="ecard">
-      <p class="in-h">OPENS THURSDAY, NOVEMBER 27</p>
+      <p class="in-h">OPENS FRIDAY, NOVEMBER 27</p>
       <h2>UNIÃO<small>IFBB PRO FELIPE FUKAI ・ TRAINING EDUCATION</small></h2>
       <p>IFBB PRO Felipe Fukai が、全種目をこのレッスンのように解説するトレーニング教育コミュニティ。毎週1本の徹底解説と、あなたのフォームへの直接の答え。</p>
       <div class="chips"><span class="on">種目解説</span><span>骨格に合わせる</span><span>プログラム</span><span>栄養</span><span>回復</span><span>大会準備</span></div>
@@ -195,6 +195,13 @@ fbq('track', 'ViewContent', {content_name: 'lesson-joints'});
     try { was = localStorage.getItem('uniao_lesson_joints') === '1'; } catch (e) {}
     if (was || q.get('unlocked') === '1') { showLesson(false); }
 
+    // Headline variant for the E2 ad (utm_content starting with "e2")
+    try {
+      if ((q.get('utm_content') || '').indexOf('e2') === 0) {
+        var h = document.getElementById('h1-locked');
+        if (h) h.innerHTML = 'その種目、<br />あなたの<u>骨格に</u><br /><u>合っていますか。</u>';
+      }
+    } catch (e) {}
     // Tag the lead with its traffic source
     try {
       var src = (q.get('utm_source') || (document.referrer.indexOf('instagram') > -1 ? 'ig' : 'direct')).toLowerCase();
