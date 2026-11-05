@@ -102,9 +102,9 @@ fbq('track', 'ViewContent', {content_name: 'lesson-joints'});
 
   <!-- ===== LOCKED ===== -->
   <main id="locked">
-    <p class="eyebrow">ベントオーバーロー ｜ 原因の特定</p>
+    <p class="eyebrow" id="eyebrow-locked">ベントオーバーロー ｜ 原因の特定</p>
     <h1 class="h1" id="h1-locked">関節ばかり疲れて、<br /><u>狙った筋肉は</u><br /><u>効いていない。</u></h1>
-    <p class="lead">腰と腕が先に疲れて、背中が変わらない。その原因は、<strong>ベントオーバーローを見れば分かります</strong>。IFBB PRO Felipe Fukai が、負荷が関節や腰に逃げる瞬間を8つのチェックで特定します。13分。</p>
+    <p class="lead" id="lead-locked">腰と腕が先に疲れて、背中が変わらない。その原因は、<strong>ベントオーバーローを見れば分かります</strong>。IFBB PRO Felipe Fukai が、負荷が関節や腰に逃げる瞬間を8つのチェックで特定します。13分。</p>
 
     <div class="vid" id="vid-locked">
       <img src="/assets/go-poster.jpg" alt="" width="1280" height="720" />
@@ -200,6 +200,15 @@ fbq('track', 'ViewContent', {content_name: 'lesson-joints'});
       if ((q.get('utm_content') || '').indexOf('e2') === 0) {
         var h = document.getElementById('h1-locked');
         if (h) h.innerHTML = 'その種目、<br />あなたの<u>骨格に</u><br /><u>合っていますか。</u>';
+      }
+    } catch (e) {}
+    // Trainer variant (utm_content starting with "t-")
+    try {
+      if ((q.get('utm_content') || '').indexOf('t-') === 0) {
+        var eb = document.getElementById('eyebrow-locked'); if (eb) eb.textContent = 'パーソナルトレーナーの方へ';
+        var h2 = document.getElementById('h1-locked'); if (h2) h2.innerHTML = 'その指導、<br /><u>根拠を</u><br /><u>説明できますか。</u>';
+        var ld = document.getElementById('lead-locked');
+        if (ld) ld.innerHTML = 'クライアントの重量は伸びた。でも身体が変わらない。「効かせて」を感覚ではなく、<strong>作用線とモーメントアームで説明できる</strong>と、指導が変わります。IFBB PRO Felipe Fukai が、ベントオーバーローを8つのチェックで分解します。13分。';
       }
     } catch (e) {}
     // Tag the lead with its traffic source
