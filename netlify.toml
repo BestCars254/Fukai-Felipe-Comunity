@@ -27,10 +27,10 @@
 # Form submissions land in: https://app.netlify.com/sites/[your-site]/forms
 # Free tier: 100 submissions/month (enough for Waitlist Phase 1)
 
-# Home and ad landing page: both serve go.html (problem-first flow)
+# Home: UNIÃO landing page (v3)
 [[redirects]]
   from = "/"
-  to = "/go.html"
+  to = "/uniao.html"
   status = 200
   force = true
 
