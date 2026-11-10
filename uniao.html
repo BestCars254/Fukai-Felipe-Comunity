@@ -123,6 +123,26 @@ body.u { overflow-x: hidden; }
 .s-hero .h1 .dim { color: rgba(255,255,255,.72); }
 .s-hero .seven li { border-bottom-color: rgba(255,255,255,.14); }
 @media (min-width: 900px) { .s-hero::before { background-position: center 22%; } }
+
+/* pricing */
+.price-h { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.price-h small { font-size: 13px; color: var(--ff-white-dim); font-weight: 400; }
+.tiers { display: grid; gap: 12px; margin: 18px 0 14px; }
+@media (min-width: 640px) { .tiers { grid-template-columns: 1fr 1fr 1fr; } }
+.tier { background: var(--ff-black-soft); border: 1px solid var(--gray-line); border-radius: 12px; padding: 22px 18px; text-align: center; position: relative; }
+.tier.f { border-color: var(--kagayaki-gold); box-shadow: 0 0 0 1px rgba(212,169,79,.25), 0 14px 40px rgba(0,0,0,.5); }
+.tier .n { font-family: 'Barlow Condensed', sans-serif; font-size: 15px; letter-spacing: 0.22em; color: var(--ff-white-muted); font-weight: 700; margin: 0 0 10px; }
+.tier.f .n { color: var(--kagayaki-gold); }
+.tier .p { font-family: 'Barlow Condensed', sans-serif; font-size: 48px; font-weight: 700; line-height: 1; margin: 0; letter-spacing: -0.01em; }
+.tier.f .p { color: var(--kagayaki-gold); }
+.tier .p small { font-family: 'Noto Sans JP', sans-serif; font-size: 15px; font-weight: 700; margin-left: 4px; color: var(--ff-white-muted); }
+.tier .per { font-size: 12px; color: var(--ff-white-muted); margin: 8px 0 12px; }
+.tier .lim { display: inline-block; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 999px; background: rgba(255,255,255,.1); }
+.tier.f .lim { background: var(--kagayaki-gold); color: var(--ff-black); }
+.tier.e .lim { background: var(--laurel-red); color: #fff; }
+.tier .note { font-size: 12px; color: var(--ff-white-dim); margin: 12px 0 0; line-height: 1.6; }
+.price-foot { font-size: 13px; color: var(--ff-white-muted); line-height: 1.8; margin: 0; }
+.price-foot strong { color: var(--ff-white); }
 </style>
 <!-- Meta Pixel Code -->
 <script>
@@ -169,7 +189,7 @@ fbq('track', 'ViewContent', {content_name: 'uniao-v2'});
     <p class="mark">UNIÃO</p>
     <p class="mark-sub">IFBB PRO FELIPE FUKAI ・ TRAINING EDUCATION</p>
     <button class="cta-main" type="button" data-go="register">事前登録する（無料）</button>
-    <p class="cta-note">11月27日オープン ｜ 事前登録者に先行アクセスと特典 ｜ 11月23日のライブで価格発表</p>
+    <p class="cta-note">11月27日オープン ｜ 事前登録者に先行アクセスと特典 ｜ Founder 20名 ¥66,000/年</p>
   </section>
 
   <!-- 2. 7 conditions -->
@@ -257,22 +277,35 @@ fbq('track', 'ViewContent', {content_name: 'uniao-v2'});
     <h2 class="h2">11月27日、オープン。</h2>
     <ul class="sched">
       <li class="now"><b>NOW</b><span>事前登録受付中（無料）。登録者には全てを先にお知らせします</span></li>
-      <li><b>11.23</b><span>Instagram ライブで価格発表。質問に全部答えます</span></li>
+      <li><b>11.23</b><span>Instagram ライブ。質問に全部答えます</span></li>
       <li><b>11.26</b><span>事前登録者だけ先行アクセス</span></li>
       <li><b>11.27</b><span>オープン</span></li>
     </ul>
     <div class="founder">
       <p class="tag">FOUNDING MEMBER</p>
       <h3><b>20</b>名限定</h3>
-      <p>事前登録者から先着。僕による身体評価、優先 Q&amp;A、FOUNDER バッジ、全コンテンツへの最速アクセス。価格は 11月23日のライブで。</p>
+      <p>事前登録者から先着。僕による身体評価、優先 Q&amp;A、FOUNDER バッジ、全コンテンツへの最速アクセス。¥66,000/年、一生この価格。</p>
     </div>
+  </section>
+
+
+  <!-- 6b. Pricing -->
+  <section class="s" id="price">
+    <p class="eyebrow">MEMBERSHIP</p>
+    <h2 class="h2 price-h">メンバー価格 <small>早いほど、安い（すべて税込）</small></h2>
+    <div class="tiers">
+      <div class="tier f"><p class="n">FOUNDER</p><p class="p">¥66,000<small>/年</small></p><p class="per">月換算 ¥5,500 ・ 1日約181円</p><span class="lim">20名限定</span><p class="note">創設メンバー。一生この価格。<br />僕による身体評価、優先 Q&amp;A、FOUNDER バッジ</p></div>
+      <div class="tier e"><p class="n">初期メンバー</p><p class="p">¥6,980<small>/月</small></p><p class="per">いつでも解約可</p><span class="lim">50名限定</span><p class="note">21〜70人目までこの価格</p></div>
+      <div class="tier"><p class="n">通常メンバー</p><p class="p">¥7,980<small>/月</small></p><p class="per">年払い ¥83,760（月換算 ¥6,980）</p><span class="lim">無制限</span><p class="note">71人目以降はこの価格</p></div>
+    </div>
+    <p class="price-foot">動画・講座・フォーム記録・Q&amp;A ライブ、全部含まれます。追加料金はありません。<strong>事前登録者には 11月26日に先行アクセス</strong>。Founder 20名は、その先着で埋まります。</p>
   </section>
 
   <!-- 7. Register -->
   <section class="s" id="register">
     <p class="eyebrow">PRE-REGISTRATION</p>
     <h2 class="h2">まず、事前登録を。</h2>
-    <p class="lead">11月23日の価格発表、11月26日の先行アクセス、Founder 20名の案内。全部、登録した人に先に届きます。</p>
+    <p class="lead">11月26日の先行アクセスと、Founder 20名の案内。全部、登録した人に先に届きます。</p>
     <form name="uniao-waitlist" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="u-form" action="/thanks.html">
       <input type="hidden" name="form-name" value="uniao-waitlist" />
       <input type="hidden" name="source" value="uniao-v2" />
