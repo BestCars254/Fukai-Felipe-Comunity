@@ -143,6 +143,29 @@ body.u { overflow-x: hidden; }
 .tier .note { font-size: 12px; color: var(--ff-white-dim); margin: 12px 0 0; line-height: 1.6; }
 .price-foot { font-size: 13px; color: var(--ff-white-muted); line-height: 1.8; margin: 0; }
 .price-foot strong { color: var(--ff-white); }
+
+.pre { font-size: 17px; font-weight: 700; line-height: 1.9; margin: 0 0 22px; color: rgba(255,255,255,.9); }
+.pre .q { display: block; margin-top: 10px; color: var(--kagayaki-gold); }
+.h1 .dim { font-size: 0.62em; white-space: nowrap; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.pain { list-style: none; margin: 0; padding: 0; }
+.pain li { padding: 13px 0 13px 32px; border-bottom: 1px solid var(--gray-line); position: relative; font-size: 15px; font-weight: 700; line-height: 1.6; }
+.pain li::before { content: ""; position: absolute; left: 0; top: 17px; width: 16px; height: 16px; border: 2px solid rgba(255,255,255,.45); border-radius: 3px; }
+.lines { font-size: 16px; font-weight: 700; line-height: 2; margin: 0 0 16px; }
+.lines .x { color: var(--ff-white-muted); text-decoration: line-through; text-decoration-color: var(--laurel-red-hover); }
+.seven2 { list-style: none; margin: 0 0 20px; padding: 0; }
+.seven2 li { padding: 16px 0; border-bottom: 1px solid var(--gray-line); display: grid; grid-template-columns: 40px 1fr; gap: 0 12px; align-items: baseline; }
+.seven2 b { font-family: 'Barlow Condensed', sans-serif; font-size: 24px; color: var(--laurel-red-hover); }
+.seven2 strong { font-size: 19px; font-weight: 900; display: block; }
+.seven2 span { font-size: 14px; color: rgba(255,255,255,.8); line-height: 1.7; }
+.vid { position: relative; width: 100%; aspect-ratio: 16/9; background: #000; border-radius: 8px; overflow: hidden; margin: 18px 0 0; box-shadow: 0 14px 40px rgba(0,0,0,.6); }
+.vid iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.vid-cap { font-size: 12px; color: var(--ff-white-dim); margin: 8px 0 0; }
+.last { text-align: center; }
+.last .lines { text-align: center; font-size: 18px; }
+.last .lines em { font-style: normal; color: var(--kagayaki-gold); }
+.last .mark { margin-top: 10px; }
+.fine { font-size: 11px; color: var(--ff-white-dim); text-align: center; margin: 8px 0 0; line-height: 1.7; }
 </style>
 <!-- Meta Pixel Code -->
 <script>
@@ -172,162 +195,142 @@ fbq('track', 'ViewContent', {content_name: 'uniao-v2'});
     <span>UNIÃO ｜ 2026.11.27 OPEN</span>
   </header>
 
-  <!-- 1. HERO -->
+  <!-- HERO -->
   <section class="s band s-hero" style="padding-top:44px">
+    <p class="eyebrow">鍛えているのに、なぜデカくならない？</p>
+    <p class="pre">重量は伸びている。<br />毎回、本気で追い込んでいる。<br />それなのに、身体が思うように変わらない。<span class="q">その原因、説明できますか？</span></p>
     <h1 class="h1"><span class="dim">筋トレを学びたいんじゃない。</span><em>デカくなりたい。</em></h1>
-    <p class="hero-for">そのために必要な、</p>
-    <ul class="seven">
-      <li><b>01</b>種目選択</li>
-      <li><b>02</b>フォーム</li>
-      <li><b>03</b>重量設定</li>
-      <li><b>04</b>レップ</li>
-      <li><b>05</b>強度</li>
-      <li><b>06</b>プログラム設計</li>
-      <li><b>07</b>回復</li>
-    </ul>
-    <p class="hero-sub">筋肉を成長させるために覚えるべきことを、<br /><strong>現役 IFBB PRO</strong> が徹底解説。</p>
+    <p class="hero-sub">現役 IFBB PRO Felipe Fukai から、<br />筋肉を成長させるための<strong>トレーニング技術と判断力</strong>を学ぶ。</p>
     <p class="mark">UNIÃO</p>
-    <p class="mark-sub">IFBB PRO FELIPE FUKAI ・ TRAINING EDUCATION</p>
-    <button class="cta-main" type="button" data-go="register">事前登録する（無料）</button>
-    <p class="cta-note">11月27日オープン ｜ 事前登録者に先行アクセスと特典 ｜ Founder 20名 ¥66,000/年</p>
+    <p class="mark-sub">2026.11.27 OPEN</p>
+    <button class="cta-main" type="button" data-go="register">無料で事前登録する</button>
+    <p class="cta-note">登録無料・決済不要 ｜ 事前登録者に先行案内</p>
   </section>
 
-  <!-- 2. 7 conditions -->
+  <!-- 01 -->
   <section class="s">
-    <p class="eyebrow">WHY YOU ARE NOT GROWING</p>
-    <h2 class="h2">デカくならない理由は、<br />この7つのどこかにある。</h2>
-    <p class="lead">才能でも、努力の量でもないと僕は考えています。7つのうち1つでも知らないままだと、重量は伸びても身体は変わらない。</p>
-    <ol class="cond">
-      <li><b>01</b><div><h3>種目選択</h3><p class="x">王道の種目を、自分の骨格に合わないまま続けている</p><p class="o">自分の骨格と狙いに合う種目の選び方。合わないときに何へ変えるか</p></div></li>
-      <li><b>02</b><div><h3>フォーム</h3><p class="x">重量は伸びるのに狙った筋肉が変わらない。負荷が関節と腰に逃げている</p><p class="o">作用線・固定・可動域・テンポ。全種目を START → FINISH の5段階で分解する</p></div></li>
-      <li><b>03</b><div><h3>重量設定</h3><p class="x">重くするたびにフォームが崩れ、別の筋肉の種目になっている</p><p class="o">どこまで上げていいかの判断基準。重くしたとき最初に崩れる場所の見方</p></div></li>
-      <li><b>04</b><div><h3>レップ</h3><p class="x">「8〜12回」を理由なく守っている。種目の性質に合っていない</p><p class="o">なぜそのレップ数か。ストレッチ特化と収縮特化で変える理由</p></div></li>
-      <li><b>05</b><div><h3>強度</h3><p class="x">毎セット限界まで。回復が追いつかず、出力が落ちていく</p><p class="o">RIR の使い方。限界まで行く種目と、手前で止める種目の区別</p></div></li>
-      <li><b>06</b><div><h3>プログラム設計</h3><p class="x">好きな種目から始める。疲れた状態で一番大事な種目をやっている</p><p class="o">序盤・中盤・終盤に何を置くか。種目の前後関係と、週の組み方</p></div></li>
-      <li><b>07</b><div><h3>回復</h3><p class="x">追い込むほど伸びると思っている</p><p class="o">疲労管理。神経疲労と筋疲労の違い、ボリュームと回復の設計</p></div></li>
+    <p class="eyebrow">01</p>
+    <h2 class="h2">こんな悩み、ありませんか？</h2>
+    <ul class="pain">
+      <li>何年も鍛えているのに、身体が変わらない。</li>
+      <li>胸や背中など、特定の部位が成長しない。</li>
+      <li>限界まで追い込んでいるのに、結果が出ない。</li>
+      <li>情報が多すぎて、何が正しいのかわからない。</li>
+      <li>もっとデカくなりたい。でも、何を変えればいいかわからない。</li>
+    </ul>
+  </section>
+
+  <!-- 02 -->
+  <section class="s">
+    <p class="eyebrow">02</p>
+    <h2 class="h2">デカくならない理由は、<br />努力不足だけじゃない。</h2>
+    <p class="lines"><span class="x">重量を増やす。</span><br /><span class="x">セット数を増やす。</span><br /><span class="x">限界まで追い込む。</span></p>
+    <p class="lead">それだけでは解決しないことがあります。</p>
+    <p class="lead"><strong>種目、フォーム、強度、プログラム、回復。</strong><br />そのどこに問題があるのか。原因を考えられなければ、何を変えるべきかもわからない。</p>
+    <p class="lead">だからこそ、トレーニングを理解することが必要です。</p>
+  </section>
+
+  <!-- 03 -->
+  <section class="s">
+    <p class="eyebrow">03</p>
+    <h2 class="h2">UNIÃO で学ぶ、<br />筋肉を成長させる7つの要素。</h2>
+    <ol class="seven2">
+      <li><b>01</b><div><strong>種目選択</strong><span>なぜ、その種目を選ぶのか。</span></div></li>
+      <li><b>02</b><div><strong>フォーム</strong><span>どう動けば、狙った筋肉に負荷をかけられるのか。</span></div></li>
+      <li><b>03</b><div><strong>重量設定</strong><span>いつ重量を増やすべきなのか。</span></div></li>
+      <li><b>04</b><div><strong>レップ</strong><span>なぜ、その回数なのか。</span></div></li>
+      <li><b>05</b><div><strong>強度</strong><span>どこまで追い込むべきなのか。</span></div></li>
+      <li><b>06</b><div><strong>プログラム設計</strong><span>何を、どの順番で、何セット行うのか。</span></div></li>
+      <li><b>07</b><div><strong>回復</strong><span>成長するために、どれだけ休むべきなのか。</span></div></li>
     </ol>
+    <p class="lead">知識を覚えるためではない。<br /><strong>自分のトレーニングに何が必要か、判断できるようになるためです。</strong></p>
   </section>
 
-  <!-- 3. Felipe -->
-  <section class="s">
-    <div class="fel">
-      <picture>
-        <source srcset="/assets/hero-felipe-800.webp" type="image/webp" />
-        <img src="/assets/hero-felipe-800.jpg" alt="IFBB PRO Felipe Fukai" width="800" height="1200" loading="lazy" />
-      </picture>
-      <div>
-        <p class="cap">IFBB PRO ・ CLASSIC PHYSIQUE</p>
-        <h2 class="h2">僕も、2年止まった。</h2>
-        <p class="lead">重量は毎月伸びていました。でも背中だけ変わらなかった。変えたのは重量ではなく、<strong>負荷がどこに乗っているかを見る判断基準</strong>です。</p>
-      </div>
-    </div>
-    <p class="quote">「僕は、重量より先に1レップの質を見ます。狙った筋肉に負荷が乗っていない1レップは、何回やっても身体を変えない。それを知ってから、身体が変わり始めました。」</p>
-    <div class="rec"><span>2026年 IFBB PRO カード取得</span><span>TAIWAN PRO 5位</span><span>日本在住・日本語で解説</span></div>
-  </section>
-
-  <!-- 4. Contents -->
+  <!-- 04 -->
   <section class="s band s-inside">
-    <p class="eyebrow">INSIDE UNIÃO</p>
-    <h2 class="h2">7つを、全種目で、<br />僕の身体で見せる。</h2>
+    <p class="eyebrow">04</p>
+    <h2 class="h2">UNIÃO では、<br />実際に何ができるのか？</h2>
     <div class="pack">
-      <div class="pk">
-        <p class="tag">毎週1本 ・ 15分</p>
-        <h3>種目の徹底解説</h3>
-        <p>1種目を10項目で分解。完成形を先に見せて、セットアップ、動作の5段階、よくある間違いと代償筋、重量を上げたときに見る場所、レップと強度、プログラムのどこに入れるか、合わない人の代替案、そして「僕なら実際どう使うか」。</p>
-        <div class="steps"><span>定義</span><span>完成形</span><span>セットアップ</span><span class="on">START</span><span class="on">ECCENTRIC</span><span class="on">TURNAROUND</span><span class="on">CONCENTRIC</span><span class="on">FINISH</span><span>間違い</span><span>重量</span><span>レップ</span><span>配置</span><span>代替</span><span>僕なら</span></div>
-        <p style="margin-top:12px;font-size:13px;color:var(--ff-white-muted)">オープン時点で10本（ベントオーバーロー、チンニング、プルオーバー、サイドレイズ、スミスショルダープレス、インクラインプレス、ほか）。以降、毎週1本。</p>
-      </div>
-      <div class="pk">
-        <p class="tag">月1章 ・ 全7章</p>
-        <h3>筋肉が成長する力学</h3>
-        <p>第1章 力の作用線 ／ 第2章 ブレーシング ／ 第3章 合力 ／ 第4章 モーメントアーム ／ 第5章 トルクとレジスタンスプロファイル ／ 第6章 ストレングスプロファイルとマッチング ／ 第7章 疲労管理。種目解説の「なぜ」を、全部ここで説明します。</p>
-      </div>
-      <div class="pk">
-        <p class="tag">毎週水曜</p>
-        <h3>あなたのフォームに、僕が直接コメント</h3>
-        <p>自分のフォーム動画を上げる「マイ・フォーム記録」。僕が見て、あなたの骨格と動きについてコメントします。1年続けると、自分の身体について IFBB PRO が書いた1年分のメモが、そこにだけ残ります。</p>
-      </div>
-      <div class="pk">
-        <p class="tag">週のリズム</p>
-        <h3>やめる日を作らない</h3>
-        <div class="week">
-          <div><b>月</b><small>今週の種目</small></div>
-          <div><b>水</b><small>フォーム<br />チェック</small></div>
-          <div><b>土</b><small>Q&amp;A<br />ライブ</small></div>
-          <div><b>日</b><small>今週の<br />1レップ</small></div>
-        </div>
-      </div>
+      <div class="pk"><p class="tag">EXERCISE</p><h3>種目の徹底解説</h3><p>1種目約10〜15分。完成形から動作を分解し、よくある間違い、重量設定、レップ、プログラムへの組み込み方まで解説。</p>
+        <div class="steps"><span>完成形</span><span>セットアップ</span><span class="on">START</span><span class="on">ECCENTRIC</span><span class="on">TURNAROUND</span><span class="on">CONCENTRIC</span><span class="on">FINISH</span><span>間違い</span><span>重量</span><span>レップ</span><span>配置</span><span>代替</span></div></div>
+      <div class="pk"><p class="tag">PRINCIPLES</p><h3>トレーニング原則・プログラム設計</h3><p>筋肥大に必要な原則を学び、自分の目的に合わせてメニューを考える。</p></div>
+      <div class="pk"><p class="tag">FORM CHECK</p><h3>Felipe によるフォームチェック</h3><p>メンバーのフォーム動画を取り上げ、PRO がどこを見て、何を修正するのかを学ぶ。</p></div>
+      <div class="pk"><p class="tag">COMMUNITY</p><h3>Q&amp;A・LIVE・コミュニティ</h3><p>学ぶ、実践する、質問する、見直す。一人では気づけないことも、学び続けられる環境をつくる。</p></div>
     </div>
+    <div class="vid"><iframe src="https://www.youtube-nocookie.com/embed/vNz1KK12BYE?rel=0&modestbranding=1&playsinline=1" title="ベントオーバーロー 徹底解説" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div>
+    <p class="vid-cap">実際の解説動画：ベントオーバーロー 徹底解説（13分）</p>
   </section>
 
-  <!-- 5. Who -->
+  <!-- 05 -->
   <section class="s">
-    <p class="eyebrow">FOR</p>
-    <h2 class="h2">こういう人のために作りました。</h2>
+    <p class="eyebrow">05</p>
+    <h2 class="h2">教えるのは、現役 IFBB PRO。</h2>
+    <div class="fel">
+      <picture><source srcset="/assets/hero-felipe-800.webp" type="image/webp" /><img src="/assets/hero-felipe-800.jpg" alt="IFBB PRO Felipe Fukai" width="800" height="1200" loading="lazy" /></picture>
+      <div><p class="cap">FELIPE FUKAI</p><div class="rec" style="margin-top:0"><span>2026 IFBB PRO カード獲得</span><span>TAIWAN PRO 5位</span></div></div>
+    </div>
+    <h3 style="font-size:22px;font-weight:900;margin:0 0 12px">僕も、2年間止まった。</h3>
+    <p class="lead">重量は伸びていた。毎回、本気でトレーニングしていた。<br />でも、背中だけは思ったように変わらなかった。</p>
+    <p class="lead">そこで変えたのは、努力の量ではなく、<strong>トレーニングの見方</strong>。<br />フォーム、種目、重量、レップ、プログラム。一つひとつを見直したことで、身体が変わり始めました。</p>
+    <p class="quote">僕が学び、実践してきたことを、UNIÃO で伝えていきます。</p>
+  </section>
+
+  <!-- 06 -->
+  <section class="s">
+    <p class="eyebrow">06</p>
+    <h2 class="h2">こんな人のために作りました。</h2>
     <ul class="who">
-      <li>3年以上やっているのに、去年と同じ身体の人<small>重量は伸びている。でも鏡が変わらない。原因は7つのどこかにあります</small></li>
-      <li>指導の「根拠」がほしいパーソナルトレーナー<small>「効かせて」を感覚ではなく、作用線とモーメントアームで説明できるようになる</small></li>
-      <li>大会を目指していて、PRO の判断基準を知りたい人<small>オフと減量期で何を変えるか。僕が実際にやっている判断を全部話します</small></li>
+      <li>1年以上鍛えているのに、成長が停滞している人。</li>
+      <li>胸・背中・肩・脚などの弱点を改善したい人。</li>
+      <li>SNS の情報を真似するだけで終わりたくない人。</li>
+      <li>大会を目指し、PRO の考え方を学びたい人。</li>
+      <li>指導力を高めたいパーソナルトレーナー。</li>
     </ul>
+    <p class="lead" style="margin-top:18px"><strong>ただ鍛えるだけではなく、理解して鍛えたい人へ。</strong></p>
   </section>
 
-  <!-- 6. Schedule + Founder -->
-  <section class="s band s-sched">
-    <p class="eyebrow">SCHEDULE</p>
-    <h2 class="h2">11月27日、オープン。</h2>
-    <ul class="sched">
-      <li class="now"><b>NOW</b><span>事前登録受付中（無料）。登録者には全てを先にお知らせします</span></li>
-      <li><b>11.23</b><span>Instagram ライブ。質問に全部答えます</span></li>
-      <li><b>11.26</b><span>事前登録者だけ先行アクセス</span></li>
-      <li><b>11.27</b><span>オープン</span></li>
-    </ul>
-    <div class="founder">
-      <p class="tag">FOUNDING MEMBER</p>
-      <h3><b>20</b>名限定</h3>
-      <p>事前登録者から先着。僕による身体評価、優先 Q&amp;A、FOUNDER バッジ、全コンテンツへの最速アクセス。¥66,000/年、一生この価格。</p>
-    </div>
-  </section>
-
-
-  <!-- 6b. Pricing -->
+  <!-- 07 -->
   <section class="s" id="price">
-    <p class="eyebrow">MEMBERSHIP</p>
-    <h2 class="h2 price-h">メンバー価格 <small>早いほど、安い（すべて税込）</small></h2>
+    <p class="eyebrow">07 ｜ MEMBERSHIP</p>
     <div class="tiers">
-      <div class="tier f"><p class="n">FOUNDER</p><p class="p">¥66,000<small>/年</small></p><p class="per">月換算 ¥5,500 ・ 1日約181円</p><span class="lim">20名限定</span><p class="note">創設メンバー。一生この価格。<br />僕による身体評価、優先 Q&amp;A、FOUNDER バッジ</p></div>
-      <div class="tier e"><p class="n">初期メンバー</p><p class="p">¥6,980<small>/月</small></p><p class="per">いつでも解約可</p><span class="lim">50名限定</span><p class="note">21〜70人目までこの価格</p></div>
-      <div class="tier"><p class="n">通常メンバー</p><p class="p">¥7,980<small>/月</small></p><p class="per">年払い ¥83,760（月換算 ¥6,980）</p><span class="lim">無制限</span><p class="note">71人目以降はこの価格</p></div>
+      <div class="tier f"><p class="n">FOUNDING MEMBER</p><p class="p">¥66,000<small>/年</small></p><p class="per">税込 ・ 月換算 ¥5,500</p><span class="lim">先着20名限定</span><p class="note">継続中は Founder 価格を維持。</p></div>
+      <div class="tier e"><p class="n">EARLY MEMBER</p><p class="p">¥6,980<small>/月</small></p><p class="per">税込</p><span class="lim">初期メンバー50名限定</span><p class="note">継続中は同価格を維持。</p></div>
+      <div class="tier"><p class="n">STANDARD MEMBER</p><p class="p">¥7,980<small>/月</small></p><p class="per">税込</p><span class="lim">通常価格</span></div>
     </div>
-    <p class="price-foot">動画・講座・フォーム記録・Q&amp;A ライブ、全部含まれます。追加料金はありません。<strong>事前登録者には 11月26日に先行アクセス</strong>。Founder 20名は、その先着で埋まります。</p>
+    <p class="price-foot">すべてのプランで共通の教材・コミュニティ機能をご利用いただけます。<br /><span style="color:var(--ff-white-dim)">※Founder は年額一括払いです。更新・解約条件は申込時にご確認ください。</span></p>
   </section>
 
-  <!-- 7. Register -->
-  <section class="s" id="register">
-    <p class="eyebrow">PRE-REGISTRATION</p>
-    <h2 class="h2">まず、事前登録を。</h2>
-    <p class="lead">11月26日の先行アクセスと、Founder 20名の案内。全部、登録した人に先に届きます。</p>
-    <form name="uniao-waitlist" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="u-form" action="/thanks.html">
+  <!-- 08 -->
+  <section class="s band s-sched">
+    <p class="eyebrow">08</p>
+    <h2 class="h2">2026.11.27 OPEN</h2>
+    <ul class="sched">
+      <li class="now"><b>NOW</b><span>無料事前登録受付中</span></li>
+      <li><b>11.23</b><span>Instagram LIVE</span></li>
+      <li><b>11.26</b><span>事前登録者へ先行案内</span></li>
+      <li><b>11.27</b><span>UNIÃO OPEN</span></li>
+    </ul>
+    <div class="founder"><p class="tag">FOUNDING MEMBER</p><h3><b>20</b>名限定</h3><p>Founder 限定20名の募集情報も、事前登録者へ先にお知らせします。</p></div>
+  </section>
+
+  <!-- 09 -->
+  <section class="s last" id="register">
+    <p class="eyebrow">09 ｜ 最後に。</p>
+    <p class="lines">筋トレを学ぶことが、目的じゃない。<br /><em>デカくなるために学ぶ。</em></p>
+    <p class="lead center">努力を続けてきた。それでも、まだ理想の身体には届いていない。<br />ならば、これからは何を変えるべきかを理解して鍛える。</p>
+    <p class="lines">ただやる から、<em>理解してやる</em> へ。</p>
+    <p class="mark">UNIÃO</p>
+    <p class="mark-sub">2026.11.27 OPEN</p>
+    <form name="uniao-waitlist" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="u-form" action="/thanks.html" style="text-align:left">
       <input type="hidden" name="form-name" value="uniao-waitlist" />
       <input type="hidden" name="source" value="uniao-v2" />
       <p class="hidden-honeypot"><label>Don't fill this out: <input name="bot-field" /></label></p>
       <label><span class="sr-only">お名前</span><input type="text" name="name" autocomplete="given-name" placeholder="お名前（任意）" /></label>
       <label><span class="sr-only">メールアドレス</span><input type="email" name="email" required autocomplete="email" inputmode="email" placeholder="メールアドレス" /></label>
-      <button type="submit" class="cta-main">事前登録する（無料）</button>
+      <button type="submit" class="cta-main">無料で事前登録する</button>
     </form>
-    <p class="cta-note">無料｜クレジットカード不要｜いつでも解除できます</p>
-  </section>
-
-  <!-- 8. FAQ -->
-  <section class="s">
-    <p class="eyebrow">FAQ</p>
-    <dl class="faq">
-      <dt>初心者でも大丈夫ですか</dt>
-      <dd>はい。ただ、一番変わるのは「3年やっているのに変わらない人」です。基礎がある人ほど、7つのどこが抜けているかがすぐ分かります。</dd>
-      <dt>ジムに同じマシンがありません</dt>
-      <dd>全種目に「合わない場合の代替案」を入れています。骨格的に合わない、痛みが出る、マシンがない。その場合に何へ変えるかまで解説します。</dd>
-      <dt>どこで見られますか</dt>
-      <dd>Circle というコミュニティアプリの中です。動画、講座、フォーム記録、Q&amp;A が全部1か所にあります。スマホでも PC でも見られます。</dd>
-    </dl>
+    <p class="cta-note">登録無料・決済不要</p>
+    <p class="fine">※事前登録は入会枠の確保を保証するものではありません。</p>
   </section>
 
   <footer class="u-foot">
@@ -336,7 +339,7 @@ fbq('track', 'ViewContent', {content_name: 'uniao-v2'});
   </footer>
 </div>
 
-<div class="u-bar" id="u-bar" aria-hidden="true"><a href="#register">事前登録する（無料）</a></div>
+<div class="u-bar" id="u-bar" aria-hidden="true"><a href="#register">無料で事前登録する</a></div>
 
 <script>
   (function () {
