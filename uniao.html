@@ -17,7 +17,8 @@
 <link rel="stylesheet" href="/style.css" />
 <style>
 .u { background: var(--ff-black); color: var(--ff-white); }
-.u-wrap { max-width: 680px; margin: 0 auto; padding: 0 20px; }
+.u-wrap { max-width: 680px; margin: 0 auto; padding: 0 20px; overflow-x: clip; }
+body.u { overflow-x: hidden; }
 .u-top { display: flex; align-items: center; justify-content: space-between; padding: 14px 0 0; }
 .u-top img { width: 72px; height: auto; }
 .u-top span { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 0.18em; color: var(--ff-white-dim); }
@@ -110,6 +111,18 @@
 .u-bar.show { transform: none; }
 .u-bar a { display: block; max-width: 640px; margin: 0 auto; background: var(--laurel-red); color: #fff; text-align: center; font-weight: 900; padding: 14px; border-radius: 4px; }
 @media (prefers-reduced-motion: reduce) { .u-bar { transition: none; } }
+
+/* full-bleed photo bands */
+.band { position: relative; }
+.band::before { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 100vw; transform: translateX(-50%); z-index: -1; background-position: center; background-size: cover; background-repeat: no-repeat; }
+.band > * { position: relative; }
+.s-hero::before { background-image: linear-gradient(90deg, var(--ff-black) 0%, rgba(14,11,10,.88) 30%, rgba(14,11,10,.45) 62%, rgba(14,11,10,.25) 100%), linear-gradient(180deg, rgba(14,11,10,.35) 0%, rgba(14,11,10,.05) 45%, var(--ff-black) 100%), url(/assets/final-felipe-900.jpg); background-position: 68% 10%; background-size: cover; filter: grayscale(.3); }
+.s-inside::before { background-image: linear-gradient(180deg, var(--ff-black) 0%, rgba(14,11,10,.78) 30%, rgba(14,11,10,.78) 70%, var(--ff-black) 100%), url(/assets/bg-gym-row-1200.jpg); background-position: center 30%; filter: grayscale(.4); }
+.s-sched::before { background-image: linear-gradient(180deg, var(--ff-black) 0%, rgba(14,11,10,.82) 25%, rgba(14,11,10,.82) 75%, var(--ff-black) 100%), url(/assets/records-felipe-920.jpg); background-position: center 20%; filter: grayscale(.5); }
+.band.s + .s, .s + .band.s { border-top: 0; }
+.s-hero .h1 .dim { color: rgba(255,255,255,.72); }
+.s-hero .seven li { border-bottom-color: rgba(255,255,255,.14); }
+@media (min-width: 900px) { .s-hero::before { background-position: center 22%; } }
 </style>
 <!-- Meta Pixel Code -->
 <script>
@@ -140,7 +153,7 @@ fbq('track', 'ViewContent', {content_name: 'uniao-v2'});
   </header>
 
   <!-- 1. HERO -->
-  <section class="s" style="padding-top:44px">
+  <section class="s band s-hero" style="padding-top:44px">
     <h1 class="h1"><span class="dim">筋トレを学びたいんじゃない。</span><em>デカくなりたい。</em></h1>
     <p class="hero-for">そのために必要な、</p>
     <ul class="seven">
@@ -193,7 +206,7 @@ fbq('track', 'ViewContent', {content_name: 'uniao-v2'});
   </section>
 
   <!-- 4. Contents -->
-  <section class="s">
+  <section class="s band s-inside">
     <p class="eyebrow">INSIDE UNIÃO</p>
     <h2 class="h2">7つを、全種目で、<br />僕の身体で見せる。</h2>
     <div class="pack">
@@ -239,7 +252,7 @@ fbq('track', 'ViewContent', {content_name: 'uniao-v2'});
   </section>
 
   <!-- 6. Schedule + Founder -->
-  <section class="s">
+  <section class="s band s-sched">
     <p class="eyebrow">SCHEDULE</p>
     <h2 class="h2">11月27日、オープン。</h2>
     <ul class="sched">
