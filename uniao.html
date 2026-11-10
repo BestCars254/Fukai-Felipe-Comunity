@@ -3,24 +3,114 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>UNIÃO ｜ 本気は、人を変える。 - IFBB PRO Felipe Fukai のトレーニング教育コミュニティ</title>
-<meta name="description" content="世界と戦い続けるIFBB PRO Felipe Fukaiの、本物のトレーニング教育コミュニティ UNIÃO。日本初、現役IFBB PROが主宰する教育コミュニティ。2026年11月27日(ブラックフライデー)オープン。Founding Member 100名限定の先行登録受付中。" />
-<meta property="og:title" content="UNIÃO ｜ 本気は、人を変える。" />
-<meta property="og:description" content="IFBB PRO Felipe Fukaiのトレーニング教育コミュニティ。11/27 ブラックフライデーにオープン、Founding Member 100名限定。" />
+<title>UNIÃO ｜ 筋トレを学びたいんじゃない。デカくなりたい。｜IFBB PRO Felipe Fukai</title>
+<meta name="description" content="種目選択・フォーム・重量設定・レップ・強度・プログラム設計・回復。筋肉を成長させるために覚えるべきことを、現役 IFBB PRO Felipe Fukai が徹底解説。2026年11月27日オープン。事前登録受付中。" />
+<meta property="og:title" content="UNIÃO ｜ 筋トレを学びたいんじゃない。デカくなりたい。" />
+<meta property="og:description" content="筋肉を成長させるために覚えるべきことを、現役 IFBB PRO が徹底解説。11月27日オープン。" />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="https://ff-uniao.netlify.app/assets/og-image.jpg" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
 <meta property="og:url" content="https://ff-uniao.netlify.app/uniao" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://ff-uniao.netlify.app/assets/og-image.jpg" />
-<link rel="preload" as="image" type="image/webp" imagesrcset="assets/hero-felipe-800.webp 800w, assets/hero-felipe-1400.webp 1400w" imagesizes="(max-width: 768px) 100vw, 55vw" fetchpriority="high" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Barlow+Condensed:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Barlow+Condensed:wght@500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+<link rel="stylesheet" href="/style.css" />
+<style>
+.u { background: var(--ff-black); color: var(--ff-white); }
+.u-wrap { max-width: 680px; margin: 0 auto; padding: 0 20px; }
+.u-top { display: flex; align-items: center; justify-content: space-between; padding: 14px 0 0; }
+.u-top img { width: 72px; height: auto; }
+.u-top span { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 0.18em; color: var(--ff-white-dim); }
+.s { padding: 60px 0 28px; }
+.s + .s { border-top: 1px solid var(--gray-line); }
+.eyebrow { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 0.24em; color: var(--kagayaki-gold); font-weight: 700; margin: 0 0 14px; }
+.h1 { font-weight: 900; font-size: clamp(32px, 9vw, 54px); line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 26px; }
+.h1 em { font-style: normal; color: var(--ff-white); display: block; }
+.h1 .dim { color: var(--ff-white-muted); font-size: 0.72em; display: block; margin-bottom: 8px; font-weight: 700; }
+.h2 { font-weight: 900; font-size: clamp(22px, 6vw, 32px); line-height: 1.3; margin: 0 0 18px; }
+.lead { font-size: 15px; line-height: 1.95; color: rgba(255,255,255,0.82); margin: 0 0 16px; }
+.lead strong { color: var(--ff-white); }
+.hero-for { font-size: 16px; font-weight: 700; color: var(--ff-white-muted); margin: 0 0 10px; }
+.seven { list-style: none; margin: 0 0 26px; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 18px; }
+.seven li { font-size: 19px; font-weight: 900; padding: 10px 0; border-bottom: 1px solid var(--gray-line); display: flex; align-items: baseline; gap: 10px; }
+.seven li b { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; color: var(--laurel-red-hover); letter-spacing: 0.08em; font-weight: 700; }
+.seven li:last-child { grid-column: 1 / -1; }
+@media (max-width: 420px) { .seven { grid-template-columns: 1fr; } .seven li { font-size: 18px; } }
+.hero-sub { font-size: 17px; font-weight: 700; line-height: 1.8; margin: 0 0 26px; }
+.hero-sub strong { color: var(--kagayaki-gold); }
+.mark { font-family: 'Playfair Display', serif; font-size: clamp(44px, 12vw, 72px); letter-spacing: 0.08em; line-height: 1; margin: 0 0 6px; }
+.mark-sub { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; letter-spacing: 0.26em; color: var(--ff-white-dim); margin: 0 0 26px; }
+.cta-main { display: block; width: 100%; background: var(--laurel-red); color: var(--ff-white); text-align: center; font-weight: 900; font-size: 17px; padding: 18px 20px; border-radius: 4px; border: 0; cursor: pointer; font-family: inherit; }
+.cta-main:hover { background: var(--laurel-red-hover); }
+.cta-note { font-size: 12px; color: var(--ff-white-dim); text-align: center; margin: 10px 0 0; }
+
+/* 7 conditions */
+.cond { list-style: none; margin: 0; padding: 0; }
+.cond li { padding: 22px 0; border-bottom: 1px solid var(--gray-line); display: grid; grid-template-columns: 44px 1fr; gap: 0 14px; }
+.cond li:last-child { border-bottom: 0; }
+.cond b { font-family: 'Barlow Condensed', sans-serif; font-size: 28px; color: var(--laurel-red-hover); line-height: 1; padding-top: 2px; }
+.cond h3 { font-size: 20px; font-weight: 900; margin: 0 0 10px; }
+.cond .x, .cond .o { font-size: 14px; line-height: 1.75; margin: 0; padding-left: 26px; position: relative; }
+.cond .x { color: var(--ff-white-muted); margin-bottom: 6px; }
+.cond .x::before { content: "✕"; position: absolute; left: 0; color: var(--laurel-red-hover); font-weight: 900; }
+.cond .o { color: var(--ff-white); }
+.cond .o::before { content: "✓"; position: absolute; left: 0; color: var(--kagayaki-gold); font-weight: 900; }
+
+/* Felipe */
+.fel { display: grid; grid-template-columns: 120px 1fr; gap: 18px; align-items: start; margin: 0 0 18px; }
+.fel img { width: 100%; height: auto; border-radius: 8px; display: block; }
+.fel .cap { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 0.1em; color: var(--kagayaki-gold); margin: 0 0 6px; }
+.fel .h2 { margin-bottom: 10px; font-size: clamp(20px, 5.5vw, 26px); }
+.quote { border-left: 3px solid var(--laurel-red); padding: 6px 0 6px 16px; margin: 18px 0 0; font-size: 15px; line-height: 1.9; color: rgba(255,255,255,0.88); }
+.rec { display: flex; gap: 10px; flex-wrap: wrap; margin: 18px 0 0; }
+.rec span { font-size: 12px; font-weight: 700; border: 1px solid rgba(255,255,255,0.3); padding: 6px 10px; border-radius: 999px; color: var(--ff-white-muted); }
+
+/* contents */
+.pack { display: grid; gap: 12px; margin: 0 0 8px; }
+.pk { background: var(--ff-black-soft); border: 1px solid var(--gray-line); border-radius: 10px; padding: 20px 18px; }
+.pk .tag { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: var(--kagayaki-gold); margin: 0 0 8px; }
+.pk h3 { font-size: 18px; font-weight: 900; margin: 0 0 8px; }
+.pk p { font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.82); margin: 0; }
+.pk .steps { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 0; }
+.pk .steps span { font-size: 12px; padding: 4px 9px; border: 1px solid rgba(255,255,255,0.22); border-radius: 4px; color: var(--ff-white-muted); }
+.pk .steps span.on { background: var(--laurel-red); border-color: var(--laurel-red); color: #fff; font-weight: 700; }
+.week { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 12px 0 0; }
+.week div { text-align: center; padding: 10px 4px; border: 1px solid var(--gray-line); border-radius: 6px; }
+.week b { display: block; font-family: 'Barlow Condensed', sans-serif; font-size: 20px; color: var(--kagayaki-gold); }
+.week small { font-size: 11px; color: var(--ff-white-muted); line-height: 1.4; display: block; margin-top: 4px; }
+
+/* who */
+.who { list-style: none; margin: 0; padding: 0; }
+.who li { padding: 14px 0 14px 30px; border-bottom: 1px solid var(--gray-line); position: relative; font-size: 15px; font-weight: 700; line-height: 1.6; }
+.who li::before { content: ""; position: absolute; left: 0; top: 22px; width: 10px; height: 10px; background: var(--laurel-red); }
+.who li small { display: block; font-weight: 400; font-size: 13px; color: var(--ff-white-muted); margin-top: 4px; }
+
+/* schedule */
+.sched { list-style: none; margin: 0 0 22px; padding: 0; }
+.sched li { display: grid; grid-template-columns: 92px 1fr; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--gray-line); align-items: baseline; }
+.sched b { font-family: 'Barlow Condensed', sans-serif; font-size: 26px; color: var(--ff-white); letter-spacing: 0.02em; }
+.sched span { font-size: 14px; line-height: 1.6; }
+.sched li.now b { color: var(--laurel-red-hover); }
+.founder { border: 1px solid var(--kagayaki-gold); border-radius: 10px; padding: 22px 20px; }
+.founder .tag { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 0.24em; color: var(--kagayaki-gold); margin: 0 0 6px; }
+.founder h3 { font-size: 22px; font-weight: 900; margin: 0 0 10px; }
+.founder h3 b { font-family: 'Barlow Condensed', sans-serif; font-size: 40px; color: var(--kagayaki-gold); margin-right: 4px; }
+.founder p { font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.85); margin: 0; }
+
+/* form */
+.u-form { display: grid; gap: 10px; }
+.u-form input { width: 100%; padding: 16px; background: var(--ff-black-soft); border: 1px solid rgba(255,255,255,0.18); border-radius: 4px; color: var(--ff-white); font: inherit; font-size: 16px; }
+.u-form input::placeholder { color: var(--ff-white-dim); }
+.u-form input:focus-visible { outline: 2px solid var(--kagayaki-gold); outline-offset: 0; border-color: var(--kagayaki-gold); }
+.faq dt { font-weight: 900; font-size: 15px; margin: 18px 0 6px; }
+.faq dd { margin: 0; font-size: 14px; line-height: 1.85; color: rgba(255,255,255,0.82); }
+.u-foot { border-top: 1px solid var(--gray-line); padding: 20px 0 110px; font-size: 13px; line-height: 1.9; color: var(--ff-white-muted); }
+.u-foot a { color: var(--kagayaki-gold); }
+.u-bar { position: fixed; left: 0; right: 0; bottom: 0; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: rgba(14,11,10,0.92); backdrop-filter: blur(8px); border-top: 1px solid var(--gray-line); transform: translateY(110%); transition: transform .25s; z-index: 20; }
+.u-bar.show { transform: none; }
+.u-bar a { display: block; max-width: 640px; margin: 0 auto; background: var(--laurel-red); color: #fff; text-align: center; font-weight: 900; padding: 14px; border-radius: 4px; }
+@media (prefers-reduced-motion: reduce) { .u-bar { transition: none; } }
+</style>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -33,663 +123,208 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '2606382796526025');
 fbq('track', 'PageView');
+fbq('track', 'ViewContent', {content_name: 'uniao-v2'});
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1"
-/></noscript>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1" /></noscript>
 <!-- End Meta Pixel Code -->
 </head>
-<body>
-
-<!-- HIDDEN Netlify form registration (required for form detection) -->
+<body class="u">
 <form name="uniao-waitlist" netlify netlify-honeypot="bot-field" hidden>
-  <input type="email" name="email" />
-  <input type="text" name="name" />
-  <input type="text" name="training-years" />
-  <input type="text" name="goal" />
-  <input type="text" name="concern" />
-  <input type="text" name="source" />
+  <input type="email" name="email" /><input type="text" name="name" /><input type="text" name="training-years" /><input type="text" name="goal" /><input type="text" name="concern" /><input type="text" name="source" />
 </form>
 
-<!-- STICKY MINI HEADER (visible after scroll past hero) -->
-<div id="sticky-header" class="sticky-header" aria-hidden="true">
-  <div class="sticky-header-inner">
-    <div class="sticky-brand">
-      <img src="assets/logo-ff-dark-sm.png" alt="" class="sticky-logo" width="160" height="126" />
-      <span class="sticky-title"><span class="sticky-title-name">UNIÃO</span><span class="sticky-title-date">11.27.2026 LAUNCH</span></span>
+<div class="u-wrap">
+  <header class="u-top">
+    <img src="/assets/logo-ff-dark-sm.png" alt="FF" width="72" height="57" />
+    <span>UNIÃO ｜ 2026.11.27 OPEN</span>
+  </header>
+
+  <!-- 1. HERO -->
+  <section class="s" style="padding-top:44px">
+    <h1 class="h1"><span class="dim">筋トレを学びたいんじゃない。</span><em>デカくなりたい。</em></h1>
+    <p class="hero-for">そのために必要な、</p>
+    <ul class="seven">
+      <li><b>01</b>種目選択</li>
+      <li><b>02</b>フォーム</li>
+      <li><b>03</b>重量設定</li>
+      <li><b>04</b>レップ</li>
+      <li><b>05</b>強度</li>
+      <li><b>06</b>プログラム設計</li>
+      <li><b>07</b>回復</li>
+    </ul>
+    <p class="hero-sub">筋肉を成長させるために覚えるべきことを、<br /><strong>現役 IFBB PRO</strong> が徹底解説。</p>
+    <p class="mark">UNIÃO</p>
+    <p class="mark-sub">IFBB PRO FELIPE FUKAI ・ TRAINING EDUCATION</p>
+    <button class="cta-main" type="button" data-go="register">事前登録する（無料）</button>
+    <p class="cta-note">11月27日オープン ｜ 事前登録者に先行アクセスと特典 ｜ 11月23日のライブで価格発表</p>
+  </section>
+
+  <!-- 2. 7 conditions -->
+  <section class="s">
+    <p class="eyebrow">WHY YOU ARE NOT GROWING</p>
+    <h2 class="h2">デカくならない理由は、<br />この7つのどこかにある。</h2>
+    <p class="lead">才能でも、努力の量でもないと僕は考えています。7つのうち1つでも知らないままだと、重量は伸びても身体は変わらない。</p>
+    <ol class="cond">
+      <li><b>01</b><div><h3>種目選択</h3><p class="x">王道の種目を、自分の骨格に合わないまま続けている</p><p class="o">自分の骨格と狙いに合う種目の選び方。合わないときに何へ変えるか</p></div></li>
+      <li><b>02</b><div><h3>フォーム</h3><p class="x">重量は伸びるのに狙った筋肉が変わらない。負荷が関節と腰に逃げている</p><p class="o">作用線・固定・可動域・テンポ。全種目を START → FINISH の5段階で分解する</p></div></li>
+      <li><b>03</b><div><h3>重量設定</h3><p class="x">重くするたびにフォームが崩れ、別の筋肉の種目になっている</p><p class="o">どこまで上げていいかの判断基準。重くしたとき最初に崩れる場所の見方</p></div></li>
+      <li><b>04</b><div><h3>レップ</h3><p class="x">「8〜12回」を理由なく守っている。種目の性質に合っていない</p><p class="o">なぜそのレップ数か。ストレッチ特化と収縮特化で変える理由</p></div></li>
+      <li><b>05</b><div><h3>強度</h3><p class="x">毎セット限界まで。回復が追いつかず、出力が落ちていく</p><p class="o">RIR の使い方。限界まで行く種目と、手前で止める種目の区別</p></div></li>
+      <li><b>06</b><div><h3>プログラム設計</h3><p class="x">好きな種目から始める。疲れた状態で一番大事な種目をやっている</p><p class="o">序盤・中盤・終盤に何を置くか。種目の前後関係と、週の組み方</p></div></li>
+      <li><b>07</b><div><h3>回復</h3><p class="x">追い込むほど伸びると思っている</p><p class="o">疲労管理。神経疲労と筋疲労の違い、ボリュームと回復の設計</p></div></li>
+    </ol>
+  </section>
+
+  <!-- 3. Felipe -->
+  <section class="s">
+    <div class="fel">
+      <picture>
+        <source srcset="/assets/hero-felipe-800.webp" type="image/webp" />
+        <img src="/assets/hero-felipe-800.jpg" alt="IFBB PRO Felipe Fukai" width="800" height="1200" loading="lazy" />
+      </picture>
+      <div>
+        <p class="cap">IFBB PRO ・ CLASSIC PHYSIQUE</p>
+        <h2 class="h2">僕も、2年止まった。</h2>
+        <p class="lead">重量は毎月伸びていました。でも背中だけ変わらなかった。変えたのは重量ではなく、<strong>負荷がどこに乗っているかを見る判断基準</strong>です。</p>
+      </div>
     </div>
-    <a href="#waitlist" class="sticky-cta">事前登録</a>
-  </div>
+    <p class="quote">「僕は、重量より先に1レップの質を見ます。狙った筋肉に負荷が乗っていない1レップは、何回やっても身体を変えない。それを知ってから、身体が変わり始めました。」</p>
+    <div class="rec"><span>2026年 IFBB PRO カード取得</span><span>TAIWAN PRO 5位</span><span>日本在住・日本語で解説</span></div>
+  </section>
+
+  <!-- 4. Contents -->
+  <section class="s">
+    <p class="eyebrow">INSIDE UNIÃO</p>
+    <h2 class="h2">7つを、全種目で、<br />僕の身体で見せる。</h2>
+    <div class="pack">
+      <div class="pk">
+        <p class="tag">毎週1本 ・ 15分</p>
+        <h3>種目の徹底解説</h3>
+        <p>1種目を10項目で分解。完成形を先に見せて、セットアップ、動作の5段階、よくある間違いと代償筋、重量を上げたときに見る場所、レップと強度、プログラムのどこに入れるか、合わない人の代替案、そして「僕なら実際どう使うか」。</p>
+        <div class="steps"><span>定義</span><span>完成形</span><span>セットアップ</span><span class="on">START</span><span class="on">ECCENTRIC</span><span class="on">TURNAROUND</span><span class="on">CONCENTRIC</span><span class="on">FINISH</span><span>間違い</span><span>重量</span><span>レップ</span><span>配置</span><span>代替</span><span>僕なら</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--ff-white-muted)">オープン時点で10本（ベントオーバーロー、チンニング、プルオーバー、サイドレイズ、スミスショルダープレス、インクラインプレス、ほか）。以降、毎週1本。</p>
+      </div>
+      <div class="pk">
+        <p class="tag">月1章 ・ 全7章</p>
+        <h3>筋肉が成長する力学</h3>
+        <p>第1章 力の作用線 ／ 第2章 ブレーシング ／ 第3章 合力 ／ 第4章 モーメントアーム ／ 第5章 トルクとレジスタンスプロファイル ／ 第6章 ストレングスプロファイルとマッチング ／ 第7章 疲労管理。種目解説の「なぜ」を、全部ここで説明します。</p>
+      </div>
+      <div class="pk">
+        <p class="tag">毎週水曜</p>
+        <h3>あなたのフォームに、僕が直接コメント</h3>
+        <p>自分のフォーム動画を上げる「マイ・フォーム記録」。僕が見て、あなたの骨格と動きについてコメントします。1年続けると、自分の身体について IFBB PRO が書いた1年分のメモが、そこにだけ残ります。</p>
+      </div>
+      <div class="pk">
+        <p class="tag">週のリズム</p>
+        <h3>やめる日を作らない</h3>
+        <div class="week">
+          <div><b>月</b><small>今週の種目</small></div>
+          <div><b>水</b><small>フォーム<br />チェック</small></div>
+          <div><b>土</b><small>Q&amp;A<br />ライブ</small></div>
+          <div><b>日</b><small>今週の<br />1レップ</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Who -->
+  <section class="s">
+    <p class="eyebrow">FOR</p>
+    <h2 class="h2">こういう人のために作りました。</h2>
+    <ul class="who">
+      <li>3年以上やっているのに、去年と同じ身体の人<small>重量は伸びている。でも鏡が変わらない。原因は7つのどこかにあります</small></li>
+      <li>指導の「根拠」がほしいパーソナルトレーナー<small>「効かせて」を感覚ではなく、作用線とモーメントアームで説明できるようになる</small></li>
+      <li>大会を目指していて、PRO の判断基準を知りたい人<small>オフと減量期で何を変えるか。僕が実際にやっている判断を全部話します</small></li>
+    </ul>
+  </section>
+
+  <!-- 6. Schedule + Founder -->
+  <section class="s">
+    <p class="eyebrow">SCHEDULE</p>
+    <h2 class="h2">11月27日、オープン。</h2>
+    <ul class="sched">
+      <li class="now"><b>NOW</b><span>事前登録受付中（無料）。登録者には全てを先にお知らせします</span></li>
+      <li><b>11.23</b><span>Instagram ライブで価格発表。質問に全部答えます</span></li>
+      <li><b>11.26</b><span>事前登録者だけ先行アクセス</span></li>
+      <li><b>11.27</b><span>オープン</span></li>
+    </ul>
+    <div class="founder">
+      <p class="tag">FOUNDING MEMBER</p>
+      <h3><b>20</b>名限定</h3>
+      <p>事前登録者から先着。僕による身体評価、優先 Q&amp;A、FOUNDER バッジ、全コンテンツへの最速アクセス。価格は 11月23日のライブで。</p>
+    </div>
+  </section>
+
+  <!-- 7. Register -->
+  <section class="s" id="register">
+    <p class="eyebrow">PRE-REGISTRATION</p>
+    <h2 class="h2">まず、事前登録を。</h2>
+    <p class="lead">11月23日の価格発表、11月26日の先行アクセス、Founder 20名の案内。全部、登録した人に先に届きます。</p>
+    <form name="uniao-waitlist" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="u-form" action="/thanks.html">
+      <input type="hidden" name="form-name" value="uniao-waitlist" />
+      <input type="hidden" name="source" value="uniao-v2" />
+      <p class="hidden-honeypot"><label>Don't fill this out: <input name="bot-field" /></label></p>
+      <label><span class="sr-only">お名前</span><input type="text" name="name" autocomplete="given-name" placeholder="お名前（任意）" /></label>
+      <label><span class="sr-only">メールアドレス</span><input type="email" name="email" required autocomplete="email" inputmode="email" placeholder="メールアドレス" /></label>
+      <button type="submit" class="cta-main">事前登録する（無料）</button>
+    </form>
+    <p class="cta-note">無料｜クレジットカード不要｜いつでも解除できます</p>
+  </section>
+
+  <!-- 8. FAQ -->
+  <section class="s">
+    <p class="eyebrow">FAQ</p>
+    <dl class="faq">
+      <dt>初心者でも大丈夫ですか</dt>
+      <dd>はい。ただ、一番変わるのは「3年やっているのに変わらない人」です。基礎がある人ほど、7つのどこが抜けているかがすぐ分かります。</dd>
+      <dt>ジムに同じマシンがありません</dt>
+      <dd>全種目に「合わない場合の代替案」を入れています。骨格的に合わない、痛みが出る、マシンがない。その場合に何へ変えるかまで解説します。</dd>
+      <dt>どこで見られますか</dt>
+      <dd>Circle というコミュニティアプリの中です。動画、講座、フォーム記録、Q&amp;A が全部1か所にあります。スマホでも PC でも見られます。</dd>
+    </dl>
+  </section>
+
+  <footer class="u-foot">
+    IFBB PRO Felipe Fukai ｜ UNIÃO<br />
+    <a href="/lesson">ベントオーバーローの解説動画（無料）を見る</a> ・ <a href="/privacy.html">プライバシーポリシー</a>
+  </footer>
 </div>
 
-<!-- HERO -->
-<header class="hero">
-  <picture class="hero-media">
-    <source type="image/webp" srcset="assets/hero-felipe-800.webp 800w, assets/hero-felipe-1400.webp 1400w" sizes="(max-width: 768px) 100vw, 55vw" />
-    <img src="assets/hero-felipe-1400.jpg" srcset="assets/hero-felipe-800.jpg 800w, assets/hero-felipe-1400.jpg 1400w" sizes="(max-width: 768px) 100vw, 55vw" width="1400" height="2100" alt="IFBB PRO CARD を掲げる Felipe Fukai" fetchpriority="high" decoding="async" />
-  </picture>
-  <div class="hero-inner">
-    <div class="hero-topbar">
-      <img src="assets/logo-ff-dark-sm.png" alt="Felipe Fukai" class="logo-top" width="160" height="126" />
-      <span class="eyebrow"><span class="eyebrow-long">TRAINING EDUCATION COMMUNITY / </span>11.27.2026 LAUNCH</span>
-    </div>
-    <h1 class="hero-h1"><span class="nowrap">本気は、</span><span class="nowrap">人を変える。</span></h1>
-    <p class="hero-sub">
-      日本初<sup class="note-ref">※</sup>、現役 IFBB PRO が主宰し、<br />
-      トレーニングを徹底的に解説する教育コミュニティ「UNIÃO(ウニオン)」。
-    </p>
-    <p class="hero-proof">
-      IFBB PRO Felipe Fukai&nbsp;&nbsp;×&nbsp;&nbsp;Taiwan Pro 2026 出場&nbsp;&nbsp;×&nbsp;&nbsp;月20時間以上の教育コンテンツ
-    </p>
-    <a href="#waitlist" class="cta cta-primary"><span class="nowrap">Founding Member 100名限定</span>&nbsp;&nbsp;<span class="nowrap">事前登録</span></a>
-    <p class="hero-microcopy">30秒で完了 ・ スパム無し ・ いつでも配信停止可能</p>
-  </div>
-</header>
-
-<!-- WAITLIST BENEFITS -->
-<section class="benefits section-dark">
-  <div class="container">
-    <span class="section-eyebrow gold">WAITLIST — 4つの権利</span>
-    <h2 class="section-h2">先に信じてくれる人には、先に返す。</h2>
-    <div class="benefits-grid">
-      <div class="benefit-card">
-        <span class="benefit-num">01</span>
-        <h3>Waitlist 限定価格・生涯ロック</h3>
-        <p>正式価格は 11/27 ブラックフライデーに公開。Waitlist 登録者には <strong>11/23(月) のライブで先行公開</strong>し、その <strong>Waitlist 限定価格を生涯固定</strong>します。今後の値上げの影響を一切受けません。</p>
-      </div>
-      <div class="benefit-card">
-        <span class="benefit-num">02</span>
-        <h3>24時間先行購入枠</h3>
-        <p>11/26(木)10:00、Waitlist 登録者だけが Founding Member 100名枠の先行購入にアクセスできます。一般公開はブラックフライデー 11/27(金)10:00 から。</p>
-      </div>
-      <div class="benefit-card">
-        <span class="benefit-num">03</span>
-        <h3>Q&Aライブ #0 限定視聴</h3>
-        <p>11/23(月) に開催する Felipe による 90分の Q&Aライブを、Waitlist 限定で視聴。<strong>価格もこのライブで最初に公開</strong>します。買う前に UNIÃO を体験できます。</p>
-      </div>
-      <div class="benefit-card">
-        <span class="benefit-num">04</span>
-        <h3>Founding Member 応募権</h3>
-        <p>Founding Member 100名枠(永久バッジ・優先質問・紹介プログラム、そして <strong>Felipe による身体評価 & 骨格別プランの抽選</strong>)への応募権。Waitlist 未登録者は取得できません。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROBLEM -->
-<section class="problem section-light">
-  <div class="container">
-    <span class="section-eyebrow red">SUCH FRUSTRATIONS?</span>
-    <h2 class="section-h2 dark">こんな経験、ありませんか?</h2>
-    <ul class="problem-list">
-      <li>トレーニング歴は1年以上あるのに、思ったほど身体が変わらない</li>
-      <li>弱点部位を、何年やっても克服できない</li>
-      <li>情報が多すぎて、何が自分に必要なのか分からない</li>
-      <li>YouTube を見ても、フォームの「なぜ」までは学べない</li>
-      <li>コーチをつけるほどではないが、独学の限界を感じている</li>
-    </ul>
-    <p class="problem-answer">
-      UNIÃO は、<strong>本気で身体を変え、次のステージへ進みたい中級者・競技者</strong>に、<br />
-      自ら世界へ挑み続ける IFBB PRO Felipe Fukai が、<br />
-      現場で磨いた本物のトレーニング技術を届けるコミュニティです。
-    </p>
-  </div>
-</section>
-
-<!-- RESULTS (coaching clients) -->
-<section class="results section-dark">
-  <div class="container">
-    <span class="section-eyebrow gold">BEFORE / AFTER</span>
-    <h2 class="section-h2">Felipe の指導で、身体はここまで変わる。</h2>
-    <p class="results-lead">Felipe のオンラインコーチングを受けた受講生の変化。年齢も目的もバラバラですが、共通しているのは「普通のことを正しく、高いレベルで」積み上げたこと。この判断基準を、UNIÃO で学べます。</p>
-    <div class="results-carousel">
-      <button type="button" class="results-nav results-prev" aria-label="前へ">‹</button>
-      <div class="results-track" tabindex="0" aria-label="受講生の変化（横にスワイプ）">
-      <figure class="result-card">
-        <picture>
-          <source type="image/webp" srcset="assets/result-1.webp" />
-          <img src="assets/result-1.jpg" alt="受講生の変化 同じ体重（1年半）" loading="lazy" decoding="async" />
-        </picture>
-        <figcaption>
-          <span class="result-headline">同じ体重<small>1年半</small></span>
-          <span class="result-sub">体重は変えずに、身体の密度と形を作り直す</span>
-        </figcaption>
-      </figure>
-      <figure class="result-card">
-        <picture>
-          <source type="image/webp" srcset="assets/result-2.webp" />
-          <img src="assets/result-2.jpg" alt="受講生の変化 −12kg（9ヶ月）" loading="lazy" decoding="async" />
-        </picture>
-        <figcaption>
-          <span class="result-headline">−12kg<small>9ヶ月</small></span>
-          <span class="result-sub">80kg → 68kg</span>
-        <div class="result-meta">
-          <span><small>BEFORE</small>2024.12 / 80kg</span>
-          <span class="result-arrow">→</span>
-          <span><small>AFTER</small>2025.9 / 68kg</span>
-        </div>
-        </figcaption>
-      </figure>
-      <figure class="result-card">
-        <picture>
-          <source type="image/webp" srcset="assets/result-3.webp" />
-          <img src="assets/result-3.jpg" alt="受講生の変化 +5kg（5ヶ月）" loading="lazy" decoding="async" />
-        </picture>
-        <figcaption>
-          <span class="result-headline">+5kg<small>5ヶ月</small></span>
-          <span class="result-sub">オフシーズンの増量期</span>
-        <div class="result-meta">
-          <span><small>BEFORE</small>2025.7 / 73kg</span>
-          <span class="result-arrow">→</span>
-          <span><small>AFTER</small>2025.12 / 78kg</span>
-        </div>
-        </figcaption>
-      </figure>
-      <figure class="result-card">
-        <picture>
-          <source type="image/webp" srcset="assets/result-4.webp" />
-          <img src="assets/result-4.jpg" alt="受講生の変化 7位 → 1位（9ヶ月）" loading="lazy" decoding="async" />
-        </picture>
-        <figcaption>
-          <span class="result-headline">7位 → 1位<small>9ヶ月</small></span>
-          <span class="result-sub">FWJ Classic Physique</span>
-        <div class="result-meta">
-          <span><small>BEFORE</small>2024.12 / 7位</span>
-          <span class="result-arrow">→</span>
-          <span><small>AFTER</small>2025.9 / 1位</span>
-        </div>
-        </figcaption>
-      </figure>
-      <figure class="result-card">
-        <picture>
-          <source type="image/webp" srcset="assets/result-5.webp" />
-          <img src="assets/result-5.jpg" alt="受講生の変化 +8kg（22ヶ月）" loading="lazy" decoding="async" />
-        </picture>
-        <figcaption>
-          <span class="result-headline">+8kg<small>22ヶ月</small></span>
-          <span class="result-sub">大会直後にコーチング開始 → 次の大会9週前</span>
-        <div class="result-meta">
-          <span><small>BEFORE</small>2024.7 / 78kg</span>
-          <span class="result-arrow">→</span>
-          <span><small>AFTER</small>2026.5 / 86kg</span>
-        </div>
-        </figcaption>
-      </figure>
-      <figure class="result-card">
-        <picture>
-          <source type="image/webp" srcset="assets/result-6.webp" />
-          <img src="assets/result-6.jpg" alt="受講生の変化 デビュー（2年）" loading="lazy" decoding="async" />
-        </picture>
-        <figcaption>
-          <span class="result-headline">デビュー<small>2年</small></span>
-          <span class="result-sub">マスターズ クラシックフィジーク</span>
-        <div class="result-meta">
-          <span><small>BEFORE</small>2022</span>
-          <span class="result-arrow">→</span>
-          <span><small>AFTER</small>2024 / デビュー</span>
-        </div>
-        </figcaption>
-      </figure>
-      <figure class="result-card">
-        <picture>
-          <source type="image/webp" srcset="assets/result-7.webp" />
-          <img src="assets/result-7.jpg" alt="受講生の変化 表彰台（1年8ヶ月）" loading="lazy" decoding="async" />
-        </picture>
-        <figcaption>
-          <span class="result-headline">表彰台<small>1年8ヶ月</small></span>
-          <span class="result-sub">コーチング開始 → 大会で表彰台へ</span>
-        <div class="result-meta">
-          <span><small>BEFORE</small>2022.6 / 開始</span>
-          <span class="result-arrow">→</span>
-          <span><small>AFTER</small>2024.2 / 表彰台</span>
-        </div>
-        </figcaption>
-      </figure>
-      </div>
-      <button type="button" class="results-nav results-next" aria-label="次へ">›</button>
-    </div>
-    <div class="results-dots" aria-hidden="true"></div>
-    <p class="results-note">※ 掲載写真は Felipe の個別オンラインコーチング受講生の実例です。UNIÃO は教育コミュニティであり、個別の食事・トレーニング指導は含まれません。結果には個人差があります。</p>
-  </div>
-</section>
-
-<!-- ABOUT FELIPE -->
-<section class="about section-dark">
-  <div class="container">
-    <span class="section-eyebrow gold">ABOUT</span>
-    <h2 class="section-h2">Felipe Fukai — 世界と戦いながら、本物を教える男。</h2>
-    <div class="about-layout">
-    <picture class="about-photo">
-      <source type="image/webp" srcset="assets/about-felipe-600.webp 600w, assets/about-felipe-1000.webp 1000w" sizes="(max-width: 768px) 100vw, 420px" />
-      <img src="assets/about-felipe-1000.jpg" srcset="assets/about-felipe-600.jpg 600w, assets/about-felipe-1000.jpg 1000w" sizes="(max-width: 768px) 100vw, 420px" width="1000" height="1250" alt="フロントダブルバイセップスのポーズをとる Felipe Fukai" loading="lazy" decoding="async" />
-    </picture>
-    <div class="about-body">
-    <div class="about-story">
-      <p>父のベンチプレスから始まった、9年の道。</p>
-      <p>18歳で初舞台、5位。</p>
-      <p>2025年、挫折の連続。</p>
-      <p>2026年、ブレずに <strong>PRO カード取得</strong>。</p>
-      <p>プロデビュー戦 <strong>Taiwan Pro で5位</strong>。</p>
-    </div>
-    <p class="about-edge">
-      日本在住の外国人選手だからこそ、<strong>海外トップ選手・コーチの最新情報</strong>を直接収集し、日本語で届けられる。
-    </p>
-    <p class="about-signature">
-      完成した先生ではなく、<br />
-      今も世界最高峰へ挑み続けている。<br />
-      その現場で磨いた技術を、UNIÃO で還元する。
-    </p>
-    <p class="about-quote">
-      派手な種目や裏技を探す前に、まず普通のことを正しくできる身体を作る。<br />
-      そしてその普通を、誰よりも高いレベルまで高めていく。
-    </p>
-    </div>
-    </div>
-  </div>
-</section>
-
-<!-- CURRICULUM -->
-<section class="curriculum section-light">
-  <div class="container">
-    <span class="section-eyebrow red">CURRICULUM</span>
-    <h2 class="section-h2 dark">UNIÃO で学べること</h2>
-    <div class="first-content">
-      <span class="first-content-label">FIRST FOCUS — 最初のテーマ</span>
-      <h3 class="first-content-title">最初のフォーカスは、いちばん悩みの多い「背中」。</h3>
-      <p>「僧帽ばかり効く」「広がりが出ない」「厚みが出ない」。ローンチ後は、Felipe の最強部位である背中をメインテーマに据えて徹底解説。もちろん他の部位・メニュー設計・PRO の判断も並行して配信します。</p>
-      <a href="/schedule.html" class="text-link">コンテンツスケジュールを見る →</a>
-    </div>
-    <div class="curriculum-grid">
-      <div class="curriculum-card">
-        <span class="curriculum-num">01</span>
-        <h3>部位別・種目別 徹底解説</h3>
-        <p>Felipe の最強部位「背中」を含む、部位別のフォーム・身体の使い方・強度・ボリュームを、動画で徹底解説。</p>
-      </div>
-      <div class="curriculum-card">
-        <span class="curriculum-num">02</span>
-        <h3>メニュー設計の原理</h3>
-        <p>その人に今何が必要なのかを見極めて組み合わせる、実践型プログラム設計をケーススタディで学ぶ。</p>
-      </div>
-      <div class="curriculum-card">
-        <span class="curriculum-num">03</span>
-        <h3>PRO の判断 — 週次教育</h3>
-        <p>Felipe が「重量」ではなく「なぜこの重量・回数・頻度か」を語る、専門判断の可視化。</p>
-      </div>
-      <div class="curriculum-card">
-        <span class="curriculum-num">04</span>
-        <h3>Road to World Stage</h3>
-        <p>Felipe の世界挑戦を内側から見る。オリンピア Top6・アーノルドクラシック優勝への道。</p>
-      </div>
-      <div class="curriculum-card">
-        <span class="curriculum-num">05</span>
-        <h3>月1回の Q&Aライブ</h3>
-        <p>Felipe が90分間、リアルタイムで質問に答える。過去回はアーカイブで永久視聴可能。</p>
-      </div>
-      <div class="curriculum-card">
-        <span class="curriculum-num">06</span>
-        <h3>UNIÃO の輪</h3>
-        <p>向上心を持った仲間が集まり、共に成長する場。ファンクラブではなく、学び合う場。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FELIPE ACHIEVEMENTS -->
-<section class="achievements section-dark">
-  <div class="container">
-    <span class="section-eyebrow gold">RECORDS</span>
-    <h2 class="section-h2">実績と、これからの挑戦</h2>
-    <picture class="records-photo">
-      <source type="image/webp" srcset="assets/records-felipe-800.webp 800w, assets/records-felipe-920.webp 920w" sizes="(max-width: 1120px) 100vw, 1072px" />
-      <img src="assets/records-felipe-920.jpg" srcset="assets/records-felipe-800.jpg 800w, assets/records-felipe-920.jpg 920w" sizes="(max-width: 1120px) 100vw, 1072px" width="920" height="613" alt="ステージ上で雄叫びを上げる Felipe Fukai" loading="lazy" decoding="async" />
-    </picture>
-    <div class="achievements-grid">
-      <div class="achievement-card">
-        <span class="achievement-year">2026</span>
-        <span class="achievement-title">IFBB PRO CARD</span>
-        <span class="achievement-desc">日本在住選手として希少な現役プロ選手権出場資格</span>
-      </div>
-      <div class="achievement-card">
-        <span class="achievement-year">2026</span>
-        <span class="achievement-title">TAIWAN PRO — 5TH</span>
-        <span class="achievement-desc">プロデビュー戦・世界へのスタート</span>
-      </div>
-      <div class="achievement-card">
-        <span class="achievement-year">NEXT</span>
-        <span class="achievement-title">OLYMPIA TOP 6</span>
-        <span class="achievement-desc">Classic Physique 世界最高峰への挑戦</span>
-      </div>
-      <div class="achievement-card">
-        <span class="achievement-year">FUTURE</span>
-        <span class="achievement-title">ARNOLD CLASSIC</span>
-        <span class="achievement-desc">シュワルツェネッガー本人からトロフィーを受け取る</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="pricing section-light">
-  <div class="container">
-    <span class="section-eyebrow red">PRICING</span>
-    <h2 class="section-h2 dark">価格は、ブラックフライデーに公開。</h2>
-    <div class="pricing-grid">
-      <div class="pricing-card">
-        <span class="pricing-tag">一般公開</span>
-        <span class="pricing-amount pricing-date">11/27<span class="pricing-per">(金) 10:00</span></span>
-        <p>ブラックフライデー当日に正式価格を公開</p>
-      </div>
-      <div class="pricing-card pricing-card-featured">
-        <span class="pricing-tag pricing-tag-gold">WAITLIST 先行公開</span>
-        <span class="pricing-amount pricing-date">11/23<span class="pricing-per">(月) ライブ</span></span>
-        <p>Q&Aライブ #0 で <strong>Waitlist 限定価格</strong>を最初に公開・<strong>生涯固定</strong></p>
-      </div>
-    </div>
-    <p class="pricing-notes">
-      目安は、パーソナルジム 1回分未満 / 月。コンテスト用オンライン指導の 1/4〜1/10。<br />
-      毎月、Felipe による深い教育コンテンツと Q&Aライブが継続的に追加されます。
-    </p>
-  </div>
-</section>
-
-<!-- FOUNDING MEMBER -->
-<section class="founding section-dark">
-  <div class="container">
-    <span class="section-eyebrow gold">FOUNDING MEMBER</span>
-    <h2 class="section-h2">先着100名限定 — Founding Member 特典</h2>
-    <ul class="founding-list">
-      <li class="founding-highlight"><strong>Felipe による身体評価 & 骨格別トレーニングプラン(抽選)</strong> — Founding Member 100名の中から数名を抽選で選出。Felipe があなたの身体を直接評価し、骨格に合わせたトレーニングプランを提供します。<span class="founding-tba">※ 詳細は後日発表</span></li>
-      <li><strong>Founding Member 永久バッジ</strong> — UNIÃO 内で永久表示、後から入手不可</li>
-      <li><strong>年払いオプション</strong> — 2ヶ月分お得 — Founding Member 期間のみ</li>
-      <li><strong>Q&Aライブ #1 優先質問枠</strong> — ローンチ翌週のライブで質問を先に採用</li>
-      <li><strong>専門パック早期案内権</strong> — 一般公開 2週間前に先行案内</li>
-      <li><strong>紹介プログラム参加権</strong> — 3名紹介で次月1ヶ月無料</li>
-    </ul>
-    <p class="founding-note">
-      ※ Founding Member は先着100名で締め切ります。<br />
-      特典は Founding Member 期間中の会員のみに付与され、後から入手できません。
-    </p>
-  </div>
-</section>
-
-<!-- WAITLIST FORM -->
-<section id="waitlist" class="waitlist section-dark">
-  <div class="container container-narrow">
-    <span class="section-eyebrow gold">WAITLIST — 30秒で完了</span>
-    <h2 class="section-h2">事前登録</h2>
-    <p class="waitlist-lead">
-      Waitlist の 4つの権利(生涯価格ロック・24h先行購入・Q&Aライブ #0・Founding Member 応募権)を受け取ります。
-    </p>
-
-    <form name="uniao-waitlist" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="waitlist-form" action="/thanks.html">
-      <input type="hidden" name="form-name" value="uniao-waitlist" />
-      <p class="hidden-honeypot"><label>Don't fill this out: <input name="bot-field" /></label></p>
-
-      <label>
-        <span>メールアドレス <em>*</em></span>
-        <input type="email" name="email" required placeholder="you@example.com" />
-      </label>
-
-      <label>
-        <span>お名前(ニックネーム可) <em>*</em></span>
-        <input type="text" name="name" required placeholder="山田 太郎" />
-      </label>
-
-      <label>
-        <span>トレーニング歴 <em>*</em></span>
-        <select name="training-years" required>
-          <option value="">選択してください</option>
-          <option value="under-1yr">1年未満</option>
-          <option value="1-3yr">1〜3年</option>
-          <option value="3-5yr">3〜5年</option>
-          <option value="over-5yr">5年以上</option>
-        </select>
-      </label>
-
-      <label>
-        <span>主な目的 <em>*</em></span>
-        <select name="goal" required>
-          <option value="">選択してください</option>
-          <option value="bodymake">ボディメイク</option>
-          <option value="contest">コンテスト出場</option>
-          <option value="bodymake-competitive">ボディメイク+競技視野</option>
-          <option value="coach">指導者志望</option>
-          <option value="other">その他</option>
-        </select>
-      </label>
-
-      <label>
-        <span>現在の最大の悩み(任意・1行で)</span>
-        <input type="text" name="concern" placeholder="例:背中のトレーニングでいつも僧帽ばかり効いてしまう" />
-      </label>
-
-      <input type="hidden" name="source" value="lp-direct" />
-
-      <button type="submit" class="cta cta-primary cta-large"><span class="nowrap">Founding Member</span>&nbsp;&nbsp;<span class="nowrap">事前登録を確定する</span></button>
-      <p class="form-microcopy">登録後、Instagram チャンネル「UNIÃO」への参加をご案内します。新情報はそこで発信し、Q&Aライブ #0 と先行購入のリンクはメールでもお届けします。<br />送信をもって、<a href="/privacy.html" target="_blank" rel="noopener" class="inline-link">プライバシーポリシー</a>とローンチ通知メールの受信に同意したものとします。</p>
-    </form>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq section-light">
-  <div class="container">
-    <span class="section-eyebrow red">FAQ</span>
-    <h2 class="section-h2 dark">よくあるご質問</h2>
-    <div class="faq-list">
-      <details>
-        <summary>価格はいくらですか?</summary>
-        <p>正式価格はブラックフライデー 11/27(金) に公開します。Waitlist 登録者には 11/23(月) の Q&Aライブ #0 で Waitlist 限定価格を先行公開し、その価格が生涯固定されます。目安は、パーソナルジム 1回分未満 / 月、コンテスト用オンライン指導の 1/4〜1/10、月2冊分の書籍代ほど。継続的に新しい深い教育コンテンツが追加されることを考えると、単発の情報消費よりコスパは高いと判断しています。</p>
-      </details>
-      <details>
-        <summary>初心者でも参加できますか?</summary>
-        <p>対象は <strong>トレーニング歴1年以上の中級者〜競技者</strong> です。フォームや種目の基礎は既に押さえている前提で解説します。初心者の方には、まず Felipe の <a href="https://www.instagram.com/ffpro_classic_9/" target="_blank" rel="noopener" class="inline-link">Instagram(@ffpro_classic_9)</a>や <a href="https://www.youtube.com/@fe.fukai2025" target="_blank" rel="noopener" class="inline-link">YouTube(@fe.fukai2025)</a>の無料コンテンツをおすすめします。</p>
-      </details>
-      <details>
-        <summary>途中で解約できますか?</summary>
-        <p>いつでも解約可能です。日割り返金はありませんが、当月末までは視聴可能です。生涯価格ロックは、継続契約中のみ有効です。</p>
-      </details>
-      <details>
-        <summary>これは「オンラインサロン」ですか?</summary>
-        <p>UNIÃO(コミュニティ・教育プラットフォーム)と呼びます。「オンラインサロン」という言葉が持つイメージとは明確に一線を画します。中身は継続的な教育コンテンツと相互学習の場です。</p>
-      </details>
-      <details>
-        <summary>Felipe と直接やり取りできますか?</summary>
-        <p>Q&Aライブ(月1回・90分)で質問を投げられます。UNIÃO 内投稿にも Felipe 本人が定期的にコメントします。個別の全質問への1対1回答は物理的に不可能ですが、Q&Aの中で必ず拾います。</p>
-      </details>
-      <details>
-        <summary>動画コンテンツはどの程度追加されますか?</summary>
-        <p>月あたり、種目解説動画 3〜4本+メニュー設計動画 2本+PRO の判断 1本+短尺 Tips 3本+挑戦ドキュメント随時。ローンチ時点で 20本以上ストック済み。</p>
-      </details>
-      <details>
-        <summary>Founding Member の100名 が埋まったらどうなりますか?</summary>
-        <p>通常会員(一般価格)として引き続き募集しますが、Founding Member 特典は付きません。永久バッジや紹介プログラム参加権は後から入手できない設計です。</p>
-      </details>
-      <details>
-        <summary>決済方法は?</summary>
-        <p>クレジットカード(Visa/Master/JCB/Amex)、Apple Pay、Google Pay を予定。年払いはコンビニ決済にも対応予定です。</p>
-      </details>
-      <details>
-        <summary>領収書・請求書は発行できますか?</summary>
-        <p>適格請求書(インボイス)に対応した請求書の発行に対応予定です。詳細は決済開始までにお知らせします。</p>
-      </details>
-      <details>
-        <summary>Waitlist の生涯価格ロックは、いつから適用されますか?</summary>
-        <p>11/26(木)10:00 の Waitlist 先行購入開始と同時に適用されます。継続契約中は生涯価格が固定されます(解約後の再入会時は再入会時点の一般価格が適用)。</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- FINAL CTA -->
-<section class="final-cta section-dark">
-  <picture class="final-bg">
-      <source type="image/webp" srcset="assets/final-felipe-900.webp 900w, assets/final-felipe-1400.webp 1400w" sizes="100vw" />
-      <img src="assets/final-felipe-1400.jpg" srcset="assets/final-felipe-900.jpg 900w, assets/final-felipe-1400.jpg 1400w" sizes="100vw" width="1400" height="2100" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-    </picture>
-  <div class="container container-narrow">
-    <img src="assets/logo-ff-dark.png" alt="Felipe Fukai" class="logo-final" width="480" height="377" />
-    <h2 class="final-tagline"><span class="nowrap">本気は、</span><span class="nowrap">人を変える。</span></h2>
-    <p class="final-lead">
-      UNIÃO は 2026年11月27日(ブラックフライデー)、100名の Founding Member とともに始まります。<br />
-      先に信じてくれる人には、先に返す。
-    </p>
-    <a href="#waitlist" class="cta cta-primary cta-large">Waitlist に事前登録</a>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <div class="container">
-    <p class="footer-brand">Felipe Fukai ｜ UNIÃO Training Education Community</p>
-    <p class="footer-sponsor">Official Sponsor: <a href="https://www.instagram.com/neweraberio/" target="_blank" rel="noopener">@neweraberio</a> ｜ Code <strong>Felipe10</strong> for 10% OFF</p>
-    <p class="footer-links">
-      <a href="https://www.instagram.com/ffpro_classic_9/" target="_blank" rel="noopener">Instagram</a>
-      <span class="sep">・</span>
-      <a href="https://www.youtube.com/@fe.fukai2025" target="_blank" rel="noopener">YouTube</a>
-      <span class="sep">・</span>
-      <a href="/schedule.html">コンテンツスケジュール</a>
-      <span class="sep">・</span>
-      <a href="/privacy.html">プライバシーポリシー</a>
-    </p>
-    <p class="footer-note">※ 「日本初」は、現役 IFBB PRO が主宰するトレーニング教育コミュニティとして。自社調べ(2026年10月時点)。</p>
-    <p class="footer-operator">運営: 株式会社マルカト</p>
-    <p class="footer-copy">© 2026 Felipe Fukai. All rights reserved.</p>
-  </div>
-</footer>
+<div class="u-bar" id="u-bar" aria-hidden="true"><a href="#register">事前登録する（無料）</a></div>
 
 <script>
-  // ---- Sticky header on scroll ----
   (function () {
-    const stickyHeader = document.getElementById('sticky-header');
-    const hero = document.querySelector('.hero');
-    if (!stickyHeader || !hero) return;
+    var reg = document.getElementById('register');
+    var bar = document.getElementById('u-bar');
+    function go() { reg.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    document.querySelectorAll('[data-go="register"]').forEach(function (b) { b.addEventListener('click', go); });
+    bar.querySelector('a').addEventListener('click', function (e) { e.preventDefault(); go(); });
+    var hero = document.querySelector('.s');
+    var regVisible = false;
+    function update() { var past = hero.getBoundingClientRect().bottom < 0; var show = past && !regVisible; bar.classList.toggle('show', show); bar.setAttribute('aria-hidden', show ? 'false' : 'true'); }
+    if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { regVisible = es[0].isIntersecting; update(); }, { threshold: 0.1 }).observe(reg);
+    window.addEventListener('scroll', update, { passive: true }); update();
 
-    const heroObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          stickyHeader.classList.remove('is-visible');
-          stickyHeader.setAttribute('aria-hidden', 'true');
-        } else {
-          stickyHeader.classList.add('is-visible');
-          stickyHeader.setAttribute('aria-hidden', 'false');
-        }
-      });
-    }, { threshold: 0, rootMargin: '-80px 0px 0px 0px' });
+    try {
+      var q = new URLSearchParams(location.search);
+      var src = (q.get('utm_source') || (document.referrer.indexOf('instagram') > -1 ? 'ig' : 'direct')).toLowerCase();
+      var tag = 'uniao-v2-' + src + (q.get('utm_content') ? '-' + q.get('utm_content') : '');
+      document.querySelectorAll('form.u-form input[name="source"]').forEach(function (i) { i.value = tag.slice(0, 60); });
+    } catch (e) {}
 
-    heroObserver.observe(hero);
-  })();
-
-  // ---- Scroll-triggered fade-in for section content ----
-  (function () {
-    const targets = document.querySelectorAll('section .container, section .container-narrow, .achievement-card, .benefit-card, .curriculum-card, .pricing-card');
-    if (!('IntersectionObserver' in window) || targets.length === 0) return;
-
-    targets.forEach(function (el) { el.classList.add('reveal'); });
-
-    const revealObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-revealed');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
-
-    targets.forEach(function (el) { revealObserver.observe(el); });
-  })();
-
-  // ---- Form submit (AJAX to Netlify Forms, then go to thanks page) ----
-  (function () {
-    const form = document.querySelector('form[name="uniao-waitlist"]:not([hidden])');
-    if (!form || !window.fetch || !window.URLSearchParams) return;
-    const button = form.querySelector('button[type="submit"]');
-    if (!button) return;
-
-    const originalLabel = button.innerHTML;
-    const errorEl = document.createElement('p');
-    errorEl.className = 'form-error';
-    errorEl.setAttribute('role', 'alert');
-    errorEl.hidden = true;
+    if (!window.fetch || !window.URLSearchParams) return;
+    var form = document.querySelector('form.u-form');
+    var button = form.querySelector('button[type="submit"]');
+    var original = button.innerHTML;
+    var errorEl = document.createElement('p'); errorEl.className = 'form-error'; errorEl.setAttribute('role', 'alert'); errorEl.hidden = true;
     button.insertAdjacentElement('afterend', errorEl);
-
-    function restore() {
-      button.disabled = false;
-      button.classList.remove('is-loading');
-      button.innerHTML = originalLabel;
-    }
-
     form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      errorEl.hidden = true;
-      button.disabled = true;
-      button.classList.add('is-loading');
-      button.textContent = '送信中…';
-
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(new FormData(form)).toString()
-      }).then(function (res) {
-        if (!res.ok) throw new Error('HTTP ' + res.status);
-        window.location.href = '/thanks.html';
-      }).catch(function () {
-        restore();
-        errorEl.textContent = '送信できませんでした。通信環境をご確認のうえ、もう一度お試しください。';
-        errorEl.hidden = false;
-      });
+      e.preventDefault(); errorEl.hidden = true; button.disabled = true; button.textContent = '送信中…';
+      fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(form)).toString() })
+        .then(function (res) { if (!res.ok) throw new Error('HTTP ' + res.status); try { sessionStorage.setItem('uniao_email', form.querySelector('input[name="email"]').value); } catch (e) {} window.location.href = '/thanks.html'; })
+        .catch(function () { button.disabled = false; button.innerHTML = original; errorEl.textContent = '送信できませんでした。通信環境をご確認のうえ、もう一度お試しください。'; errorEl.hidden = false; });
     });
-  })();
-
-  // ---- Results carousel (scroll-snap + arrows + dots) ----
-  (function () {
-    const track = document.querySelector('.results-track');
-    if (!track) return;
-    const cards = Array.from(track.children);
-    const prev = document.querySelector('.results-prev');
-    const next = document.querySelector('.results-next');
-    const dotsBox = document.querySelector('.results-dots');
-    const dots = cards.map(function (_, i) {
-      const d = document.createElement('button');
-      d.type = 'button'; d.className = 'results-dot'; d.setAttribute('aria-label', (i + 1) + '枚目');
-      d.addEventListener('click', function () { scrollToCard(i); });
-      dotsBox.appendChild(d);
-      return d;
-    });
-    let idx = 0, settle = null;
-    function current() {
-      const x = track.scrollLeft;
-      let best = 0, bestD = Infinity;
-      cards.forEach(function (c, i) { const d = Math.abs(c.offsetLeft - 16 - x); if (d < bestD) { bestD = d; best = i; } });
-      return best;
-    }
-    function scrollToCard(i) {
-      idx = Math.max(0, Math.min(cards.length - 1, i));
-      track.scrollTo({ left: cards[idx].offsetLeft - 16, behavior: 'smooth' });
-      update();
-    }
-    function update() {
-      dots.forEach(function (d, k) { d.classList.toggle('is-active', k === idx); });
-      prev.disabled = idx === 0;
-      next.disabled = idx === cards.length - 1;
-    }
-    prev.addEventListener('click', function () { scrollToCard(idx - 1); });
-    next.addEventListener('click', function () { scrollToCard(idx + 1); });
-    // After a user swipe settles, sync idx with the snapped card
-    track.addEventListener('scroll', function () {
-      clearTimeout(settle);
-      settle = setTimeout(function () { idx = current(); update(); }, 120);
-    });
-    window.addEventListener('resize', update);
-    update();
-  })();
-
-  // ---- Respect prefers-reduced-motion ----
-  (function () {
-    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      document.documentElement.classList.add('reduced-motion');
-    }
   })();
 </script>
-
 </body>
 </html>
