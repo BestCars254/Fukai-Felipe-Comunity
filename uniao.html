@@ -166,6 +166,34 @@ body.u { overflow-x: hidden; }
 .last .lines em { font-style: normal; color: var(--kagayaki-gold); }
 .last .mark { margin-top: 10px; }
 .fine { font-size: 11px; color: var(--ff-white-dim); text-align: center; margin: 8px 0 0; line-height: 1.7; }
+
+/* pricing v2 */
+.price-lead { font-size: 17px; font-weight: 900; margin: 0 0 8px; }
+.tier { text-align: left; padding: 24px 20px 22px; }
+.tier .lim { display: inline-block; margin: 0 0 14px; }
+.tier .n { margin: 0 0 6px; }
+.tier .p { font-size: 44px; }
+.tier .p small { display: block; margin: 6px 0 0; font-size: 13px; }
+@media (min-width: 640px) { .tier .p { font-size: 40px; } .tier.f .p { font-size: 46px; } }
+.tier.f .p { font-size: 52px; }
+.tier .per { margin: 6px 0 14px; }
+.tier ul { list-style: none; margin: 0; padding: 14px 0 0; border-top: 1px solid var(--gray-line); }
+.tier li { font-size: 14px; line-height: 1.7; padding: 3px 0 3px 20px; position: relative; color: rgba(255,255,255,.88); }
+.tier li::before { content: "・"; position: absolute; left: 0; color: var(--ff-white-dim); }
+.tier.f li::before { color: var(--kagayaki-gold); }
+.tier .note { margin: 14px 0 0; color: var(--kagayaki-gold); font-weight: 700; font-size: 13px; }
+.tier.e, .tier.s { background: #1C1715; }
+.incl { margin: 22px 0 0; padding: 20px 18px; border: 1px solid var(--gray-line); border-radius: 10px; }
+.incl h3 { font-size: 15px; font-weight: 900; margin: 0 0 10px; letter-spacing: .02em; }
+.incl ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 14px; }
+@media (max-width: 480px) { .incl ul { grid-template-columns: 1fr; } }
+.incl li { font-size: 14px; line-height: 1.6; padding-left: 22px; position: relative; }
+.incl li::before { content: "✓"; position: absolute; left: 0; color: var(--kagayaki-gold); font-weight: 900; }
+.price-cta { margin: 24px 0 0; }
+.price-cta h3 { font-size: 20px; font-weight: 900; margin: 0 0 8px; }
+.price-cta p.lead { margin-bottom: 14px; }
+.legal { list-style: none; margin: 14px 0 0; padding: 0; }
+.legal li { font-size: 13px; line-height: 1.75; color: var(--ff-white-muted); padding-left: 1.2em; text-indent: -1.2em; margin-bottom: 4px; }
 </style>
 <!-- Meta Pixel Code -->
 <script>
@@ -292,12 +320,45 @@ fbq('track', 'ViewContent', {content_name: 'uniao-v2'});
   <!-- 07 -->
   <section class="s" id="price">
     <p class="eyebrow">07 ｜ MEMBERSHIP</p>
+    <p class="price-lead">本気で身体を変えたい人へ。</p>
+    <p class="lead">現役 IFBB PRO から、トレーニングの技術と判断力を学ぶ。<br />すべてのプランで、同じ教材・コミュニティ機能をご利用いただけます。</p>
     <div class="tiers">
-      <div class="tier f"><p class="n">FOUNDING MEMBER</p><p class="p">¥66,000<small>/年</small></p><p class="per">税込 ・ 月換算 ¥5,500</p><span class="lim">先着20名限定</span><p class="note">継続中は Founder 価格を維持。</p></div>
-      <div class="tier e"><p class="n">EARLY MEMBER</p><p class="p">¥6,980<small>/月</small></p><p class="per">税込</p><span class="lim">初期メンバー50名限定</span><p class="note">継続中は同価格を維持。</p></div>
-      <div class="tier"><p class="n">STANDARD MEMBER</p><p class="p">¥7,980<small>/月</small></p><p class="per">税込</p><span class="lim">通常価格</span></div>
+      <div class="tier f">
+        <span class="lim">先着20名限定</span>
+        <p class="n">FOUNDING MEMBER</p>
+        <p class="p">¥66,000<small>/年（税込）</small></p>
+        <p class="per">月換算 ¥5,500</p>
+        <ul><li>Founder 限定ステータス</li><li>継続中は Founder 価格を維持</li><li>年額一括払い</li></ul>
+        <p class="note">UNIÃO を最初から一緒につくる、最初の20名へ。</p>
+      </div>
+      <div class="tier e">
+        <span class="lim">初期メンバー50名限定</span>
+        <p class="n">EARLY MEMBER</p>
+        <p class="p">¥6,980<small>/月（税込）</small></p>
+        <ul><li>Founder 枠終了後に募集</li><li>継続中は月額 6,980円を維持</li><li>月額払い</li></ul>
+      </div>
+      <div class="tier s">
+        <span class="lim">通常価格</span>
+        <p class="n">STANDARD MEMBER</p>
+        <p class="p">¥7,980<small>/月（税込）</small></p>
+        <ul><li>初期募集終了後の通常価格</li><li>月額払い</li></ul>
+      </div>
     </div>
-    <p class="price-foot">すべてのプランで共通の教材・コミュニティ機能をご利用いただけます。<br /><span style="color:var(--ff-white-dim)">※Founder は年額一括払いです。更新・解約条件は申込時にご確認ください。</span></p>
+    <div class="incl">
+      <h3>すべてのプランに含まれる内容</h3>
+      <ul><li>種目の徹底解説動画</li><li>トレーニング原則・プログラム設計</li><li>定期フォームチェック</li><li>Q&amp;A・LIVE</li><li>メンバーコミュニティ</li><li>新しい教材の継続追加</li></ul>
+    </div>
+    <div class="price-cta">
+      <h3>無料事前登録受付中</h3>
+      <p class="lead">11月26日、事前登録者へ先行案内。<br />Founder 限定20名の募集情報もお届けします。</p>
+      <button class="cta-main" type="button" data-go="register">無料で事前登録する</button>
+      <ul class="legal">
+        <li>※事前登録は無料です。登録しただけでは料金は発生しません。</li>
+        <li>※Founder は 66,000円の年額一括払いです。月額 5,500円での支払いではありません。</li>
+        <li>※事前登録は Founder 枠の確保を保証するものではありません。</li>
+        <li>※更新・解約・返金条件は申込時にご確認ください。</li>
+      </ul>
+    </div>
   </section>
 
   <!-- 08 -->
