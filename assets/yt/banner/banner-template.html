@@ -1,0 +1,31 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><style>
+@font-face{font-family:"NS";src:url("../fonts/node_modules/@fontsource/noto-sans-jp/files/noto-sans-jp-japanese-900-normal.woff2") format("woff2");font-weight:900}
+@font-face{font-family:"NS";src:url("../fonts/node_modules/@fontsource/noto-sans-jp/files/noto-sans-jp-japanese-700-normal.woff2") format("woff2");font-weight:700}
+@font-face{font-family:"BC";src:url("../fonts/node_modules/@fontsource/barlow-condensed/files/barlow-condensed-latin-700-normal.woff2") format("woff2");font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}html,body{width:2560px;height:1440px;overflow:hidden;background:#0E0B0A}
+body{font-family:"NS",sans-serif;color:#fff;position:relative}
+/* photo: within the safe zone on the right half */
+.ph{position:absolute;left:1280px;top:0;width:1280px;height:1440px;background:url(stage.jpg) 40% 0%/auto 130% no-repeat;background-position-y:190px;filter:saturate(.75) contrast(1.08)}
+.fade{position:absolute;inset:0;background:linear-gradient(90deg,#0E0B0A 0%,#0E0B0A 42%,rgba(14,11,10,.85) 50%,rgba(14,11,10,.2) 64%,rgba(14,11,10,0) 80%),linear-gradient(180deg,rgba(14,11,10,.55) 0%,rgba(14,11,10,0) 25%,rgba(14,11,10,0) 75%,rgba(14,11,10,.6) 100%)}
+/* safe zone 1546x423 centered: x 507..2053, y 508..931 */
+.safe{position:absolute;left:507px;top:508px;width:1546px;height:423px}
+.lbl{position:absolute;left:0;top:0;font-family:"BC",sans-serif;font-size:40px;letter-spacing:.3em;color:#D4A94F}
+.h{position:absolute;left:0;top:70px;font-size:118px;font-weight:900;line-height:1.1;letter-spacing:-.01em;white-space:nowrap}
+.h em{font-style:normal;color:#fff;text-shadow:0 0 22px rgba(185,58,56,.9),0 0 48px rgba(185,58,56,.55)}
+.tags{position:absolute;left:0;top:225px;font-size:36px;font-weight:700;color:rgba(255,255,255,.75);letter-spacing:.04em}
+.rule{position:absolute;left:0;top:300px;width:620px;height:3px;background:#9C302E}
+.open{position:absolute;left:0;top:330px;font-family:"BC",sans-serif;font-size:40px;letter-spacing:.2em;color:#D4A94F}
+.logo{position:absolute;left:507px;top:380px;height:90px}
+.guide{display:none;position:absolute;left:507px;top:508px;width:1546px;height:423px;outline:2px dashed lime}
+</style></head><body>
+<div class="ph"></div><div class="fade"></div>
+<img class="logo" src="logo.png" alt="">
+<div class="safe">
+  <p class="lbl">IFBB PRO FELIPE FUKAI</p>
+  <p class="h">理解して、<em>デカくなる。</em></p>
+  <p class="tags">筋肥大 ｜ フォーム ｜ トレーニング理論</p>
+  <div class="rule"></div>
+  <p class="open">UNIÃO ｜ 11.27 OPEN</p>
+</div>
+<div class="guide"></div>
+</body></html>
