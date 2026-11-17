@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://ff-uniao.netlify.app/" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="preload" as="image" href="/assets/lp/felipe-stage.jpg" fetchpriority="high" />
+<link rel="preload" as="image" href="/assets/lp/video-poster.jpg" fetchpriority="high" />
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;900&family=Barlow+Condensed:wght@600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
 <link rel="stylesheet" href="/style.css" />
@@ -43,9 +43,7 @@ body.u { background: var(--bg); color: var(--ink); font-family: 'Noto Sans JP', 
 
 /* hero */
 .hv { position: relative; padding: 18px 0 44px; text-align: left; }
-.hv::before { content: ""; position: absolute; top: -52px; bottom: 0; left: 50%; width: 100vw; transform: translateX(-50%); z-index: -1;
-  background-image: linear-gradient(90deg, var(--bg) 0%, rgba(14,11,10,.9) 34%, rgba(14,11,10,.45) 60%, rgba(14,11,10,.15) 100%), linear-gradient(180deg, rgba(14,11,10,.5) 0%, rgba(14,11,10,.05) 40%, rgba(14,11,10,.75) 78%, var(--bg) 100%), url(/assets/lp/felipe-stage.jpg);
-  background-size: cover; background-position: 86% 6%; filter: saturate(.7); }
+.hv::before { content: ""; position: absolute; top: -52px; bottom: 0; left: 50%; width: 100vw; transform: translateX(-50%); z-index: -1; background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(156,48,46,.18), transparent 70%); }
 .hv .q { font-size: 15px; font-weight: 700; color: var(--gold); margin: 0 0 12px; letter-spacing: .02em; }
 .hv .lines { font-size: 17px; font-weight: 700; line-height: 1.65; margin: 0 0 18px; }
 .hv h1 { font-size: clamp(34px, 9.4vw, 44px); font-weight: 900; line-height: 1.18; letter-spacing: -.02em; margin: 0 0 16px; }
@@ -176,6 +174,47 @@ body.u { background: var(--bg); color: var(--ink); font-family: 'Noto Sans JP', 
 .bar.show { transform: none; }
 .bar a { display: block; max-width: 600px; margin: 0 auto; background: var(--red); color: #fff; text-align: center; font-weight: 900; font-size: 16px; padding: 13px; border-radius: 6px; }
 @media (prefers-reduced-motion: reduce) { .bar { transition: none; } html { scroll-behavior: auto; } }
+
+/* v4 additions */
+.hv h1{margin-bottom:10px}
+.hv .one{font-size:17px;font-weight:700;color:var(--gold);margin:0 0 18px}
+.hvid{position:relative;aspect-ratio:16/9;background:#000;border-radius:10px;overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,.6);margin:0 0 10px;cursor:pointer}
+.hvid img{width:100%;height:100%;object-fit:cover;display:block}
+.hvid::after{content:"";position:absolute;left:50%;top:50%;width:72px;height:72px;margin:-36px 0 0 -36px;border-radius:50%;background:var(--red) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23fff'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E") center/36px no-repeat;box-shadow:0 8px 24px rgba(0,0,0,.6)}
+.hvid.on::after{display:none}
+.hvid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.hv .vcap{font-size:13px;color:var(--ink-3);text-align:center;margin:0 0 20px}
+.state{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.state li{background:var(--card);border-radius:8px;padding:16px 16px 16px 50px;position:relative;font-size:16px;font-weight:700;line-height:1.6}
+.state li::before{content:"✓";position:absolute;left:18px;top:15px;color:var(--gold);font-weight:900;font-size:18px}
+.state li small{display:block;font-weight:500;font-size:13px;color:var(--ink-2);margin-top:4px}
+.anchor{display:grid;gap:12px;margin:0 0 18px}
+@media(min-width:560px){.anchor{grid-template-columns:1fr 1fr}}
+.anchor div{border-radius:10px;padding:18px;background:var(--card);border:1px solid var(--line)}
+.anchor div.u{border-color:var(--gold)}
+.anchor h3{font-size:13px;letter-spacing:.1em;color:var(--ink-3);margin:0 0 8px;font-weight:700}
+.anchor div.u h3{color:var(--gold)}
+.anchor .big{font-family:'Barlow Condensed',sans-serif;font-size:40px;font-weight:700;line-height:1;margin:0}
+.anchor .big small{font-family:'Noto Sans JP',sans-serif;font-size:13px;color:var(--ink-3);font-weight:700;margin-left:6px}
+.anchor div.u .big{color:var(--gold)}
+.anchor p{font-size:13px;color:var(--ink-2);margin:8px 0 0;line-height:1.6}
+.anchor .day{display:inline-block;margin-top:10px;font-size:13px;font-weight:700;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.08)}
+.anchor div.u .day{background:var(--gold);color:var(--bg)}
+.eq{font-size:16px;font-weight:700;text-align:center;margin:0 0 22px;line-height:1.7}
+.eq strong{color:var(--gold)}
+.perk{display:grid;gap:12px;margin:0 0 18px}
+.perk article{border-radius:12px;padding:20px 18px;background:var(--card);border:1px solid var(--line)}
+.perk article.f{border-color:var(--gold);box-shadow:0 0 0 1px rgba(212,169,79,.3)}
+.perk .lim{display:inline-block;font-size:12px;font-weight:700;padding:4px 12px;border-radius:999px;background:rgba(255,255,255,.1);margin:0 0 10px}
+.perk article.f .lim{background:var(--gold);color:var(--bg)}
+.perk h3{font-size:20px;font-weight:900;margin:0 0 10px}
+.perk h3 small{display:block;font-family:'Barlow Condensed',sans-serif;font-size:13px;letter-spacing:.2em;color:var(--ink-3);margin-bottom:4px}
+.perk ul{list-style:none;margin:0;padding:0}
+.perk li{font-size:15px;line-height:1.7;padding:3px 0 3px 24px;position:relative}
+.perk li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:900}
+.perk li.lot{margin-top:8px;padding:12px 12px 12px 42px;background:rgba(156,48,46,.18);border:1px solid rgba(185,58,56,.5);border-radius:8px;font-weight:700}
+.perk li.lot::before{content:"★";left:14px;color:var(--red-h)}
+.perk li.lot small{display:block;font-weight:500;font-size:13px;color:var(--ink-2);margin-top:2px}
 </style>
 <!-- Meta Pixel Code -->
 <script>
@@ -189,7 +228,7 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '2606382796526025');
 fbq('track', 'PageView');
-fbq('track', 'ViewContent', {content_name: 'uniao-v3'});
+fbq('track', 'ViewContent', {content_name: 'uniao-v4'});
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2606382796526025&ev=PageView&noscript=1" /></noscript>
 <!-- End Meta Pixel Code -->
@@ -205,39 +244,53 @@ fbq('track', 'ViewContent', {content_name: 'uniao-v3'});
     <span>UNIÃO ｜ 2026.11.27 OPEN</span>
   </header>
 
-  <!-- HERO -->
+  <!-- HERO: video first -->
   <section class="hv">
-    <p class="q">感覚でデカくなる時代は、もう終わり。</p>
-    <p class="lines">なぜその種目か。<br />なぜそのフォームか。<br />なぜその重量、その回数か。</p>
     <h1><small>筋肉のデカさには、</small><em>理由がある。</em></h1>
-    <p class="desc">デカい人は、全部説明できる。現役 IFBB PRO Felipe Fukai が、筋肉が成長する理由を<strong>全種目で言語化</strong>する。</p>
-    <div class="brand"><p class="mark">UNIÃO</p><p class="mark-sub">2026.11.27 OPEN</p></div>
+    <p class="one">感覚でデカくなる時代は、もう終わり。</p>
+    <div class="hvid" id="hvid" data-id="M1rwhaDaGqw" role="button" tabindex="0" aria-label="動画を再生"><img src="/assets/lp/video-poster.jpg" alt="UNIÃO 紹介動画" width="1280" height="720" fetchpriority="high" /></div>
+    <p class="vcap">▶ まず、この動画を見てください。</p>
     <button class="cta" type="button" data-go>無料で事前登録する</button>
     <p class="cta-note">登録無料・決済不要</p>
   </section>
 
-  <!-- 3 pain -->
+  <!-- 1 state -->
   <section class="s">
-    <h2 class="h2">こんな悩み、ありませんか？</h2>
-    <div class="pain">
-      <div>何年も鍛えているのに、身体が変わらない。</div>
-      <div>特定の部位だけ成長しない。</div>
-      <div>限界まで追い込んでも結果が出ない。</div>
-      <div>情報が多すぎて、何が正しいかわからない。</div>
-      <div>もっとデカくなりたい。でも何を変えればいいかわからない。</div>
+    <p class="eyebrow">AFTER UNIÃO</p>
+    <h2 class="h2">UNIÃO に入ると、<br />こうなる。</h2>
+    <ul class="state">
+      <li>自分のフォームの、どこで負荷が逃げているかが分かる<small>腰や腕が先に疲れる理由を、自分で見つけられる</small></li>
+      <li>種目を選ぶ理由を、自分の言葉で言える<small>骨格と狙いに合った種目を、自分で選べる</small></li>
+      <li>重量・レップ・強度を、自分で決められる<small>「8〜12回」ではなく、なぜその回数かが分かる</small></li>
+      <li>停滞したとき、何を変えればいいかが分かる<small>7つの要素のどこが抜けているかを、自分で探せる</small></li>
+    </ul>
+  </section>
+
+  <!-- 2 get -->
+  <section class="s">
+    <p class="eyebrow">WHAT YOU GET</p>
+    <h2 class="h2">手に入るもの。</h2>
+    <div class="ct">
+      <article>
+        <div class="vis"><img src="/assets/lp/thumb-bentover.jpg" alt="種目の徹底解説" width="1200" height="675" /></div>
+        <div class="tx"><p class="n">01</p><h3>種目の徹底解説</h3><p>毎週1本、10〜15分。完成形から動作を分解し、間違い・重量・レップ・PRO の判断まで。</p></div>
+      </article>
+      <article>
+        <div class="vis"><img src="/assets/lp/principles.jpg" alt="トレーニング原則" width="1200" height="675" /></div>
+        <div class="tx"><p class="n">02</p><h3>トレーニング原則とプログラム設計</h3><p>重量、強度、セット数、頻度、回復。自分のメニューを自分で組めるようになる。</p></div>
+      </article>
+      <article>
+        <div class="vis"><img src="/assets/lp/formcheck.jpg" alt="フォームチェック" width="1200" height="675" /></div>
+        <div class="tx"><p class="n">03</p><h3>Felipe によるフォームチェック</h3><p>メンバーの動画を、PRO の視点で解説。どこを見て、何を直すか。</p></div>
+      </article>
+      <article>
+        <div class="vis"><img src="/assets/lp/community.jpg" alt="コミュニティ" width="1200" height="675" /></div>
+        <div class="tx"><p class="n">04</p><h3>Q&amp;A・LIVE・コミュニティ</h3><p>質問して、実践して、見直す。一人では続かないことを、続けられる場所。</p></div>
+      </article>
     </div>
   </section>
 
-  <!-- 4 compare -->
-  <section class="s">
-    <h2 class="h2">デカくならない理由は、<br />努力不足だけじゃない。</h2>
-    <div class="cmp">
-      <div class="now"><h3>よくある考え方</h3><ul><li>重量を増やす</li><li>セット数を増やす</li><li>とにかく限界まで追い込む</li></ul></div>
-      <div class="new"><h3>UNIÃO で身につける考え方</h3><ul><li>なぜ、その種目なのか</li><li>なぜ、そのフォームなのか</li><li>何を変えるべきなのか</li></ul></div>
-    </div>
-  </section>
-
-  <!-- 5 seven -->
+  <!-- 3 seven -->
   <section class="s">
     <h2 class="h2">筋肉を成長させるために、<br />外せない7つ。</h2>
     <div class="seven">
@@ -251,46 +304,21 @@ fbq('track', 'ViewContent', {content_name: 'uniao-v3'});
     </div>
   </section>
 
-  <!-- 6 contents -->
-  <section class="s">
-    <h2 class="h2">UNIÃO では、<br />実際に何ができるのか？</h2>
-    <div class="ct">
-      <article>
-        <div class="vis video" id="vid" data-id="vNz1KK12BYE" role="button" tabindex="0" aria-label="解説動画を再生"><img src="/assets/lp/thumb-bentover.jpg" alt="ベントオーバーロー 徹底解説" width="1200" height="675" /></div>
-        <div class="tx"><p class="n">01</p><h3>種目の徹底解説</h3><p>1種目約10〜15分。フォーム・動作分解・重量設定・レップ・PRO の判断まで解説。</p></div>
-      </article>
-      <article>
-        <div class="vis"><img src="/assets/lp/principles.jpg" alt="トレーニング原則のまとめスライド" width="1200" height="675" /></div>
-        <div class="tx"><p class="n">02</p><h3>トレーニング原則とプログラム設計</h3><p>重量、強度、セット数、頻度、回復などを体系的に学ぶ。</p></div>
-      </article>
-      <article>
-        <div class="vis"><img src="/assets/lp/formcheck.jpg" alt="ジムでのトレーニング" width="1200" height="675" /></div>
-        <div class="tx"><p class="n">03</p><h3>Felipe によるフォームチェック</h3><p>実際のトレーニング動画を見ながら、PRO の視点で解説。</p></div>
-      </article>
-      <article>
-        <div class="vis"><img src="/assets/lp/community.jpg" alt="ジムでのトレーニング風景" width="1200" height="675" /></div>
-        <div class="tx"><p class="n">04</p><h3>Q&amp;A・LIVE・コミュニティ</h3><p>質問・実践・学習を繰り返せる環境。</p></div>
-      </article>
-    </div>
-    <button class="cta" type="button" data-go>無料で事前登録する</button>
-  </section>
-
-  <!-- 7 felipe -->
+  <!-- 4 felipe -->
   <section class="s">
     <h2 class="h2">教えるのは、現役 IFBB PRO。</h2>
     <div class="fel">
-      <img src="/assets/lp/felipe-stage.jpg" alt="IFBB PRO Felipe Fukai" width="1000" height="1500" loading="lazy" />
+      <img src="/assets/lp/felipe-stage.jpg" alt="IFBB PRO Felipe Fukai" width="1000" height="1500" />
       <div class="ov"><p class="name">FELIPE FUKAI</p><div class="ach"><span>2026 IFBB PRO カード獲得</span><span>TAIWAN PRO 5位</span></div></div>
     </div>
     <div class="story">
       <h3>僕も、2年間止まった。</h3>
-      <p class="p">重量は伸びていた。<br />毎回、本気でトレーニングしていた。<br />でも、背中だけは思ったように変わらなかった。</p>
-      <p class="p">そこで変えたのは、努力の量ではなく、<span class="k">トレーニングの見方</span>。</p>
-      <p class="p">フォーム、種目、重量、レップ、プログラム。<br />一つひとつを見直したことで、身体が変わり始めました。</p>
+      <p class="p">重量は伸びていた。毎回、本気でトレーニングしていた。<br />でも、背中だけは思ったように変わらなかった。</p>
+      <p class="p">そこで変えたのは、努力の量ではなく、<span class="k">トレーニングの見方</span>。<br />一つひとつに理由をつけたことで、身体が変わり始めました。</p>
     </div>
   </section>
 
-  <!-- 8 who -->
+  <!-- 5 who -->
   <section class="s">
     <h2 class="h2">こんな人のために作りました。</h2>
     <ul class="who">
@@ -302,17 +330,50 @@ fbq('track', 'ViewContent', {content_name: 'uniao-v3'});
     </ul>
   </section>
 
-  <!-- 9 pricing -->
+  <!-- 6 pricing w/ anchor -->
   <section class="s" id="price">
     <p class="eyebrow">MEMBERSHIP</p>
-    <h2 class="h2">本気で身体を変えたい人へ。</h2>
-    <p class="p">すべてのプランで、同じ教材・コミュニティ機能をご利用いただけます。価格はすべて税込。</p>
+    <h2 class="h2">PRO に毎週聞ける環境が、<br />1日 約181円から。</h2>
+    <div class="anchor">
+      <div><h3>パーソナルトレーニング</h3><p class="big">¥10,000<small>〜 / 1回 60分</small></p><p>月4回なら ¥40,000〜。その日のフォームは見てもらえるが、理由までは残らない。</p><span class="day">1日 約1,300円</span></div>
+      <div class="u"><h3>UNIÃO</h3><p class="big">¥6,980<small>/ 月（税込）</small></p><p>全種目の徹底解説、原則とプログラム設計、フォームチェック、Q&amp;A・LIVE。全部込み。</p><span class="day">1日 約233円</span></div>
+    </div>
+    <p class="eq">パーソナル <strong>約6回分</strong> の金額で、<br />IFBB PRO の全種目解説が <strong>1年間</strong>。</p>
     <div class="tiers">
-      <div class="tier f"><span class="lim">先着20名限定</span><p class="n">FOUNDING MEMBER</p><p class="pr">¥66,000<small>/ 年（税込・年額一括払い）</small></p><p class="per">月換算 ¥5,500</p><ul><li>継続中は Founder 価格を維持</li><li>Founder ステータス付き</li></ul></div>
-      <div class="tier"><span class="lim">初期メンバー50名限定</span><p class="n">EARLY MEMBER</p><p class="pr">¥6,980<small>/ 月（税込）</small></p><p class="per">Founder 枠終了後に募集</p><ul><li>継続中は同価格を維持</li><li>月額払い</li></ul></div>
+      <div class="tier f"><span class="lim">先着20名限定</span><p class="n">FOUNDING MEMBER</p><p class="pr">¥66,000<small>/ 年（税込・年額一括払い）</small></p><p class="per">月換算 ¥5,500 ・ 1日 約181円</p><ul><li>継続中は Founder 価格を維持</li><li>Founder ステータス付き</li></ul></div>
+      <div class="tier"><span class="lim">初期メンバー50名限定</span><p class="n">EARLY MEMBER</p><p class="pr">¥6,980<small>/ 月（税込）</small></p><p class="per">1日 約233円 ・ いつでも解約可</p><ul><li>継続中は同価格を維持</li><li>Founder 枠終了後に募集</li></ul></div>
       <div class="tier"><span class="lim">通常価格</span><p class="n">STANDARD MEMBER</p><p class="pr">¥7,980<small>/ 月（税込）</small></p><p class="per">初期募集終了後</p><ul><li>月額払い</li></ul></div>
     </div>
     <div class="incl"><h3>すべてのプランに含まれる内容</h3><ul><li>種目の徹底解説動画</li><li>トレーニング原則・プログラム設計</li><li>定期フォームチェック</li><li>Q&amp;A・LIVE</li><li>メンバーコミュニティ</li><li>新しい教材の継続追加</li></ul></div>
+  </section>
+
+  <!-- 7 perks -->
+  <section class="s">
+    <p class="eyebrow">FOUNDER &amp; EARLY MEMBER</p>
+    <h2 class="h2">最初の70名だけの、<br />豪華特典。</h2>
+    <div class="perk">
+      <article class="f">
+        <span class="lim">先着20名</span>
+        <h3><small>FOUNDING MEMBER</small>UNIÃO を最初から一緒につくる20名へ</h3>
+        <ul>
+          <li>Felipe による身体評価（1回）</li>
+          <li>FOUNDER バッジと、優先 Q&amp;A</li>
+          <li>全コンテンツへの最速アクセス</li>
+          <li>継続中は一生 Founder 価格</li>
+          <li class="lot">抽選で3名に、Felipe 本人の個別コーチング（1ヶ月）<small>フォーム・メニュー・減量まで、本人が直接見ます</small></li>
+        </ul>
+      </article>
+      <article>
+        <span class="lim">初期メンバー50名</span>
+        <h3><small>EARLY MEMBER</small>オープン直後に入った50名へ</h3>
+        <ul>
+          <li>初期メンバーバッジ</li>
+          <li>継続中は月額 ¥6,980 を維持</li>
+          <li class="lot">抽選で2名に、Felipe 本人の個別コーチング（1ヶ月）</li>
+        </ul>
+      </article>
+    </div>
+    <p class="p">特典の詳細と抽選の方法は、11月23日（月）21時の Instagram LIVE で全部話します。</p>
     <button class="cta" type="button" data-go>無料で事前登録する</button>
     <ul class="legal">
       <li>※事前登録は無料です。登録しただけでは料金は発生しません。</li>
@@ -331,25 +392,24 @@ fbq('track', 'ViewContent', {content_name: 'uniao-v3'});
     <details><summary>退会できますか？</summary><p class="a">月額プラン（Early・Standard）はいつでも退会でき、次回の請求から停止します。Founder は年額一括払いのため、更新・解約・返金の条件は申込時にご確認ください。</p></details>
   </section>
 
-  <!-- 10 schedule -->
+  <!-- schedule -->
   <section class="s">
     <h2 class="h2">2026.11.27 OPEN</h2>
     <ul class="tl">
-      <li><b>11.23</b><span>Instagram LIVE</span></li>
+      <li><b>11.23</b><span>Instagram LIVE 21:00 ─ 価格と特典を全部話します</span></li>
       <li><b>11.26</b><span>事前登録者へ先行案内</span></li>
       <li class="open"><b>11.27</b><span>UNIÃO OPEN</span></li>
     </ul>
   </section>
 
-  <!-- 11 final -->
+  <!-- final -->
   <section class="s final" id="register">
     <p class="big">筋肉のデカさには、理由がある。<em>感覚でデカくなる時代は、もう終わり。</em></p>
-    <p class="p">努力を続けてきた。それでも、まだ理想の身体には届いていない。<br />だからこそ、何を変えるべきかを理解して鍛える。</p>
     <p class="big" style="font-size:19px">感覚でやる から、理由を知ってやる へ。</p>
     <p class="mark">UNIÃO</p><p class="mark-sub">2026.11.27 OPEN</p>
     <form name="uniao-waitlist" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="form" action="/thanks.html">
       <input type="hidden" name="form-name" value="uniao-waitlist" />
-      <input type="hidden" name="source" value="uniao-v3" />
+      <input type="hidden" name="source" value="uniao-v4" />
       <p class="hidden-honeypot"><label>Don't fill this out: <input name="bot-field" /></label></p>
       <label><span class="sr-only">メールアドレス</span><input type="email" name="email" required autocomplete="email" inputmode="email" placeholder="メールアドレス" /></label>
       <button type="submit" class="cta">無料で事前登録する</button>
@@ -377,14 +437,14 @@ fbq('track', 'ViewContent', {content_name: 'uniao-v3'});
     if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { regVisible = es[0].isIntersecting; update(); }, { threshold: 0.05 }).observe(reg);
     window.addEventListener('scroll', update, { passive: true }); update();
 
-    var v = document.getElementById('vid');
-    function play() { if (v.classList.contains('on')) return; v.classList.add('on'); var f = document.createElement('iframe'); f.src = 'https://www.youtube-nocookie.com/embed/' + v.dataset.id + '?autoplay=1&rel=0&modestbranding=1&playsinline=1'; f.allow = 'autoplay; encrypted-media; picture-in-picture'; f.allowFullscreen = true; f.title = '種目の徹底解説'; v.appendChild(f); if (window.fbq) fbq('trackCustom', 'PlayVideo', {content_name: 'uniao-v3'}); }
+    var v = document.getElementById('hvid');
+    function play() { if (v.classList.contains('on')) return; v.classList.add('on'); var f = document.createElement('iframe'); f.src = 'https://www.youtube-nocookie.com/embed/' + v.dataset.id + '?autoplay=1&rel=0&modestbranding=1&playsinline=1'; f.allow = 'autoplay; encrypted-media; picture-in-picture'; f.allowFullscreen = true; f.title = '種目の徹底解説'; v.appendChild(f); if (window.fbq) fbq('trackCustom', 'PlayVideo', {content_name: 'uniao-v4'}); }
     v.addEventListener('click', play); v.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); play(); } });
 
     try {
       var q = new URLSearchParams(location.search);
       var src = (q.get('utm_source') || (document.referrer.indexOf('instagram') > -1 ? 'ig' : 'direct')).toLowerCase();
-      var tag = 'uniao-v3-' + src + (q.get('utm_content') ? '-' + q.get('utm_content') : '');
+      var tag = 'uniao-v4-' + src + (q.get('utm_content') ? '-' + q.get('utm_content') : '');
       document.querySelectorAll('form.form input[name="source"]').forEach(function (i) { i.value = tag.slice(0, 60); });
     } catch (e) {}
 
