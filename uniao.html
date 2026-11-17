@@ -215,6 +215,23 @@ body.u { background: var(--bg); color: var(--ink); font-family: 'Noto Sans JP', 
 .perk li.lot{margin-top:8px;padding:12px 12px 12px 42px;background:rgba(156,48,46,.18);border:1px solid rgba(185,58,56,.5);border-radius:8px;font-weight:700}
 .perk li.lot::before{content:"★";left:14px;color:var(--red-h)}
 .perk li.lot small{display:block;font-weight:500;font-size:13px;color:var(--ink-2);margin-top:2px}
+
+/* comparison table */
+.cmpt{border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:0 0 18px}
+.cmpt .hd{display:grid;grid-template-columns:1fr 1fr;background:var(--card)}
+.cmpt .hd div{padding:14px 12px;text-align:center;font-size:13px;font-weight:700;letter-spacing:.06em;color:var(--ink-3)}
+.cmpt .hd div.u{color:var(--bg);background:var(--gold)}
+.cmpt .row{border-top:1px solid var(--line)}
+.cmpt .lab{font-size:12px;letter-spacing:.08em;color:var(--ink-3);padding:10px 12px 0;font-weight:700;margin:0}
+.cmpt .vals{display:grid;grid-template-columns:1fr 1fr}
+.cmpt .vals div{padding:6px 12px 14px;font-size:15px;line-height:1.5;font-weight:700}
+.cmpt .vals div:first-child{color:var(--ink-3);font-weight:500}
+.cmpt .vals div.u{color:var(--ink);border-left:1px solid var(--line)}
+.cmpt .vals b{font-family:'Barlow Condensed',sans-serif;font-size:30px;font-weight:700;line-height:1;display:block;margin-bottom:2px}
+.cmpt .vals div.u b{color:var(--gold)}
+.cmpt .vals small{display:block;font-size:12px;font-weight:500;color:var(--ink-3);margin-top:2px}
+.first{border-left:3px solid var(--gold);padding:4px 0 4px 16px;margin:0 0 20px;font-size:17px;font-weight:900;line-height:1.6}
+.first small{display:block;font-size:13px;font-weight:500;color:var(--ink-2);margin-top:4px}
 </style>
 <!-- Meta Pixel Code -->
 <script>
@@ -263,6 +280,7 @@ fbq('track', 'ViewContent', {content_name: 'uniao-v4'});
       <li>種目を選ぶ理由を、自分の言葉で言える<small>骨格と狙いに合った種目を、自分で選べる</small></li>
       <li>重量・レップ・強度を、自分で決められる<small>「8〜12回」ではなく、なぜその回数かが分かる</small></li>
       <li>停滞したとき、何を変えればいいかが分かる<small>7つの要素のどこが抜けているかを、自分で探せる</small></li>
+      <li>迷ったら、現役 IFBB PRO に聞ける<small>Q&amp;A、メンバー限定 LIVE、勉強会。一人で悩む時間がなくなる</small></li>
     </ul>
   </section>
 
@@ -270,6 +288,7 @@ fbq('track', 'ViewContent', {content_name: 'uniao-v4'});
   <section class="s">
     <p class="eyebrow">WHAT YOU GET</p>
     <h2 class="h2">手に入るもの。</h2>
+    <p class="first">現役 IFBB PRO が、あなたと一緒に教える。<small>解説を見るだけではなく、質問して、見てもらって、答えが返ってくる。</small></p>
     <div class="ct">
       <article>
         <div class="vis"><img src="/assets/lp/thumb-bentover.jpg" alt="種目の徹底解説" width="1200" height="675" /></div>
@@ -285,7 +304,7 @@ fbq('track', 'ViewContent', {content_name: 'uniao-v4'});
       </article>
       <article>
         <div class="vis"><img src="/assets/lp/community.jpg" alt="コミュニティ" width="1200" height="675" /></div>
-        <div class="tx"><p class="n">04</p><h3>Q&amp;A・LIVE・コミュニティ</h3><p>質問して、実践して、見直す。一人では続かないことを、続けられる場所。</p></div>
+        <div class="tx"><p class="n">04</p><h3>Q&amp;A・メンバー限定 LIVE・勉強会</h3><p>迷ったら、その場で聞ける。メンバーだけの LIVE と勉強会で、Felipe が直接答える。迷わせない。</p></div>
       </article>
     </div>
   </section>
@@ -333,12 +352,19 @@ fbq('track', 'ViewContent', {content_name: 'uniao-v4'});
   <!-- 6 pricing w/ anchor -->
   <section class="s" id="price">
     <p class="eyebrow">MEMBERSHIP</p>
-    <h2 class="h2">PRO に毎週聞ける環境が、<br />1日 約181円から。</h2>
-    <div class="anchor">
-      <div><h3>パーソナルトレーニング</h3><p class="big">¥10,000<small>〜 / 1回 60分</small></p><p>月4回なら ¥40,000〜。その日のフォームは見てもらえるが、理由までは残らない。</p><span class="day">1日 約1,300円</span></div>
-      <div class="u"><h3>UNIÃO</h3><p class="big">¥6,980<small>/ 月（税込）</small></p><p>全種目の徹底解説、原則とプログラム設計、フォームチェック、Q&amp;A・LIVE。全部込み。</p><span class="day">1日 約233円</span></div>
+    <h2 class="h2">料金を、ひと目で。</h2>
+    <p class="p">現役 IFBB PRO に毎週聞ける環境が、1日 約181円から。</p>
+    <div class="cmpt">
+      <div class="hd"><div>一般的なパーソナル</div><div class="u">UNIÃO</div></div>
+      <div class="row"><p class="lab">月額</p><div class="vals"><div><b>¥36,000</b>平均 ¥9,000 × 月4回<small>60分 ・ 平均的な相場</small></div><div class="u"><b>¥6,980</b>月額（税込）<small>Founder は月換算 ¥5,500</small></div></div></div>
+      <div class="row"><p class="lab">1日あたり</p><div class="vals"><div><b>約1,200円</b></div><div class="u"><b>約233円</b><small>Founder は 約181円</small></div></div></div>
+      <div class="row"><p class="lab">教えるのは</p><div class="vals"><div>トレーナー<small>経歴はさまざま</small></div><div class="u">現役 IFBB PRO<small>2026 PRO カード・TAIWAN PRO 5位</small></div></div></div>
+      <div class="row"><p class="lab">学べる範囲</p><div class="vals"><div>その日の種目だけ</div><div class="u">全種目 ＋ 原則 ＋ プログラム設計<small>毎週増えていく</small></div></div></div>
+      <div class="row"><p class="lab">フォーム</p><div class="vals"><div>その場で見てもらう<small>次回まで忘れる</small></div><div class="u">動画で見てもらえる<small>解説は残り、何度でも見返せる</small></div></div></div>
+      <div class="row"><p class="lab">質問</p><div class="vals"><div>次の予約まで待つ</div><div class="u">Q&amp;A でいつでも<small>メンバー限定 LIVE・勉強会</small></div></div></div>
+      <div class="row"><p class="lab">理由</p><div class="vals"><div>口頭。残らない</div><div class="u">全部、言語化して残る</div></div></div>
     </div>
-    <p class="eq">パーソナル <strong>約6回分</strong> の金額で、<br />IFBB PRO の全種目解説が <strong>1年間</strong>。</p>
+    <p class="eq">パーソナル <strong>2ヶ月分</strong> の金額で、<br />IFBB PRO の全種目解説が <strong>1年間</strong>。</p>
     <div class="tiers">
       <div class="tier f"><span class="lim">先着20名限定</span><p class="n">FOUNDING MEMBER</p><p class="pr">¥66,000<small>/ 年（税込・年額一括払い）</small></p><p class="per">月換算 ¥5,500 ・ 1日 約181円</p><ul><li>継続中は Founder 価格を維持</li><li>Founder ステータス付き</li></ul></div>
       <div class="tier"><span class="lim">初期メンバー50名限定</span><p class="n">EARLY MEMBER</p><p class="pr">¥6,980<small>/ 月（税込）</small></p><p class="per">1日 約233円 ・ いつでも解約可</p><ul><li>継続中は同価格を維持</li><li>Founder 枠終了後に募集</li></ul></div>
