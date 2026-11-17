@@ -232,6 +232,24 @@ body.u { background: var(--bg); color: var(--ink); font-family: 'Noto Sans JP', 
 .cmpt .vals small{display:block;font-size:12px;font-weight:500;color:var(--ink-3);margin-top:2px}
 .first{border-left:3px solid var(--gold);padding:4px 0 4px 16px;margin:0 0 20px;font-size:17px;font-weight:900;line-height:1.6}
 .first small{display:block;font-size:13px;font-weight:500;color:var(--ink-2);margin-top:4px}
+
+/* tier details pulldown */
+.tier details{margin:14px 0 0;border-top:1px solid var(--line);padding-top:4px}
+.tier summary{cursor:pointer;list-style:none;font-size:14px;font-weight:700;padding:10px 28px 10px 0;position:relative;color:var(--gold)}
+.tier summary::-webkit-details-marker{display:none}
+.tier summary::after{content:"+";position:absolute;right:2px;top:6px;font-size:22px;font-weight:400}
+.tier details[open] summary::after{content:"−"}
+.tier .pd{padding:4px 0 6px}
+.tier .pd h4{font-family:'Barlow Condensed',sans-serif;font-size:13px;letter-spacing:.22em;color:var(--ink-3);margin:10px 0 8px;font-weight:700}
+.tier .pd ol{list-style:none;margin:0;padding:0;counter-reset:pk}
+.tier .pd ol li{counter-increment:pk;position:relative;padding:8px 0 8px 36px;border-top:1px solid var(--line);font-size:14px;line-height:1.6}
+.tier .pd ol li::before{content:counter(pk);position:absolute;left:0;top:9px;width:24px;height:24px;border-radius:50%;background:var(--gold);color:var(--bg);font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.tier .pd ol li b{display:block;font-weight:900;color:var(--ink)}
+.tier .pd ol li span{color:var(--ink-2);font-size:13px}
+.tier .pd ul.lot{list-style:none;margin:0;padding:0}
+.tier .pd ul.lot li{position:relative;padding:7px 0 7px 26px;font-size:14px;font-weight:700;border-top:1px solid var(--line)}
+.tier .pd ul.lot li::before{content:"★";position:absolute;left:2px;color:var(--red-h)}
+.tier .pd ul.lot li small{font-weight:500;color:var(--ink-3);margin-left:6px}
 </style>
 <!-- Meta Pixel Code -->
 <script>
@@ -366,42 +384,52 @@ fbq('track', 'ViewContent', {content_name: 'uniao-v4'});
     </div>
     <p class="eq">パーソナル <strong>2ヶ月分</strong> の金額で、<br />IFBB PRO の全種目解説が <strong>1年間</strong>。</p>
     <div class="tiers">
-      <div class="tier f"><span class="lim">先着20名限定</span><p class="n">FOUNDING MEMBER</p><p class="pr">¥66,000<small>/ 年（税込・年額一括払い）</small></p><p class="per">月換算 ¥5,500 ・ 1日 約181円</p><ul><li>継続中は Founder 価格を維持</li><li>Founder ステータス付き</li></ul></div>
-      <div class="tier"><span class="lim">初期メンバー50名限定</span><p class="n">EARLY MEMBER</p><p class="pr">¥6,980<small>/ 月（税込）</small></p><p class="per">1日 約233円 ・ いつでも解約可</p><ul><li>継続中は同価格を維持</li><li>Founder 枠終了後に募集</li></ul></div>
+      <div class="tier f"><span class="lim">先着20名限定</span><p class="n">FOUNDING MEMBER</p><p class="pr">¥66,000<small>/ 年（税込・年額一括払い）</small></p><p class="per">月換算 ¥5,500 ・ 1日 約181円</p><ul><li>継続中は Founder 価格を維持</li><li>Founder ステータス付き</li></ul>
+        <details>
+          <summary>5大特典 ＋ 抽選特典を見る</summary>
+          <div class="pd">
+            <h4>5大特典</h4>
+            <ol>
+              <li><b>Felipe の1日サプリメントルーティン公開</b><span>何を・いつ・なぜ使っているのかまで公開。</span></li>
+              <li><b>Felipe 使用トレーニングギアリスト</b><span>実際に使っているギアと選ぶ理由を紹介。</span></li>
+              <li><b>1日の食事内容・PFC 公開</b><span>普段の食事内容と PFC、考え方まで公開。</span></li>
+              <li><b>増量期の落とし穴 完全解説</b><span>失敗しない増量のために見るべきポイントを解説。</span></li>
+              <li><b>Founder 20名限定 オンライン勉強会 LIVE</b><span>少人数だからこそ、事前質問を集めて一人ひとりの疑問を深く扱う。</span></li>
+            </ol>
+            <h4>さらに抽選特典</h4>
+            <ul class="lot">
+              <li>オンラインコーチング<small>1名 ・ Founder のみ</small></li>
+              <li>フォームチェック<small>抽選</small></li>
+              <li>トレーニングアドバイス<small>抽選</small></li>
+            </ul>
+          </div>
+        </details>
+      </div>
+      <div class="tier"><span class="lim">初期メンバー50名限定</span><p class="n">EARLY MEMBER</p><p class="pr">¥6,980<small>/ 月（税込）</small></p><p class="per">1日 約233円 ・ いつでも解約可</p><ul><li>継続中は同価格を維持</li><li>Founder 枠終了後に募集</li></ul>
+        <details>
+          <summary>5大特典 ＋ 抽選特典を見る</summary>
+          <div class="pd">
+            <h4>5大特典</h4>
+            <ol>
+              <li><b>Felipe の1日サプリメントルーティン公開</b></li>
+              <li><b>Felipe 使用トレーニングギアリスト</b></li>
+              <li><b>1日の食事内容・PFC 公開</b></li>
+              <li><b>増量期の落とし穴 完全解説</b></li>
+              <li><b>初期メンバー50名限定 オンライン勉強会 LIVE</b><span>Felipe によるテーマ解説 ＋ 全体 Q&amp;A 形式で開催。</span></li>
+            </ol>
+            <h4>さらに抽選特典</h4>
+            <ul class="lot">
+              <li>フォームチェック<small>3名</small></li>
+              <li>トレーニングアドバイス<small>3名</small></li>
+              <li style="opacity:.6">オンラインコーチング<small>1名 ・ Founder のみ</small></li>
+            </ul>
+          </div>
+        </details>
+      </div>
       <div class="tier"><span class="lim">通常価格</span><p class="n">STANDARD MEMBER</p><p class="pr">¥7,980<small>/ 月（税込）</small></p><p class="per">初期募集終了後</p><ul><li>月額払い</li></ul></div>
     </div>
     <div class="incl"><h3>すべてのプランに含まれる内容</h3><ul><li>種目の徹底解説動画</li><li>トレーニング原則・プログラム設計</li><li>定期フォームチェック</li><li>Q&amp;A・LIVE</li><li>メンバーコミュニティ</li><li>新しい教材の継続追加</li></ul></div>
-  </section>
-
-  <!-- 7 perks -->
-  <section class="s">
-    <p class="eyebrow">FOUNDER &amp; EARLY MEMBER</p>
-    <h2 class="h2">最初の70名だけの、<br />豪華特典。</h2>
-    <p class="p">抽選で合計 <strong>7名</strong> が、Felipe 本人に直接見てもらえます。</p>
-    <div class="perk">
-      <article class="f">
-        <span class="lim">先着20名</span>
-        <h3><small>FOUNDING MEMBER</small>UNIÃO を最初から一緒につくる20名へ</h3>
-        <ul>
-          <li>Felipe による身体評価（1回）</li>
-          <li>FOUNDER バッジと、優先 Q&amp;A</li>
-          <li>全コンテンツへの最速アクセス</li>
-          <li>継続中は一生 Founder 価格</li>
-          <li class="lot">抽選で1名に、Felipe のオンラインコーチング<small>フォーム・メニュー・食事まで、本人が直接見ます</small></li>
-          <li class="lot">抽選で3名に、Felipe の個別フォームチェック<small>あなたの動画を、本人が1対1で見て直します</small></li>
-        </ul>
-      </article>
-      <article>
-        <span class="lim">初期メンバー50名</span>
-        <h3><small>EARLY MEMBER</small>オープン直後に入った50名へ</h3>
-        <ul>
-          <li>初期メンバーバッジ</li>
-          <li>継続中は月額 ¥6,980 を維持</li>
-          <li class="lot">抽選で3名に、Felipe の個別トレーニングアドバイス<small>今のメニューと目標を、本人が直接見て答えます</small></li>
-        </ul>
-      </article>
-    </div>
-    <p class="p">特典の詳細と抽選の方法は、11月23日（月）21時の Instagram LIVE で全部話します。</p>
+    <p class="p" style="margin-top:18px"><strong>最初の70名だけ</strong>、各プランの「特典を見る」に5大特典と抽選特典。抽選の方法は 11月23日（月）21時の Instagram LIVE で話します。</p>
     <button class="cta" type="button" data-go>無料で事前登録する</button>
     <ul class="legal">
       <li>※事前登録は無料です。登録しただけでは料金は発生しません。</li>
@@ -410,6 +438,7 @@ fbq('track', 'ViewContent', {content_name: 'uniao-v4'});
       <li>※更新・解約・返金条件は申込時にご確認ください。</li>
     </ul>
   </section>
+
 
   <!-- FAQ -->
   <section class="s faq">
