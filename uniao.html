@@ -250,6 +250,50 @@ body.u { background: var(--bg); color: var(--ink); font-family: 'Noto Sans JP', 
 .tier .pd ul.lot li{position:relative;padding:7px 0 7px 26px;font-size:14px;font-weight:700;border-top:1px solid var(--line)}
 .tier .pd ul.lot li::before{content:"★";position:absolute;left:2px;color:var(--red-h)}
 .tier .pd ul.lot li small{font-weight:500;color:var(--ink-3);margin-left:6px}
+
+/* final-spec additions */
+.ct{gap:28px}
+.ct article{border:1px solid rgba(255,255,255,.14);box-shadow:0 10px 30px rgba(0,0,0,.45)}
+.ct .tx{border-top:3px solid var(--gold)}
+.ct .n{font-size:14px}
+.badge{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.04em;padding:6px 12px;border:1px solid var(--gold);color:var(--gold);border-radius:999px;margin:0 0 18px}
+.badge::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--red-h);margin-right:8px;vertical-align:1px}
+/* results */
+.res{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 14px}
+.res figure{margin:0;border-radius:8px;overflow:hidden;background:var(--card);border:1px solid var(--line);position:relative}
+.res img{width:100%;height:auto;display:block}
+.res figcaption{display:flex;justify-content:space-between;padding:6px 10px;font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.16em;color:var(--ink-3)}
+.res figcaption b{color:var(--gold);font-weight:700}
+.res figure:first-child{grid-column:1 / -1}
+.note{font-size:12px;color:var(--ink-3);line-height:1.7;margin:0}
+/* back plan */
+.kpi{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 18px}
+.kpi div{background:var(--card);border-radius:8px;padding:14px 14px 12px;text-align:center}
+.kpi b{display:block;font-family:'Barlow Condensed',sans-serif;font-size:40px;line-height:1;color:var(--gold);font-weight:700}
+.kpi b small{font-family:'Noto Sans JP',sans-serif;font-size:14px;color:var(--ink);margin-left:2px}
+.kpi span{display:block;font-size:12px;color:var(--ink-2);margin-top:6px;line-height:1.5}
+.months{list-style:none;margin:0 0 16px;padding:0;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.months li{display:grid;grid-template-columns:72px 1fr;gap:12px;align-items:center;padding:12px 14px;border-top:1px solid var(--line);font-size:15px;font-weight:700}
+.months li:first-child{border-top:0}
+.months li.now{background:rgba(212,169,79,.08)}
+.months b{font-family:'Barlow Condensed',sans-serif;font-size:24px;color:var(--gold);font-weight:700;letter-spacing:.02em}
+.months li span small{display:block;font-weight:500;font-size:13px;color:var(--ink-2);margin-top:2px}
+.rules{list-style:none;margin:0 0 14px;padding:0;display:grid;gap:6px}
+.rules li{font-size:14px;line-height:1.6;padding-left:22px;position:relative;color:var(--ink-2)}
+.rules li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:900}
+.req{border-left:3px solid var(--red);padding:6px 0 6px 16px;margin:0 0 16px}
+.req b{display:block;font-size:16px;font-weight:900}
+.req span{font-size:14px;color:var(--ink-2);line-height:1.6}
+.cur details{border:1px solid var(--line);border-radius:10px;padding:0 14px;margin:0 0 12px}
+.cur summary{cursor:pointer;list-style:none;font-size:14px;font-weight:700;padding:14px 28px 14px 0;position:relative;color:var(--gold)}
+.cur summary::-webkit-details-marker{display:none}
+.cur summary::after{content:"+";position:absolute;right:0;top:10px;font-size:22px;font-weight:400}
+.cur details[open] summary::after{content:"−"}
+.cur table{width:100%;border-collapse:collapse;font-size:13px;margin:0 0 14px}
+.cur th{text-align:left;font-family:'Barlow Condensed',sans-serif;font-size:13px;letter-spacing:.16em;color:var(--ink-3);padding:10px 0 6px;border-bottom:1px solid var(--line)}
+.cur td{padding:7px 0;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.55}
+.cur td:first-child{white-space:nowrap;font-family:'Barlow Condensed',sans-serif;font-size:15px;color:var(--ink);width:56px}
+.cur td em{font-style:normal;color:var(--gold)}
 </style>
 <!-- Meta Pixel Code -->
 <script>
@@ -283,6 +327,7 @@ fbq('track', 'ViewContent', {content_name: 'uniao-v4'});
   <section class="hv">
     <h1><small>筋肉のデカさには、</small><em>理由がある。</em></h1>
     <p class="one">感覚でデカくなる時代は、もう終わり。</p>
+    <p class="badge">現役 IFBB PRO Felipe Fukai が直接解説</p>
     <div class="hvid" id="hvid" data-id="M1rwhaDaGqw" role="button" tabindex="0" aria-label="動画を再生"><img src="/assets/lp/video-poster.jpg" alt="UNIÃO 紹介動画" width="1280" height="720" fetchpriority="high" /></div>
     <p class="vcap">▶ まず、この動画を見てください。</p>
     <button class="cta" type="button" data-go>無料で事前登録する</button>
@@ -310,21 +355,67 @@ fbq('track', 'ViewContent', {content_name: 'uniao-v4'});
     <div class="ct">
       <article>
         <div class="vis"><img src="/assets/lp/thumb-bentover.jpg" alt="種目の徹底解説" width="1200" height="675" /></div>
-        <div class="tx"><p class="n">01</p><h3>種目の徹底解説</h3><p>毎週1本、10〜15分。完成形から動作を分解し、間違い・重量・レップ・PRO の判断まで。</p></div>
+        <div class="tx"><p class="n">01</p><h3>種目の徹底解説</h3><p>毎週金曜更新（2週に1回は2本）。10〜15分。完成形から動作を分解し、間違い・重量・レップ・PRO の判断まで。</p></div>
       </article>
       <article>
         <div class="vis"><img src="/assets/lp/principles.jpg" alt="トレーニング原則" width="1200" height="675" /></div>
         <div class="tx"><p class="n">02</p><h3>トレーニング原則とプログラム設計</h3><p>重量、強度、セット数、頻度、回復。自分のメニューを自分で組めるようになる。</p></div>
       </article>
       <article>
-        <div class="vis"><img src="/assets/lp/formcheck.jpg" alt="フォームチェック" width="1200" height="675" /></div>
-        <div class="tx"><p class="n">03</p><h3>Felipe によるフォームチェック</h3><p>メンバーの動画を、PRO の視点で解説。どこを見て、何を直すか。</p></div>
+        <div class="vis"><img src="/assets/lp/felipe-stage.jpg" alt="IFBB PRO の裏側" width="1000" height="1500" style="object-position:50% 20%" /></div>
+        <div class="tx"><p class="n">03</p><h3>SNS では語られない、PRO の裏側</h3><p>IFBB PRO の栄養、サプリメント、ポージングのコツ。表では話さないことを、メンバーにだけ。</p></div>
       </article>
       <article>
         <div class="vis"><img src="/assets/lp/community.jpg" alt="コミュニティ" width="1200" height="675" /></div>
-        <div class="tx"><p class="n">04</p><h3>Q&amp;A・メンバー限定 LIVE・勉強会</h3><p>迷ったら、その場で聞ける。メンバーだけの LIVE と勉強会で、Felipe が直接答える。迷わせない。</p></div>
+        <div class="tx"><p class="n">04</p><h3>Q&amp;A・LIVE（月1回以上）・勉強会</h3><p>迷ったら、その場で聞ける。メンバーだけの LIVE と勉強会で、Felipe が直接答える。迷わせない。</p></div>
       </article>
     </div>
+  </section>
+
+  <!-- back plan -->
+  <section class="s cur">
+    <p class="eyebrow">FIRST 4 MONTHS</p>
+    <h2 class="h2">最初の4ヶ月で、<br />背中を変える。</h2>
+    <p class="p">日本人の背中に一番足りないのは、広背筋の広がりと厚み。だから UNIÃO は、まず背中を徹底的に良くするところから始めます。</p>
+    <div class="kpi">
+      <div><b>3<small>/ 5本</small></b><span>初日に公開する種目解説5本のうち、3本が背中</span></div>
+      <div><b>11<small>/ 19本</small></b><span>3月末までの種目解説19本のうち、11本が背中</span></div>
+      <div><b>33<small>本</small></b><span>2027年3月26日までの公開予定の合計</span></div>
+      <div><b>毎週<small>金曜</small></b><span>2週に1回は2本。種目の徹底解説＋基礎知識</span></div>
+    </div>
+    <ul class="months">
+      <li class="now"><b>11月</b><span>OPEN<small>初日に7本公開（種目5本＋基礎2本）</small></span></li>
+      <li><b>12月</b><span>フォームと負荷の理解<small>ペックフライ、ワンハンドロー、スミススクワット、リバースペックフライ ほか</small></span></li>
+      <li><b>1月</b><span>強度・重量・レップ数<small>インクラインダンベルプレス、バックエクステンション、チェストサポートマシンロー ほか</small></span></li>
+      <li><b>2月</b><span>種目選択とプログラム<small>ハーフデッド、チンニング、デッドリフト ほか</small></span></li>
+      <li><b>3月</b><span>応用・弱点改善<small>ケーブルプルオーバー、ベントオーバーロー、疲労管理・デロード ほか</small></span></li>
+    </ul>
+    <div class="req"><b>2027年1月から、あなたの声で中身が決まる。</b><span>メンバーの投票・要望で選んだ種目を、毎月2本追加。Felipe が特徴・フォーム・負荷設定・実際の使い方を徹底解説します。</span></div>
+    <details>
+      <summary>公開予定の全リストを見る（11/27 〜 3/26）</summary>
+      <table>
+        <tr><th>日付</th><th>公開内容</th></tr>
+        <tr><td>11/27</td><td><em>初日7本</em>：ダンベルプルオーバー／クローズグリップラットプル／シングルアームハイプル／サイドレイズ／ワンハンドアームカール／【基礎】アクティベーション／【基礎】DC ストレッチ</td></tr>
+        <tr><td>12/4</td><td>ペックフライ／【基礎①】効いている感覚と筋肥大の違い</td></tr>
+        <tr><td>12/11</td><td>ワンハンドロー</td></tr>
+        <tr><td>12/18</td><td>スミススクワット／【基礎②】ウォームアップとフィーダーセットの考え方</td></tr>
+        <tr><td>12/25</td><td>リバースペックフライ</td></tr>
+        <tr><td>1/1</td><td>インクラインダンベルプレス／【基礎③】重量・レップ数・RIR の設定</td></tr>
+        <tr><td>1/8</td><td>バックエクステンション</td></tr>
+        <tr><td>1/15</td><td>ケーブルプレスダウン／【リクエスト①】</td></tr>
+        <tr><td>1/22</td><td>チェストサポートマシンロー</td></tr>
+        <tr><td>1/29</td><td>スミスショルダープレス／【リクエスト②】</td></tr>
+        <tr><td>2/5</td><td>ハーフデッド</td></tr>
+        <tr><td>2/12</td><td>チンニング／【リクエスト③】</td></tr>
+        <tr><td>2/19</td><td>【リクエスト④】</td></tr>
+        <tr><td>2/26</td><td>デッドリフト／【基礎④】セット数とトレーニングメニューの組み方</td></tr>
+        <tr><td>3/5</td><td>ケーブルプルオーバー</td></tr>
+        <tr><td>3/12</td><td>ベントオーバーロー／【リクエスト⑤】</td></tr>
+        <tr><td>3/19</td><td>【基礎⑤】疲労管理・回復・デロードの考え方</td></tr>
+        <tr><td>3/26</td><td>【基礎⑥】筋肥大が停滞したときの見直し方／【リクエスト⑥】</td></tr>
+      </table>
+    </details>
+    <p class="note">※公開予定は変更になる場合があります。基礎講座・リクエスト種目は制作予定の企画です。</p>
   </section>
 
   <!-- 3 seven -->
@@ -353,6 +444,22 @@ fbq('track', 'ViewContent', {content_name: 'uniao-v4'});
       <p class="p">重量は伸びていた。毎回、本気でトレーニングしていた。<br />でも、背中だけは思ったように変わらなかった。</p>
       <p class="p">そこで変えたのは、努力の量ではなく、<span class="k">トレーニングの見方</span>。<br />一つひとつに理由をつけたことで、身体が変わり始めました。</p>
     </div>
+  </section>
+
+  <!-- results -->
+  <section class="s">
+    <p class="eyebrow">RESULTS</p>
+    <h2 class="h2">Felipe の指導で、<br />身体はこう変わった。</h2>
+    <div class="res">
+      <figure><picture><source srcset="/assets/result-1.webp" type="image/webp" /><img src="/assets/result-1.jpg" alt="Felipe の指導を受けた生徒の変化 1" loading="lazy" /></picture><figcaption><span>BEFORE</span><b>AFTER</b></figcaption></figure>
+      <figure><picture><source srcset="/assets/result-2.webp" type="image/webp" /><img src="/assets/result-2.jpg" alt="Felipe の指導を受けた生徒の変化 2" loading="lazy" /></picture><figcaption><span>BEFORE</span><b>AFTER</b></figcaption></figure>
+      <figure><picture><source srcset="/assets/result-3.webp" type="image/webp" /><img src="/assets/result-3.jpg" alt="Felipe の指導を受けた生徒の変化 3" loading="lazy" /></picture><figcaption><span>BEFORE</span><b>AFTER</b></figcaption></figure>
+      <figure><picture><source srcset="/assets/result-4.webp" type="image/webp" /><img src="/assets/result-4.jpg" alt="Felipe の指導を受けた生徒の変化 4" loading="lazy" /></picture><figcaption><span>BEFORE</span><b>AFTER</b></figcaption></figure>
+      <figure><picture><source srcset="/assets/result-5.webp" type="image/webp" /><img src="/assets/result-5.jpg" alt="Felipe の指導を受けた生徒の変化 5" loading="lazy" /></picture><figcaption><span>BEFORE</span><b>AFTER</b></figcaption></figure>
+      <figure><picture><source srcset="/assets/result-6.webp" type="image/webp" /><img src="/assets/result-6.jpg" alt="Felipe の指導を受けた生徒の変化 6" loading="lazy" /></picture><figcaption><span>BEFORE</span><b>AFTER</b></figcaption></figure>
+      <figure><picture><source srcset="/assets/result-7.webp" type="image/webp" /><img src="/assets/result-7.jpg" alt="Felipe の指導を受けた生徒の変化 7" loading="lazy" /></picture><figcaption><span>BEFORE</span><b>AFTER</b></figcaption></figure>
+    </div>
+    <p class="note">※効果には個人差があります。<br />※写真は本人の許可を得て掲載しています。</p>
   </section>
 
   <!-- 5 who -->
@@ -428,7 +535,7 @@ fbq('track', 'ViewContent', {content_name: 'uniao-v4'});
       </div>
       <div class="tier"><span class="lim">通常価格</span><p class="n">STANDARD MEMBER</p><p class="pr">¥7,980<small>/ 月（税込）</small></p><p class="per">初期募集終了後</p><ul><li>月額払い</li></ul></div>
     </div>
-    <div class="incl"><h3>すべてのプランに含まれる内容</h3><ul><li>種目の徹底解説動画</li><li>トレーニング原則・プログラム設計</li><li>定期フォームチェック</li><li>Q&amp;A・LIVE</li><li>メンバーコミュニティ</li><li>新しい教材の継続追加</li></ul></div>
+    <div class="incl"><h3>すべてのプランに含まれる内容</h3><ul><li>種目の徹底解説動画</li><li>トレーニング原則・プログラム設計</li><li>定期フォームチェック</li><li>Q&amp;A・LIVE（月1回以上）</li><li>メンバーコミュニティ</li><li>新しい教材の継続追加</li></ul></div>
     <p class="p" style="margin-top:18px"><strong>最初の70名だけ</strong>、各プランの「特典を見る」に5大特典と抽選特典。抽選の方法は 11月23日（月）21時の Instagram LIVE で話します。</p>
     <button class="cta" type="button" data-go>無料で事前登録する</button>
     <ul class="legal">
@@ -446,10 +553,14 @@ fbq('track', 'ViewContent', {content_name: 'uniao-v4'});
     <details><summary>初心者でも参加できますか？</summary><p class="a">参加できます。教材は基礎から順に積み上げる構成です。ただ、一番変化が大きいのは「鍛えているのに成長が止まっている人」で、その人たちを主な対象に作っています。</p></details>
     <details><summary>Felipe 本人に質問できますか？</summary><p class="a">できます。Q&amp;A と LIVE で Felipe 本人が回答します。すべての質問にその場で答えられるとは限りませんが、メンバーからの質問は本人が目を通します。</p></details>
     <details><summary>自分のフォームも見てもらえますか？</summary><p class="a">メンバーが投稿したフォーム動画の中から定期的に取り上げ、Felipe が PRO の視点で解説します。毎回全員を個別に見ることを保証するものではありませんが、取り上げた解説は全メンバーの学びになります。</p></details>
+    <details><summary>他のトレーニング動画やオンラインサロンと何が違いますか？</summary><p class="a">現役 IFBB PRO の Felipe 本人が直接解説します。解剖学や力学に基づいた理論に、PRO として積み上げてきた経験を重ね、科学的な根拠のある筋肥大への最短ルートを示します。見るだけで終わらせず、Q&amp;A や LIVE で直接質問できます。</p></details>
+    <details><summary>途中から入会しても、過去の動画は見られますか？</summary><p class="a">見られます。ただし、入会した時点ですべてが一度に開くわけではありません。あなたが最初に見るべき動画から、順番に解放していきます。基礎から積み上げることで、理解に抜けが出ないようにするためです。</p></details>
+    <details><summary>動画はいつでも見られますか？</summary><p class="a">はい。解放された動画は、在籍中いつでも何度でも見返せます。</p></details>
+    <details><summary>支払い方法は？</summary><p class="a">クレジットカードと Apple Pay に対応しています。</p></details>
     <details><summary>退会できますか？</summary><p class="a">月額プラン（Early・Standard）はいつでも退会でき、次回の請求から停止します。Founder は年額一括払いのため、更新・解約・返金の条件は申込時にご確認ください。</p></details>
   </section>
 
-  <!-- schedule -->
+  <!-- timeline -->
   <section class="s">
     <h2 class="h2">2026.11.27 OPEN</h2>
     <ul class="tl">
@@ -463,7 +574,7 @@ fbq('track', 'ViewContent', {content_name: 'uniao-v4'});
   <section class="s final" id="register">
     <p class="big">筋肉のデカさには、理由がある。<em>感覚でデカくなる時代は、もう終わり。</em></p>
     <p class="big" style="font-size:19px">感覚でやる から、理由を知ってやる へ。</p>
-    <p class="mark">UNIÃO</p><p class="mark-sub">2026.11.27 OPEN</p>
+    <p class="mark">UNIÃO</p><p class="mark-sub">IFBB PRO FELIPE FUKAI ・ 2026.11.27 OPEN</p>
     <form name="uniao-waitlist" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="form" action="/thanks.html">
       <input type="hidden" name="form-name" value="uniao-waitlist" />
       <input type="hidden" name="source" value="uniao-v4" />

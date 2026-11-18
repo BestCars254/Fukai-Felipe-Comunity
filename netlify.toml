@@ -50,6 +50,17 @@
   to = "/lesson.html"
   status = 200
 
+# Old schedule page removed; its role moved into the LP
+[[redirects]]
+  from = "/schedule"
+  to = "/uniao"
+  status = 301
+
+[[redirects]]
+  from = "/schedule.html"
+  to = "/uniao"
+  status = 301
+
 # Full UNIÃO explanation page (former top page)
 [[redirects]]
   from = "/uniao"
