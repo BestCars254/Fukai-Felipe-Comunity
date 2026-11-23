@@ -1,0 +1,19 @@
+@font-face{font-family:"NS";src:url("../fonts/node_modules/@fontsource/noto-sans-jp/files/noto-sans-jp-japanese-900-normal.woff2") format("woff2");font-weight:900}
+@font-face{font-family:"NS";src:url("../fonts/node_modules/@fontsource/noto-sans-jp/files/noto-sans-jp-japanese-700-normal.woff2") format("woff2");font-weight:700}
+@font-face{font-family:"BC";src:url("../fonts/node_modules/@fontsource/barlow-condensed/files/barlow-condensed-latin-700-normal.woff2") format("woff2");font-weight:700}
+@font-face{font-family:"PF";src:url("../fonts/node_modules/@fontsource/playfair-display/files/playfair-display-latin-700-normal.woff2") format("woff2");font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}html,body{width:1080px;height:1920px;overflow:hidden;background:#0E0B0A}
+body{font-family:"NS",sans-serif;color:#fff;position:relative}
+.bg{position:absolute;inset:0;background:url(stage.jpg) 50% 12%/cover no-repeat;filter:grayscale(1) contrast(1.1);opacity:.08}
+.logo{position:absolute;left:50%;transform:translateX(-50%);top:110px;height:96px}
+.kick{position:absolute;left:0;right:0;text-align:center;font-family:"BC",sans-serif;font-size:32px;letter-spacing:.3em;color:rgba(255,255,255,.7)}
+.h{position:absolute;left:80px;right:80px;text-align:center;font-size:84px;font-weight:900;line-height:1.25}
+.h em{font-style:normal;color:#D4A94F}
+.url{position:absolute;left:0;right:0;text-align:center;font-family:"BC",sans-serif;font-size:92px;letter-spacing:.01em;color:#D4A94F;line-height:1}
+.url small{display:block;font-family:"NS",sans-serif;font-size:28px;font-weight:700;letter-spacing:.1em;color:rgba(255,255,255,.6);margin-top:18px}
+.p{position:absolute;left:80px;right:80px;text-align:center;font-size:36px;font-weight:700;line-height:1.7;color:rgba(255,255,255,.9)}
+.arrow{position:absolute;left:0;right:0;text-align:center;font-size:160px;line-height:1;color:#9C302E;font-weight:900}
+.slot{position:absolute;left:120px;right:120px;background:#9C302E;color:#fff;font-size:44px;font-weight:900;text-align:center;padding:40px 20px;border-radius:16px;box-shadow:0 20px 60px rgba(156,48,46,.45)}
+.slot small{display:block;font-size:22px;font-weight:700;opacity:.85;margin-top:6px}
+.who{position:absolute;left:0;right:0;bottom:90px;text-align:center;font-family:"BC",sans-serif;font-size:26px;letter-spacing:.3em;color:rgba(255,255,255,.55)}
+.uni{font-family:"PF",serif;letter-spacing:.06em}
