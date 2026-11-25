@@ -1,0 +1,16 @@
+@font-face{font-family:"NS";src:url("../fonts/node_modules/@fontsource/noto-sans-jp/files/noto-sans-jp-japanese-900-normal.woff2") format("woff2");font-weight:900}
+@font-face{font-family:"NS";src:url("../fonts/node_modules/@fontsource/noto-sans-jp/files/noto-sans-jp-japanese-700-normal.woff2") format("woff2");font-weight:700}
+@font-face{font-family:"BC";src:url("../fonts/node_modules/@fontsource/barlow-condensed/files/barlow-condensed-latin-700-normal.woff2") format("woff2");font-weight:700}
+@font-face{font-family:"PF";src:url("../fonts/node_modules/@fontsource/playfair-display/files/playfair-display-latin-700-normal.woff2") format("woff2");font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}html,body{width:1600px;height:900px;overflow:hidden;background:#0E0B0A}
+body{font-family:"NS",sans-serif;color:#fff;position:relative}
+.bg{position:absolute;inset:0;background-size:cover;background-repeat:no-repeat;filter:saturate(.7) contrast(1.1) brightness(.9)}
+.fade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,11,10,.96) 0%,rgba(14,11,10,.92) 45%,rgba(14,11,10,.55) 70%,rgba(14,11,10,.25) 100%)}
+.logo{position:absolute;right:60px;top:52px;height:80px}
+.k{position:absolute;left:80px;top:110px;font-family:"BC",sans-serif;font-size:40px;letter-spacing:.3em;color:#D4A94F}
+.k b{display:inline-block;background:#9C302E;color:#fff;padding:4px 16px;margin-right:16px;letter-spacing:.1em}
+.uni{position:absolute;left:80px;top:200px;font-family:"PF",serif;font-size:60px;letter-spacing:.08em;color:rgba(255,255,255,.75)}
+.t{position:absolute;left:76px;top:280px;font-size:150px;font-weight:900;line-height:1.1;letter-spacing:-.02em;text-shadow:0 6px 30px rgba(0,0,0,.8)}
+.s{position:absolute;left:80px;top:620px;font-size:40px;font-weight:700;line-height:1.5;color:rgba(255,255,255,.9)}
+.s b{color:#D4A94F}
+.foot{position:absolute;left:80px;bottom:48px;font-family:"BC",sans-serif;font-size:26px;letter-spacing:.3em;color:rgba(255,255,255,.55)}
