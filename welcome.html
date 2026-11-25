@@ -49,17 +49,18 @@ fbq('init','2606382796526025');fbq('track','PageView');
     <p class="w-plan" id="plan">MEMBER</p>
     <p class="w-lead">会員エリアは <strong>Whop</strong> というアプリの中にあります。<br />下のボタンから参加してください。<strong>決済に使ったメールアドレス</strong>と同じもので登録すると、確認がスムーズです。</p>
     <ol class="w-step">
-      <li><b>会員エリアに参加する</b>下の赤いボタン → Whop のアカウント作成（無料）→ UNIÃO に参加<small>スマホは Whop アプリを入れると通知が届きます</small></li>
+      <li><b>会員エリアに参加する</b>下の赤いボタン → あなた専用の参加リンクが開きます → Whop のアカウント作成（無料）→ UNIÃO に参加<small>スマホは Whop アプリを入れると通知が届きます</small></li>
       <li><b>「はじめに」を読む</b>最初に見る動画と、質問の書き方が書いてあります</li>
       <li><b>自己紹介に一言</b>筋トレ歴と、今いちばんの悩みを。Felipe が目を通します</li>
     </ol>
-    <a class="w-cta" href="https://uniao.whop.site" target="_blank" rel="noopener">会員エリアに参加する（Whop）</a>
+    <a class="w-cta" id="join" href="https://uniao.whop.site/welcome" target="_blank" rel="noopener">会員エリアに参加する（Whop）</a>
+    <p class="w-lead" id="nosid" style="display:none;font-size:13px;color:var(--ff-white-muted)">※ このページを直接開いた場合は参加リンクが出ません。決済完了時に届くメール、または決済直後の画面からお進みください。届いていない場合は Instagram の DM へ。</p>
     <a class="w-sub" href="https://apps.apple.com/app/whop/id1554645240" target="_blank" rel="noopener">iPhone 用 Whop アプリ</a>
     <p class="w-note">領収書は決済時のメールアドレスに自動で届きます。お支払いの確認・解約は <a href="https://billing.stripe.com/p/login/cNidRabOe27Q01T0YD4gg01" target="_blank" rel="noopener">メンバーシップの管理ページ</a> から。<br />参加できない・メールが届かないときは、このページの URL と決済時のメールアドレスを添えて <a href="https://www.instagram.com/ffpro_classic_9/" target="_blank" rel="noopener">Instagram の DM</a> へ。<br /><small>※ 入会日を含む3日以内であれば全額返金します。</small></p>
   </div>
 </main>
 <script>
-(function(){var p=new URLSearchParams(location.search).get('plan');var n={founder:'FOUNDER ・ 先着20名',early:'EARLY ・ 初期メンバー50名',standard:'STANDARD'}[p];if(n)document.getElementById('plan').textContent=n;})();
+(function(){var q=new URLSearchParams(location.search);var p=q.get('plan');var n={founder:'FOUNDER ・ 先着20名',early:'EARLY ・ 初期メンバー50名',standard:'STANDARD',test:'TEST'}[p];if(n)document.getElementById('plan').textContent=n;var sid=q.get('session_id');var j=document.getElementById('join');if(sid&&/^cs_/.test(sid)){j.href='https://uniao.whop.site/welcome?session_id='+encodeURIComponent(sid);}else{j.style.display='none';document.getElementById('nosid').style.display='block';}})();
 </script>
 </body>
 </html>
