@@ -27,6 +27,10 @@
 - サポート: https://uniao-support.netlify.app/
 - 会員エリア（Whop）: https://uniao.whop.site
 
+**返金ポリシー（確定 11/25）**
+- EARLY / STANDARD: 入会日を含む3日以内は全額返金。それ以降なし
+- FOUNDER: 返金なし
+
 **ダッシュボードで要対応**
 - 設定 → Managed Payments を OFF（アカウント既定が ON）
 - 設定 → 公開情報: 利用規約 URL に https://ff-uniao.netlify.app/terms を登録（同意リンクが機能する条件）
