@@ -61,6 +61,12 @@
   to = "/uniao"
   status = 301
 
+# Post-payment welcome page (Stripe redirect target)
+[[redirects]]
+  from = "/welcome"
+  to = "/welcome.html"
+  status = 200
+
 # Full UNIÃO explanation page (former top page)
 [[redirects]]
   from = "/uniao"
