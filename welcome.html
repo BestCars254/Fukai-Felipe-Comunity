@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ようこそ UNIÃO へ</title>
+<meta name="robots" content="noindex" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Barlow+Condensed:wght@700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<link rel="stylesheet" href="style.css" />
+<style>
+.w-wrap{min-height:100svh;display:flex;justify-content:center;padding:36px 20px 64px}
+.w-in{max-width:560px;width:100%}
+.w-logo{height:72px;width:auto;display:block;margin:0 0 28px}
+.w-done{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:.12em;color:var(--kagayaki-gold);margin-bottom:12px}
+.w-done::before{content:"";width:18px;height:18px;border-radius:50%;background:var(--kagayaki-gold)}
+.w-h1{font-family:'Playfair Display',serif;font-size:44px;letter-spacing:.06em;color:var(--ff-white);margin:0 0 6px}
+.w-h2{font-family:'Noto Sans JP',sans-serif;font-weight:900;font-size:clamp(22px,6vw,28px);line-height:1.4;color:var(--ff-white);margin:0 0 16px}
+.w-plan{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-size:18px;letter-spacing:.14em;color:#16110F;background:var(--kagayaki-gold);padding:6px 12px;border-radius:4px;margin-bottom:18px}
+.w-lead{font-size:15px;line-height:1.9;color:rgba(255,255,255,.85);margin:0 0 20px}
+.w-lead strong{color:var(--ff-white)}
+.w-step{counter-reset:s;list-style:none;padding:0;margin:0 0 24px}
+.w-step li{counter-increment:s;position:relative;padding:16px 16px 16px 60px;background:var(--ff-black-soft);border:1px solid var(--gray-line);border-radius:10px;margin-bottom:10px;font-size:15px;line-height:1.7}
+.w-step li::before{content:counter(s);position:absolute;left:16px;top:14px;width:30px;height:30px;border-radius:50%;background:var(--laurel-red);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.w-step li b{display:block;color:var(--ff-white);font-weight:700;margin-bottom:2px}
+.w-step li small{display:block;font-size:13px;color:var(--ff-white-muted);margin-top:4px}
+.w-cta{display:block;text-align:center;background:var(--laurel-red);color:#fff;font-weight:900;font-size:17px;padding:16px;border-radius:6px;text-decoration:none;margin:0 0 10px}
+.w-cta:hover{background:var(--laurel-red-hover)}
+.w-sub{display:block;text-align:center;border:1px solid rgba(255,255,255,.28);color:var(--ff-white);font-weight:700;font-size:15px;padding:13px;border-radius:6px;text-decoration:none;margin-bottom:28px}
+.w-note{font-size:13px;line-height:1.8;color:var(--ff-white-muted);border-top:1px solid var(--gray-line);padding-top:18px}
+.w-note a{color:var(--ff-white-dim)}
+</style>
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','2606382796526025');fbq('track','PageView');
+(function(){var p=new URLSearchParams(location.search).get('plan')||'';var v={founder:66000,early:6980,standard:7980}[p]||0;fbq('track','Purchase',{value:v,currency:'JPY',content_name:'uniao-'+(p||'unknown')});})();
+</script>
+</head>
+<body>
+<main class="w-wrap">
+  <div class="w-in">
+    <img src="assets/logo-ff-dark.png" alt="Felipe Fukai" class="w-logo" width="480" height="377" />
+    <p class="w-done">決済が完了しました</p>
+    <p class="w-h1">UNIÃO</p>
+    <p class="w-h2">ようこそ。ここから、理由を知ってデカくなる。</p>
+    <p class="w-plan" id="plan">MEMBER</p>
+    <p class="w-lead">会員エリアは <strong>Whop</strong> というアプリの中にあります。<br />下のボタンから参加してください。<strong>決済に使ったメールアドレス</strong>と同じもので登録すると、確認がスムーズです。</p>
+    <ol class="w-step">
+      <li><b>会員エリアに参加する</b>下の赤いボタン → Whop のアカウント作成（無料）→ UNIÃO に参加<small>スマホは Whop アプリを入れると通知が届きます</small></li>
+      <li><b>「はじめに」を読む</b>最初に見る動画と、質問の書き方が書いてあります</li>
+      <li><b>自己紹介に一言</b>筋トレ歴と、今いちばんの悩みを。Felipe が目を通します</li>
+    </ol>
+    <a class="w-cta" href="https://uniao.whop.site" target="_blank" rel="noopener">会員エリアに参加する（Whop）</a>
+    <a class="w-sub" href="https://apps.apple.com/app/whop/id1554645240" target="_blank" rel="noopener">iPhone 用 Whop アプリ</a>
+    <p class="w-note">領収書は決済時のメールアドレスに自動で届きます。お支払いの確認・解約は <a href="https://billing.stripe.com/p/login/cNidRabOe27Q01T0YD4gg01" target="_blank" rel="noopener">メンバーシップの管理ページ</a> から。<br />参加できない・メールが届かないときは、このページの URL と決済時のメールアドレスを添えて <a href="https://www.instagram.com/ffpro_classic_9/" target="_blank" rel="noopener">Instagram の DM</a> へ。<br /><small>※ 入会日を含む3日以内であれば全額返金します。</small></p>
+  </div>
+</main>
+<script>
+(function(){var p=new URLSearchParams(location.search).get('plan');var n={founder:'FOUNDER ・ 先着20名',early:'EARLY ・ 初期メンバー50名',standard:'STANDARD'}[p];if(n)document.getElementById('plan').textContent=n;})();
+</script>
+</body>
+</html>
