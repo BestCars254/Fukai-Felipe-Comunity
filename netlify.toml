@@ -61,6 +61,12 @@
   to = "/uniao"
   status = 301
 
+# Terms of service (referenced by Stripe Checkout consent)
+[[redirects]]
+  from = "/terms"
+  to = "/terms.html"
+  status = 200
+
 # Post-payment welcome page (Stripe redirect target)
 [[redirects]]
   from = "/welcome"
