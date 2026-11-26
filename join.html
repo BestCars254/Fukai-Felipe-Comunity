@@ -32,6 +32,7 @@ body{background:var(--ff-black)}
 .j-cta{display:block;text-align:center;background:var(--laurel-red);color:#fff;font-weight:900;font-size:18px;padding:18px;border-radius:8px;text-decoration:none;margin:30px 0 8px}
 .j-cta:hover{background:var(--laurel-red-hover)}
 .j-cta small{display:block;font-size:12px;font-weight:700;opacity:.85;margin-top:3px;letter-spacing:.04em}
+.j-cta-top{margin:4px 0 30px}
 .j-note{font-size:12px;color:var(--ff-white-muted);text-align:center;margin:0 0 10px;line-height:1.7}
 .j-sec{margin-top:56px;padding-top:28px;border-top:1px solid var(--gray-line)}
 .j-sec h2{font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:.22em;color:var(--kagayaki-gold);margin:0 0 6px}
@@ -83,6 +84,7 @@ fbq('init','2606382796526025');fbq('track','PageView');fbq('track','ViewContent'
   <div class="j-top"><img src="assets/logo-ff-dark.png" alt="Felipe Fukai" /><span>UNIÃO ｜ 11.27 OPEN</span></div>
 
   <p class="j-eyebrow">先行案内｜事前登録者限定</p>
+  <a class="j-cta j-cta-top" href="#plans" id="go0">UNIÃO へ今すぐ入る<small>Founder 先着20名 ・ Early 50名</small></a>
   <h1 class="j-h1">ここまで来てくれて、<br />ありがとうございます。</h1>
 
   <div class="j-msg">
@@ -172,7 +174,7 @@ fbq('init','2606382796526025');fbq('track','PageView');fbq('track','ViewContent'
 (function(){
   var go=document.getElementById('go'),plans=document.getElementById('plans'),bar=document.getElementById('sbar');
   function sm(e){e.preventDefault();plans.scrollIntoView({behavior:'smooth'});}
-  go.addEventListener('click',sm);bar.querySelector('a').addEventListener('click',sm);
+  go.addEventListener('click',sm);document.getElementById('go0').addEventListener('click',sm);bar.querySelector('a').addEventListener('click',sm);
   function chk(){var r=go.getBoundingClientRect(),p=plans.getBoundingClientRect();var on=window.scrollY>320&&!(r.top<window.innerHeight&&r.bottom>0)&&p.top>window.innerHeight*0.6;bar.classList.toggle('on',on);}
   window.addEventListener('scroll',chk,{passive:true});chk();
 })();
