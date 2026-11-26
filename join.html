@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>UNIÃO に入る — 先行案内</title>
+<meta name="robots" content="noindex" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Barlow+Condensed:wght@700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<link rel="stylesheet" href="style.css" />
+<style>
+body{background:var(--ff-black)}
+.j{max-width:600px;margin:0 auto;padding:0 20px 120px}
+.j-top{display:flex;align-items:center;justify-content:space-between;padding:18px 0 6px}
+.j-top img{height:56px;width:auto}
+.j-top span{font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:.18em;color:var(--kagayaki-gold)}
+.j-eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.12em;color:#16110F;background:var(--kagayaki-gold);padding:5px 10px;border-radius:3px;margin:22px 0 14px}
+.j-h1{font-family:'Noto Sans JP',sans-serif;font-weight:900;font-size:clamp(24px,6.6vw,30px);line-height:1.4;color:var(--ff-white);margin:0 0 22px}
+.j-msg{font-size:16px;line-height:2;color:rgba(255,255,255,.86)}
+.j-msg p{margin:0 0 20px}
+.j-msg strong{color:var(--ff-white);font-weight:900}
+.j-msg .big{font-size:19px;line-height:1.75;color:var(--ff-white);font-weight:900;margin:26px 0}
+.j-msg .big em{font-style:normal;color:var(--kagayaki-gold)}
+.j-msg .sign{font-family:'Barlow Condensed',sans-serif;font-size:18px;letter-spacing:.14em;color:var(--ff-white-muted);margin-top:8px}
+.j-sig{display:flex;align-items:center;gap:14px;margin:28px 0 6px}
+.j-sig img{width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:50% 20%;border:2px solid var(--kagayaki-gold)}
+.j-sig b{display:block;font-size:15px;color:var(--ff-white)}
+.j-sig small{font-family:'Barlow Condensed',sans-serif;font-size:13px;letter-spacing:.16em;color:var(--ff-white-muted)}
+.j-cta{display:block;text-align:center;background:var(--laurel-red);color:#fff;font-weight:900;font-size:18px;padding:18px;border-radius:8px;text-decoration:none;margin:30px 0 8px}
+.j-cta:hover{background:var(--laurel-red-hover)}
+.j-cta small{display:block;font-size:12px;font-weight:700;opacity:.85;margin-top:3px;letter-spacing:.04em}
+.j-note{font-size:12px;color:var(--ff-white-muted);text-align:center;margin:0 0 10px;line-height:1.7}
+.j-sec{margin-top:56px;padding-top:28px;border-top:1px solid var(--gray-line)}
+.j-sec h2{font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:.22em;color:var(--kagayaki-gold);margin:0 0 6px}
+.j-sec h3{font-size:22px;font-weight:900;color:var(--ff-white);margin:0 0 18px;line-height:1.4}
+.plan{border:1px solid var(--gray-line);border-radius:12px;padding:20px 18px 18px;margin-bottom:14px;background:var(--ff-black-soft);position:relative}
+.plan.f{border-color:var(--kagayaki-gold);box-shadow:0 0 0 1px var(--kagayaki-gold)}
+.plan .lim{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;padding:4px 10px;border-radius:3px;background:rgba(255,255,255,.1);color:var(--ff-white);margin-bottom:10px}
+.plan.f .lim{background:var(--kagayaki-gold);color:#16110F}
+.plan .n{font-family:'Barlow Condensed',sans-serif;font-size:26px;letter-spacing:.1em;font-weight:700;color:var(--ff-white);margin:0 0 4px}
+.plan .pr{font-family:'Barlow Condensed',sans-serif;font-size:40px;font-weight:700;line-height:1;color:var(--ff-white);margin:0 0 4px}
+.plan .pr small{font-family:'Noto Sans JP',sans-serif;font-size:13px;font-weight:700;color:var(--ff-white-muted);margin-left:6px}
+.plan .per{font-size:13px;color:var(--kagayaki-gold);font-weight:700;margin:0 0 12px}
+.plan ul{list-style:none;padding:0;margin:0 0 14px}
+.plan li{position:relative;padding-left:18px;font-size:14px;line-height:1.7;color:rgba(255,255,255,.88)}
+.plan li::before{content:"";position:absolute;left:0;top:11px;width:7px;height:7px;background:var(--laurel-red);transform:rotate(45deg)}
+.plan.f li::before{background:var(--kagayaki-gold)}
+.plan .buy{display:block;text-align:center;font-weight:900;font-size:16px;padding:15px;border-radius:6px;text-decoration:none;color:#fff;background:var(--laurel-red)}
+.plan.f .buy{background:var(--kagayaki-gold);color:#16110F}
+.plan .buy:hover{filter:brightness(1.08)}
+.plan .fine{font-size:11px;color:var(--ff-white-dim);margin:10px 0 0;line-height:1.6}
+.std{font-size:13px;color:var(--ff-white-muted);line-height:1.8;margin:6px 0 0}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0}
+.steps li{counter-increment:s;position:relative;padding:12px 12px 12px 54px;border:1px solid var(--gray-line);border-radius:8px;margin-bottom:8px;font-size:14px;line-height:1.7;color:rgba(255,255,255,.88)}
+.steps li::before{content:counter(s);position:absolute;left:12px;top:12px;width:28px;height:28px;border-radius:50%;background:var(--laurel-red);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.steps li b{color:var(--ff-white)}
+.man{display:flex;align-items:center;gap:12px;border:1px solid var(--kagayaki-gold);border-radius:8px;padding:12px 14px;margin-top:14px;text-decoration:none;color:var(--ff-white)}
+.man span{font-size:14px;font-weight:700}
+.man small{display:block;font-size:12px;color:var(--ff-white-muted);font-weight:500}
+.man i{font-style:normal;font-family:'Barlow Condensed',sans-serif;font-size:20px;color:var(--kagayaki-gold);letter-spacing:.1em}
+.faq details{border-bottom:1px solid var(--gray-line);padding:12px 0}
+.faq summary{cursor:pointer;list-style:none;font-size:15px;font-weight:700;color:var(--ff-white);position:relative;padding-right:26px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:0;top:-2px;font-size:20px;color:var(--kagayaki-gold)}
+.faq details[open] summary::after{content:"−"}
+.faq p{font-size:14px;line-height:1.8;color:rgba(255,255,255,.82);margin:8px 0 0}
+.j-foot{margin-top:40px;font-size:12px;color:var(--ff-white-dim);line-height:1.9;text-align:center}
+.j-foot a{color:var(--ff-white-dim)}
+.sbar{position:fixed;left:0;right:0;bottom:0;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(14,11,10,.96);border-top:1px solid var(--gray-line);transform:translateY(110%);transition:transform .25s;z-index:20}
+.sbar.on{transform:translateY(0)}
+.sbar a{display:block;max-width:600px;margin:0 auto;text-align:center;background:var(--laurel-red);color:#fff;font-weight:900;font-size:16px;padding:14px;border-radius:6px;text-decoration:none}
+</style>
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','2606382796526025');fbq('track','PageView');fbq('track','ViewContent',{content_name:'uniao-join'});
+</script>
+</head>
+<body>
+<div class="j">
+  <div class="j-top"><img src="assets/logo-ff-dark.png" alt="Felipe Fukai" /><span>UNIÃO ｜ 11.27 OPEN</span></div>
+
+  <p class="j-eyebrow">先行案内｜事前登録者限定</p>
+  <h1 class="j-h1">ここまで来てくれて、<br />ありがとうございます。</h1>
+
+  <div class="j-msg">
+    <p>僕がずっと思っていることがあります。</p>
+    <p class="big">身体をデカくするには、努力だけじゃ足りない。<br />正しい知識が必要です。</p>
+    <p>重いものを持てばいい。<br />セット数を増やせばいい。<br />とにかく追い込めばいい。</p>
+    <p>それだけで全員がデカくなるなら、同じように頑張っている人は、みんな同じように成長しているはずです。</p>
+    <p><strong>でも、現実は違う。</strong></p>
+    <p>僕自身も、何度も伸び悩んできました。</p>
+    <p>だからこそ、解剖学を学び、種目を研究し、フォームを変え、重量やレップを見直し、何度も自分の身体で試してきました。</p>
+    <p>その積み重ねの中で、<strong>遠回りを減らし、筋肉の成長を最大限引き出すために、何を見るべきなのか。</strong>少しずつ分かるようになりました。</p>
+    <p>その経験と知識を、UNIÃO には惜しまず入れていきます。</p>
+    <p>僕一人が変わるだけでは、意味がない。</p>
+    <p class="big">日本のトレーニングのベースを、<br />もっと上げたい。</p>
+    <p>でも、その変化は大きなところから始まるんじゃない。</p>
+    <p>まずは、<strong>あなた自身のトレーニングが変わることから始まります。</strong></p>
+    <p>学んで、理解して、実践する。<br />そして、身体を変える。</p>
+    <p class="big"><em>一緒に、変わりましょう。</em></p>
+    <div class="j-sig"><img src="assets/lp/felipe-stage.jpg" alt="" /><div><b>Felipe Fukai</b><small>IFBB PRO ・ CLASSIC PHYSIQUE</small></div></div>
+  </div>
+
+  <a class="j-cta" href="#plans" id="go">UNIÃO に入る<small>先行案内の2プランを見る</small></a>
+  <p class="j-note">一般公開は 11/27（金）。このページは事前登録者だけに送っています。</p>
+
+  <section class="j-sec" id="plans">
+    <h2>PLANS ｜ 先行案内</h2>
+    <h3>2つのプランから選んでください。</h3>
+
+    <div class="plan f">
+      <span class="lim">先着20名限定・一生この価格</span>
+      <p class="n">FOUNDER</p>
+      <p class="pr">¥66,000<small>/ 年（税込・年額一括）</small></p>
+      <p class="per">月換算 ¥5,500 ・ 1日 約181円</p>
+      <ul>
+        <li>継続中は Founder 価格をずっと維持</li>
+        <li>5大特典（サプリルーティン／使用ギア／食事とPFC／増量期の落とし穴／限定勉強会 LIVE）</li>
+        <li>Felipe のオンラインコーチング抽選 1名 ＋ フォームチェック／アドバイス抽選</li>
+        <li>Founder ステータス付き</li>
+      </ul>
+      <a class="buy" href="https://buy.stripe.com/28E8wQ05weUCeWN7n14gg00">FOUNDER で入る</a>
+      <p class="fine">※年額一括払い。特別価格のため、お申し込み後の返金はできません。内容をご確認のうえお申し込みください。</p>
+    </div>
+
+    <div class="plan">
+      <span class="lim">初期メンバー50名限定</span>
+      <p class="n">EARLY</p>
+      <p class="pr">¥6,980<small>/ 月（税込）</small></p>
+      <p class="per">1日 約233円 ・ 継続中はこの価格</p>
+      <ul>
+        <li>5大特典（Founder と同じ）</li>
+        <li>フォームチェック抽選 3名 ＋ トレーニングアドバイス抽選 3名</li>
+        <li>いつでも解約できる。次回更新日の前日までの手続きで以降の請求なし</li>
+      </ul>
+      <a class="buy" href="https://buy.stripe.com/cNidRabOe27Q01T0YD4gg01">EARLY で入る</a>
+      <p class="fine">※入会日を含む3日以内なら全額返金。毎月自動更新。</p>
+    </div>
+
+    <p class="std">どちらも、種目徹底解説（毎週金曜更新）・トレーニング基礎講座・フォーム相談・Q&amp;A・メンバー限定 LIVE をすべて含みます。<br />11/27 以降の通常プラン STANDARD は ¥7,980/月（特典・抽選なし）。</p>
+  </section>
+
+  <section class="j-sec">
+    <h2>AFTER PAYMENT</h2>
+    <h3>決済のあと、3ステップで会員エリアへ。</h3>
+    <ol class="steps">
+      <li><b>決済する</b>（クレジットカード・Apple Pay・Google Pay）。Stripe の決済ページで、Whop 上では決済しません</li>
+      <li><b>案内ページで「Whop で UNIÃO に参加する」を押す</b>。あなた専用・1回限りの参加リンクです</li>
+      <li><b>Whop アプリで UNIÃO を開く</b>。「はじめに」→ 種目徹底解説 の順に</li>
+    </ol>
+    <a class="man" href="assets/docs/UNIAO-manual.pdf" target="_blank" rel="noopener"><i>PDF</i><span>はじめての使い方マニュアル<small>参加 → アプリ → 動画 → 質問 → LIVE まで、スマホの画面つき（11ページ）</small></span></a>
+  </section>
+
+  <section class="j-sec faq">
+    <h2>FAQ</h2>
+    <h3>よくある質問</h3>
+    <details><summary>Founder と Early、どちらがいい？</summary><p>1年以上続けるつもりなら Founder（年額 ¥66,000 ＝ 月 ¥5,500 で、Early より月 ¥1,480 安い）。まず数ヶ月試したいなら Early。どちらも中身は同じです。</p></details>
+    <details><summary>支払い方法は？</summary><p>クレジットカード（Visa・Mastercard・JCB・American Express）、Apple Pay、Google Pay。日本円で決済します。銀行振込には対応していません。</p></details>
+    <details><summary>解約・返金は？</summary><p>Early はいつでも解約でき、次回更新日の前日までの手続きで以降の請求はありません。返金は Early のみ、入会日を含む3日以内に全額。Founder は特別価格のため返金なしです。</p></details>
+    <details><summary>初心者でも入れますか？</summary><p>入れます。基礎講座から順に見てください。一番変化が大きいのは「1年以上やっているのに変わらない人」です。</p></details>
+    <details><summary>Founder が埋まっていたら？</summary><p>決済ページに「定員に達しました」と出て、Early のリンクが表示されます。Early も50名で締め切り、以降は STANDARD（¥7,980/月）になります。</p></details>
+  </section>
+
+  <p class="j-foot">質問は、このページを送ったメールへの返信か、<a href="https://www.instagram.com/ffpro_classic_9/" target="_blank" rel="noopener">Instagram の DM</a> へ。<br /><a href="/terms">利用規約</a> ・ <a href="https://uniao-tokushoho.netlify.app/" target="_blank" rel="noopener">特定商取引法に基づく表記</a> ・ <a href="/privacy.html">プライバシーポリシー</a><br />株式会社マルカト ｜ UNIÃO</p>
+</div>
+
+<div class="sbar" id="sbar"><a href="#plans">UNIÃO に入る</a></div>
+<script>
+(function(){
+  var go=document.getElementById('go'),plans=document.getElementById('plans'),bar=document.getElementById('sbar');
+  function sm(e){e.preventDefault();plans.scrollIntoView({behavior:'smooth'});}
+  go.addEventListener('click',sm);bar.querySelector('a').addEventListener('click',sm);
+  function chk(){var r=go.getBoundingClientRect(),p=plans.getBoundingClientRect();var on=window.scrollY>320&&!(r.top<window.innerHeight&&r.bottom>0)&&p.top>window.innerHeight*0.6;bar.classList.toggle('on',on);}
+  window.addEventListener('scroll',chk,{passive:true});chk();
+})();
+</script>
+</body>
+</html>

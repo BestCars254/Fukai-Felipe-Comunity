@@ -61,6 +61,12 @@
   to = "/uniao"
   status = 301
 
+# Early-access purchase page (sent to pre-registrants 11/26)
+[[redirects]]
+  from = "/join"
+  to = "/join.html"
+  status = 200
+
 # Terms of service (referenced by Stripe Checkout consent)
 [[redirects]]
   from = "/terms"
