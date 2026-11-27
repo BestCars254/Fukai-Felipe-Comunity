@@ -313,9 +313,6 @@ fbq('track', 'ViewContent', {content_name: 'uniao-v4'});
 <!-- End Meta Pixel Code -->
 </head>
 <body class="u">
-<form name="uniao-waitlist" netlify netlify-honeypot="bot-field" hidden>
-  <input type="email" name="email" /><input type="text" name="name" /><input type="text" name="training-years" /><input type="text" name="goal" /><input type="text" name="concern" /><input type="text" name="source" />
-</form>
 
 <div class="w">
   <header class="top">
@@ -560,16 +557,6 @@ fbq('track', 'ViewContent', {content_name: 'uniao-v4'});
     <details><summary>退会できますか？</summary><p class="a">月額プラン（Early・Standard）はいつでも退会でき、次回の請求から停止します。Founder は年額一括払いのため、更新・解約の条件は申込時にご確認ください。返金は月額プランのみ、加入から3日以内に限り受け付けています。</p></details>
   </section>
 
-  <!-- timeline -->
-  <section class="s">
-    <h2 class="h2">2026.11.27 OPEN</h2>
-    <ul class="tl">
-      <li><b>11.23</b><span>Instagram LIVE 21:00 ─ 価格と特典を全部話します</span></li>
-      <li><b>11.26</b><span>事前登録者へ先行案内（送付済み）</span></li>
-      <li class="open"><b>11.27</b><span>UNIÃO OPEN ─ 入会受付中</span></li>
-    </ul>
-  </section>
-
   <!-- final -->
   <section class="s final" id="register">
     <p class="big">筋肉のデカさには、理由がある。<em>感覚でデカくなる時代は、もう終わり。</em></p>
@@ -600,23 +587,6 @@ fbq('track', 'ViewContent', {content_name: 'uniao-v4'});
     function play() { if (v.classList.contains('on')) return; v.classList.add('on'); var f = document.createElement('iframe'); f.src = 'https://www.youtube-nocookie.com/embed/' + v.dataset.id + '?autoplay=1&rel=0&modestbranding=1&playsinline=1'; f.allow = 'autoplay; encrypted-media; picture-in-picture'; f.allowFullscreen = true; f.title = '種目の徹底解説'; v.appendChild(f); if (window.fbq) fbq('trackCustom', 'PlayVideo', {content_name: 'uniao-v4'}); }
     v.addEventListener('click', play); v.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); play(); } });
 
-    try {
-      var q = new URLSearchParams(location.search);
-      var src = (q.get('utm_source') || (document.referrer.indexOf('instagram') > -1 ? 'ig' : 'direct')).toLowerCase();
-      var tag = 'uniao-v4-' + src + (q.get('utm_content') ? '-' + q.get('utm_content') : '');
-      document.querySelectorAll('form.form input[name="source"]').forEach(function (i) { i.value = tag.slice(0, 60); });
-    } catch (e) {}
-
-    if (!window.fetch || !window.URLSearchParams) return;
-    var form = document.querySelector('form.form'); if (!form) return;
-    var button = form.querySelector('button[type="submit"]'), original = button.innerHTML;
-    var errorEl = document.createElement('p'); errorEl.className = 'form-error'; errorEl.setAttribute('role', 'alert'); errorEl.hidden = true; button.insertAdjacentElement('afterend', errorEl);
-    form.addEventListener('submit', function (e) {
-      e.preventDefault(); errorEl.hidden = true; button.disabled = true; button.textContent = '送信中…';
-      fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(form)).toString() })
-        .then(function (res) { if (!res.ok) throw new Error('HTTP ' + res.status); try { sessionStorage.setItem('uniao_email', form.querySelector('input[name="email"]').value); } catch (e) {} window.location.href = '/thanks.html'; })
-        .catch(function () { button.disabled = false; button.innerHTML = original; errorEl.textContent = '送信できませんでした。通信環境をご確認のうえ、もう一度お試しください。'; errorEl.hidden = false; });
-    });
   })();
 </script>
 </body>
