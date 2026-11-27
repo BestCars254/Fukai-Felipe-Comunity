@@ -2,21 +2,24 @@
 @font-face{font-family:"NS";src:url("../fonts/node_modules/@fontsource/noto-sans-jp/files/noto-sans-jp-japanese-700-normal.woff2") format("woff2");font-weight:700}
 @font-face{font-family:"NS";src:url("../fonts/node_modules/@fontsource/noto-sans-jp/files/noto-sans-jp-japanese-500-normal.woff2") format("woff2");font-weight:500}
 @font-face{font-family:"BW";src:url("../fonts/node_modules/@fontsource/barlow/files/barlow-latin-800-normal.woff2") format("woff2");font-weight:800}
+@font-face{font-family:"BC";src:url("../fonts/node_modules/@fontsource/barlow-condensed/files/barlow-condensed-latin-700-normal.woff2") format("woff2");font-weight:700}
+@font-face{font-family:"PF";src:url("../fonts/node_modules/@fontsource/playfair-display/files/playfair-display-latin-700-normal.woff2") format("woff2");font-weight:700}
 @font-face{font-family:"BW";src:url("../fonts/node_modules/@fontsource/barlow/files/barlow-latin-600-normal.woff2") format("woff2");font-weight:600}
-:root{--blue:#2F80ED;--blue-d:#1B5FC2;--gold:#D4A94F;--ink:#fff;--mute:rgba(255,255,255,.72);--dim:rgba(255,255,255,.45)}
+:root{--blue:#B93A38;--blue-d:#9C302E;--gold:#D4A94F;--ink:#fff;--mute:rgba(255,255,255,.72);--dim:rgba(255,255,255,.45)}
 *{margin:0;padding:0;box-sizing:border-box}html,body{width:1080px;height:1350px;overflow:hidden}
-body{font-family:"NS",sans-serif;color:var(--ink);position:relative;background:#06090F}
+body{font-family:"NS",sans-serif;color:var(--ink);position:relative;background:#0E0B0A}
 .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:90px 90px;mask-image:linear-gradient(180deg,rgba(0,0,0,.9),rgba(0,0,0,.2));-webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,.9),rgba(0,0,0,.2))}
-.glow{position:absolute;inset:0;background:radial-gradient(ellipse 70% 45% at 70% 0%,rgba(47,128,237,.28),transparent 70%),radial-gradient(ellipse 60% 40% at 20% 100%,rgba(47,128,237,.12),transparent 70%)}
-.logo{position:absolute;left:64px;top:60px;font-family:"BW",sans-serif;font-weight:800;font-size:44px;letter-spacing:.14em;line-height:1}
-.logo b{color:var(--blue)}
-.logo small{display:block;font-family:"NS",sans-serif;font-weight:700;font-size:16px;letter-spacing:.2em;color:var(--dim);margin-top:8px}
-.pg{position:absolute;right:64px;top:60px;font-family:"BW",sans-serif;font-weight:600;font-size:26px;letter-spacing:.08em;color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:10px 18px;border-radius:999px;line-height:1}
+.glow{position:absolute;inset:0;background:radial-gradient(ellipse 70% 45% at 70% 0%,rgba(156,48,46,.30),transparent 70%),radial-gradient(ellipse 60% 40% at 20% 100%,rgba(212,169,79,.10),transparent 70%)}
+.logo{position:absolute;left:64px;top:56px;display:flex;align-items:center;gap:18px}
+.logo img{height:64px;width:auto}
+.logo .m{font-family:"PF",serif;font-weight:700;font-size:44px;letter-spacing:.1em;line-height:1}
+.logo small{display:block;font-family:"BC",sans-serif;font-weight:700;font-size:16px;letter-spacing:.3em;color:var(--gold);margin-top:6px}
+.pg{position:absolute;right:64px;top:64px;font-family:"BC",sans-serif;font-weight:700;font-size:28px;letter-spacing:.12em;color:#fff;background:rgba(255,255,255,.08);border:1px solid rgba(212,169,79,.5);padding:10px 18px;border-radius:999px;line-height:1}
 .wrap{position:absolute;left:64px;right:64px;top:260px}
-.tag{display:inline-block;font-family:"BW",sans-serif;font-weight:800;font-size:24px;letter-spacing:.18em;color:#fff;background:var(--blue);padding:12px 20px 11px;border-radius:6px;margin-bottom:28px}
+.tag{display:inline-block;font-family:"BC",sans-serif;font-weight:700;font-size:28px;letter-spacing:.2em;color:#fff;background:var(--blue-d);padding:12px 20px 11px;border-radius:6px;margin-bottom:28px}
 .tag.ja{font-family:"NS",sans-serif;font-weight:900;letter-spacing:.08em;font-size:24px}
 .h{font-size:68px;font-weight:900;line-height:1.28;letter-spacing:-.01em}
-.h mark{background:var(--blue);color:#fff;padding:2px 14px 4px;border-radius:6px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.h mark{background:var(--blue-d);color:#fff;padding:2px 14px 4px;border-radius:6px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 .h.big{font-size:74px}
 .sub{font-size:30px;font-weight:700;line-height:1.6;color:var(--mute);margin-top:26px}
 .ul{list-style:none;margin-top:44px}
@@ -24,10 +27,10 @@ body{font-family:"NS",sans-serif;color:var(--ink);position:relative;background:#
 .ul li::before{content:"";position:absolute;left:0;top:20px;width:20px;height:20px;background:var(--blue);border-radius:4px}
 .ul.gold li::before{background:var(--gold)}
 .ul.gold li{color:#fff}
-.bridge{position:absolute;left:64px;right:64px;bottom:230px;font-size:32px;font-weight:700;line-height:1.55;color:#fff;border-left:6px solid var(--blue);padding-left:22px}
-.bridge b{color:var(--blue)}
-.swipe{position:absolute;left:64px;bottom:92px;font-family:"BW",sans-serif;font-weight:800;font-size:26px;letter-spacing:.3em;color:var(--blue)}
+.bridge{position:absolute;left:64px;right:64px;bottom:230px;font-size:32px;font-weight:700;line-height:1.55;color:#fff;border-left:6px solid var(--gold);padding-left:22px}
+.bridge b{color:var(--gold)}
+.swipe{position:absolute;left:64px;bottom:92px;font-family:"BC",sans-serif;font-weight:700;font-size:30px;letter-spacing:.3em;color:var(--gold)}
 .handle{position:absolute;right:64px;bottom:92px;font-family:"BW",sans-serif;font-weight:600;font-size:22px;letter-spacing:.06em;color:var(--dim)}
-.arrow{position:absolute;right:64px;bottom:150px;width:72px;height:72px;border:2px solid var(--blue);border-radius:50%;color:var(--blue);font-family:"BW",sans-serif;font-weight:800;font-size:34px;display:flex;align-items:center;justify-content:center;line-height:1}
+.arrow{position:absolute;right:64px;bottom:150px;width:72px;height:72px;border:2px solid var(--gold);border-radius:50%;color:var(--gold);font-family:"BW",sans-serif;font-weight:800;font-size:34px;display:flex;align-items:center;justify-content:center;line-height:1}
 
-.wm{position:absolute;right:40px;top:120px;font-family:"BW",sans-serif;font-weight:800;font-size:460px;line-height:1;color:rgba(47,128,237,.09);letter-spacing:-.04em}
+.wm{position:absolute;right:40px;top:120px;font-family:"BC",sans-serif;font-weight:700;font-size:520px;line-height:1;color:rgba(185,58,56,.12);letter-spacing:-.04em}
