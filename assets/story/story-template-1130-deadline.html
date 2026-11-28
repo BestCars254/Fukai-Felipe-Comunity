@@ -1,0 +1,55 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><style>
+@font-face{font-family:"B";src:url("../fonts/node_modules/@fontsource/barlow/files/barlow-latin-200-normal.woff2") format("woff2");font-weight:200}
+@font-face{font-family:"B";src:url("../fonts/node_modules/@fontsource/barlow/files/barlow-latin-300-normal.woff2") format("woff2");font-weight:300}
+@font-face{font-family:"B";src:url("../fonts/node_modules/@fontsource/barlow/files/barlow-latin-500-normal.woff2") format("woff2");font-weight:500}
+@font-face{font-family:"NS";src:url("../fonts/node_modules/@fontsource/noto-sans-jp/files/noto-sans-jp-japanese-300-normal.woff2") format("woff2");font-weight:300}
+@font-face{font-family:"NS";src:url("../fonts/node_modules/@fontsource/noto-sans-jp/files/noto-sans-jp-japanese-500-normal.woff2") format("woff2");font-weight:500}
+@font-face{font-family:"PF";src:url("../fonts/node_modules/@fontsource/playfair-display/files/playfair-display-latin-700-normal.woff2") format("woff2");font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}html,body{width:1080px;height:1920px;overflow:hidden}
+body{font-family:"B","NS",sans-serif;color:#fff;position:relative;background:radial-gradient(ellipse at 50% 30%,#2a2118 0%,#15110d 45%,#0E0B0A 100%)}
+.c{position:absolute;left:0;right:0;text-align:center}
+.brand{top:290px;font-family:"PF",serif;font-size:44px;letter-spacing:.5em;color:rgba(255,255,255,.85);margin-left:.5em}
+.max{top:430px;font-family:"NS";font-weight:300;font-size:40px;letter-spacing:.3em;color:rgba(255,255,255,.6);margin-left:.3em}
+.big{top:500px;font-weight:200;font-size:230px;letter-spacing:.02em;line-height:1;color:#D4A94F;white-space:nowrap}
+.big.s{font-size:188px;top:520px}
+.date{top:770px;font-weight:300;font-size:46px;letter-spacing:.14em;color:rgba(255,255,255,.95);margin-left:.14em}
+.date span{font-family:"NS";font-size:38px;letter-spacing:.1em}
+.rule{position:absolute;left:50%;top:880px;width:140px;height:2px;background:#D4A94F;transform:translateX(-50%)}
+.row{font-weight:300;font-size:40px;letter-spacing:.18em;color:rgba(255,255,255,.9);margin-left:.18em}
+.row b{display:block;font-weight:500;color:#D4A94F;letter-spacing:.2em;margin-top:8px;margin-left:.2em;font-size:40px}
+.row small{display:block;font-family:"NS";font-weight:300;font-size:26px;letter-spacing:.1em;color:rgba(255,255,255,.55);margin-top:6px}
+.jp{font-family:"NS";font-weight:300;font-size:42px;letter-spacing:.08em;line-height:1.75;color:rgba(255,255,255,.92)}
+.jp b{font-weight:500;color:#D4A94F}
+.note{font-family:"NS";font-weight:300;font-size:26px;letter-spacing:.1em;color:rgba(255,255,255,.55)}
+.go{top:1420px;font-family:"NS";font-weight:500;font-size:40px;letter-spacing:.12em;color:#D4A94F}
+</style></head><body>
+<p class="c brand">UNIÃO</p>
+<p class="c max" id="max"></p>
+<p class="c big" id="big"></p>
+<p class="c date" id="date"></p>
+<div class="rule"></div>
+<div id="body"></div>
+<p class="c go" id="go"></p>
+<script>
+var PRICES =
+  '<p class="c row" style="top:930px">FOUNDER<b>月換算 ¥5,500</b><small>年額 ¥66,000 ・ 通常 ¥7,980 / 月</small></p>' +
+  '<p class="c row" style="top:1110px">EARLY<b>¥6,980 / 月</b><small>通常 ¥7,980 / 月 ・ いつでも解約可</small></p>' +
+  '<p class="c note" style="top:1300px">月額プランは、入会から3日以内であれば全額返金</p>';
+var V = {
+  d3: { max: '初期メンバー価格　終了まで', big: '3 DAYS', date: '11.30 MON 23:59 <span>まで</span>', body: PRICES, go: '詳細は下のリンクから' },
+  d2: { max: '初期メンバー価格　終了まで', big: '2 DAYS', date: '11.30 MON 23:59 <span>まで</span>',
+        body: '<p class="c jp" style="top:940px">今すぐ見られる授業 <b>7 本</b><br>毎週、新作を追加<br>フォームチェックと、メンバー限定 LIVE</p>' +
+              '<p class="c note" style="top:1210px">EARLY ¥6,980 / 月 ・ FOUNDER 月換算 ¥5,500（年額 ¥66,000）</p>' +
+              '<p class="c note" style="top:1262px">月額プランは、入会から3日以内であれば全額返金</p>', go: '詳細は下のリンクから' },
+  last: { max: '初期メンバー価格', big: 'LAST DAY', small: 1, date: '<span>本日</span> 23:59 <span>まで</span>', body: PRICES, go: '詳細は下のリンクから' },
+  night: { max: '初期メンバー価格　終了まで', big: 'TONIGHT', small: 1, date: '23:59 <span>で終了します</span>',
+        body: '<p class="c jp" style="top:950px">迷っている方へ。<br>メンバー向けの授業を <b>1 本</b>、<br>登録なしで公開しています。<br>見てから決めてください。</p>', go: '授業は下のリンクから' }
+};
+var v = V[new URLSearchParams(location.search).get('v') || 'd3'];
+document.getElementById('max').textContent = v.max;
+var b = document.getElementById('big'); b.textContent = v.big; if (v.small) b.classList.add('s');
+document.getElementById('date').innerHTML = v.date;
+document.getElementById('body').innerHTML = v.body;
+document.getElementById('go').textContent = v.go;
+</script>
+</body></html>
