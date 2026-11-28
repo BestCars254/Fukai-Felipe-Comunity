@@ -6,6 +6,7 @@ cd "$(dirname "$0")"
   cat system-prompt.md
   printf '\n\n=====================================================\n'
   cat knowledge-core.md
+  if [ -f knowledge-ff-method.md ]; then printf '\n\n=====================================================\n'; cat knowledge-ff-method.md; fi
   printf '\n\n=====================================================\n# FELIPE AI ｜ 知識ファイル B：原文（授業の文字起こし・台本・LIVE・YouTube）\n\n迷ったらこちらの原文を優先する。話し言葉のまま。\n'
   for f in source/side-raise.txt source/cg-pulldown.txt source/high-pull.txt source/preacher-curl.txt source/activation.txt; do
     printf '\n\n## 授業：%s\n\n' "$(basename "$f" .txt)"
@@ -19,5 +20,6 @@ cd "$(dirname "$0")"
   cat ../../assets/yt/posing-transcript.txt
   printf '\n\n## 11/23 Instagram LIVE 台本（UNIÃO の中身の説明）\n\n'
   cat ../live-1123.md
+  if [ -f source/gemini-profile-2026-11-28.md ]; then printf '\n\n## 補助資料：Felipe の人物・理論プロファイル（Gemini 抽出、個人情報は除外済み）\n\n'; cat source/gemini-profile-2026-11-28.md; fi
 } > bundle.txt
 printf 'bundle.txt: %s bytes, %s chars\n' "$(wc -c < bundle.txt)" "$(wc -m < bundle.txt)"
