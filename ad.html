@@ -65,6 +65,26 @@ body { margin: 0; background: var(--bg); color: var(--ink); font-family: 'Noto S
 .inc { font-size: 14px; color: var(--ink-3); text-align: center; margin: 22px 0 22px; line-height: 1.8; }
 .inc b { color: var(--gold); }
 
+/* carousel */
+.car { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; margin: 0 -20px; padding: 4px 20px 10px; scrollbar-width: none; }
+.car::-webkit-scrollbar { display: none; }
+.car > * { flex: 0 0 82%; scroll-snap-align: center; }
+.hint { font-size: 12px; color: var(--ink-3); text-align: center; margin: 6px 0 0; letter-spacing: .1em; font-family: 'Barlow Condensed', sans-serif; }
+/* transformations */
+.tr { padding: 36px 0 8px; }
+.tr .eyebrow { text-align: center; }
+.tr h2 { font-size: 22px; font-weight: 900; text-align: center; margin: 0 0 16px; line-height: 1.4; }
+.tr figure { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; }
+.tr img { width: 100%; height: auto; display: block; }
+.tr figcaption { display: flex; justify-content: space-between; padding: 8px 14px; font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: .22em; color: var(--ink-3); }
+.tr figcaption b { color: var(--gold); }
+.tr .fine { font-size: 12px; color: var(--ink-3); text-align: center; margin: 10px 0 0; }
+/* voice screenshots */
+.vshot { background: #E9E9EB; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); }
+.vshot img { width: 100%; height: auto; display: block; }
+.vshot figcaption { background: var(--card); padding: 12px 14px; font-size: 13px; line-height: 1.6; color: var(--ink-2); }
+.vshot figcaption b { display: block; color: var(--gold); font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: .2em; margin-top: 4px; }
+
 /* trust strip */
 .trust { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 22px 0; }
 .trust p { margin: 0 0 12px; text-align: center; font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: .26em; color: var(--ink-3); }
@@ -225,6 +245,22 @@ fbq('track', 'ViewContent', {content_name: 'uniao-ad-lp'});
     <p class="cta-note">まずは無料の授業を見てから決めたい方は、このまま下へ ▼</p>
   </section>
 
+  <section class="tr">
+    <p class="eyebrow">RESULTS</p>
+    <h2>Felipe の指導で、身体はこう変わった。</h2>
+    <div class="car">
+      <figure><img src="/assets/result-1.jpg" alt="指導を受けた生徒の変化 1" width="739" height="660" /><figcaption><span>BEFORE</span><b>AFTER</b></figcaption></figure>
+      <figure><img src="/assets/result-2.jpg" alt="指導を受けた生徒の変化 2" width="650" height="570" loading="lazy" /><figcaption><span>BEFORE</span><b>AFTER</b></figcaption></figure>
+      <figure><img src="/assets/result-3.jpg" alt="指導を受けた生徒の変化 3" width="700" height="630" loading="lazy" /><figcaption><span>BEFORE</span><b>AFTER</b></figcaption></figure>
+      <figure><img src="/assets/result-4.jpg" alt="指導を受けた生徒の変化 4" width="739" height="550" loading="lazy" /><figcaption><span>BEFORE</span><b>AFTER</b></figcaption></figure>
+      <figure><img src="/assets/result-5.jpg" alt="指導を受けた生徒の変化 5" width="580" height="505" loading="lazy" /><figcaption><span>BEFORE</span><b>AFTER</b></figcaption></figure>
+      <figure><img src="/assets/result-6.jpg" alt="指導を受けた生徒の変化 6" width="645" height="570" loading="lazy" /><figcaption><span>BEFORE</span><b>AFTER</b></figcaption></figure>
+      <figure><img src="/assets/result-7.jpg" alt="指導を受けた生徒の変化 7" width="855" height="600" loading="lazy" /><figcaption><span>BEFORE</span><b>AFTER</b></figcaption></figure>
+    </div>
+    <p class="hint">← SWIPE →</p>
+    <p class="fine">※ Felipe の個人指導（コーチング）を受けた方の実績です。結果には個人差があります。</p>
+  </section>
+
   <section class="trust">
     <p>FELIPE FUKAI ・ IFBB PRO ・ CLASSIC PHYSIQUE</p>
     <ul><li><b>7</b><small>本 今すぐ視聴</small></li><li><b>33</b><small>本 公開予定</small></li><li><b>7</b><small>つの判断</small></li><li><b>∞</b><small>繰り返し視聴</small></li></ul>
@@ -234,7 +270,7 @@ fbq('track', 'ViewContent', {content_name: 'uniao-ad-lp'});
 <!-- 02 free lesson -->
 <section class="s alt" id="lesson"><div class="w">
   <p class="eyebrow pc">FREE LESSON ｜ 登録不要・無料公開</p>
-  <h2 class="h2">まずは、<em>実際の授業</em>を<br />ご覧ください。</h2>
+  <h2 class="h2">実際の<em>徹底解説</em>を<br />見てください。</h2>
   <p class="p pc">UNIÃO の授業サンプル｜ダンベルサイドレイズ 徹底解説</p>
   <div class="card">
     <div class="vid" id="vid" role="button" tabindex="0" aria-label="無料授業を再生">
@@ -259,8 +295,15 @@ fbq('track', 'ViewContent', {content_name: 'uniao-ad-lp'});
 <section class="s" id="voice"><div class="w">
   <p class="eyebrow pc">MEMBER VOICES</p>
   <h2 class="h2">入会した人の、<em>最初の感想</em>。</h2>
-  <p class="p pc">オープン初週に、7 本の授業を見終えたメンバーから届いた声です。</p>
-  <div class="rev">
+  <p class="p pc">オープン初週に、7 本の授業を見終えたメンバーから届いたメッセージです。そのまま載せています。</p>
+  <div class="car">
+    <figure class="vshot"><img src="/assets/ad/voice-1.jpg" alt="メンバーからのメッセージ 1" loading="lazy" /><figcaption>「改めて学ぶことが多くて驚きました」<b>トレーニング歴 10 年以上</b></figcaption></figure>
+    <figure class="vshot"><img src="/assets/ad/voice-2.jpg" alt="メンバーからのメッセージ 2" loading="lazy" /><figcaption>「狙いたい部位に集中しやすくなった」<b>メンバー</b></figcaption></figure>
+    <figure class="vshot"><img src="/assets/ad/voice-3.jpg" alt="メンバーからのメッセージ 3" loading="lazy" /><figcaption>「入会して本当に良かったと既に感じています」<b>パーソナルトレーナー</b></figcaption></figure>
+    <figure class="vshot"><img src="/assets/ad/voice-4.jpg" alt="メンバーからのメッセージ 4" loading="lazy" /><figcaption>「なぜそうなるのかまで言語化されていて」<b>指導者</b></figcaption></figure>
+  </div>
+  <p class="hint">← SWIPE →</p>
+  <div class="rev" style="display:none">
     <blockquote><p>トレーニング歴は長いですが、<b>改めて学ぶことが多くて驚きました。</b>なんとなく正しいと思っていたフォームに対して『なぜその形にするのか』がしっかり説明されているので、理解の質が全然違います。<span class="more"> 感覚だけに頼らず、身体の構造や動きから落とし込んで説明してくれるので、かなり納得しながら見られました。実際に動画の内容を意識して取り組むだけで、普段のトレーニングの集中度も変わってきたと思います。</span></p><button type="button">続きを読む</button><footer>トレーニング歴 10 年以上 ・ メンバー</footer></blockquote>
     <blockquote><p>まず感じたのは、説明の深さです。ただ種目を紹介するだけではなく、<b>どの筋肉にどう負荷が乗るのか、どこを意識すべきかまで</b>丁寧に解説されていて、とても勉強になりました。<span class="more"> 動画を見たあとに実際にトレーニングしてみると、今までよりも狙いたい部位に集中しやすくなった感覚があります。自己流でやるより圧倒的に質が上がると思います。</span></p><button type="button">続きを読む</button><footer>メンバー</footer></blockquote>
     <blockquote><p>アナトミーの観点から筋肉の起始と停止で解説してくださって、とても分かりやすいです。こうすれば効くと説明する方たちがいる中で、<b>体の使い方、ケガをしないやり方をしっかり説明して</b>トレーニング方法を教える形に、入会して本当に良かったと既に感じています。<span class="more"> 自分のトレーニングのクオリティが上がる事間違いなしです。</span></p><button type="button">続きを読む</button><footer>パーソナルトレーナー ・ メンバー</footer></blockquote>
