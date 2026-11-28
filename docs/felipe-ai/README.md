@@ -6,7 +6,9 @@
 
 | ファイル | 中身 | 使い方 |
 |---|---|---|
-| `bundle.txt` | システム指示 + 判断の原則 + 全文字起こし を 1 本にしたもの | **これを AI Studio の System instructions に丸ごと貼る** |
+| `gem-instructions.txt` | Gem の「指示」に貼る短い版 | 口調やルールを直したらここも直す |
+| `FELIPE-AI-knowledge.txt`（**GitHub には置かない**） | Gem の「知識」にアップロードするファイル（知識 A・B・C ＋ 原文） | Drive 保管。ファイルを直したら作り直す |
+| `bundle.txt` | 指示 + 知識を 1 本にしたもの（AI Studio 用、参考） | 通常は使わない |
 | `system-prompt.md` | 人格・判断の型・禁止事項・出力フォーマット | 口調を直すときはここ |
 | `knowledge-core.md` | 授業から抜き出した「判断の原則」（知識 A） | Felipe の修正を足すときはここ |
 | `knowledge-ff-method.md`（**GitHub には置かない**） | FF 法・部位別キュー・既往歴の型・特典の扱い（知識 C） | Felipe の Gemini プロファイル由来。運営の Drive に保管し、このフォルダに置いてから build-bundle.sh を実行 |
@@ -16,15 +18,16 @@
 | `approval-log.md` | 承認・修正の記録テンプレ | 毎回ここに残す |
 | `build-bundle.sh` | bundle.txt を作り直すスクリプト | ファイルを直したら実行 |
 
-## セットアップ（10 分）
+## セットアップ：Gemini の Gem で（無料・5 分）
 
-1. https://aistudio.google.com を開く → 「Create prompt」（Chat）。
-2. 右の設定で **Model** を Gemini の Pro 系の最新を選ぶ。**Temperature は 0.3** くらい（口調のブレを抑える）。
-3. 上部の **System instructions** を開き、`bundle.txt` の中身を全部貼り付ける。
-4. 左上の名前を「FELIPE AI v1」にして保存。
-5. チャット欄に `test-questions.md` の質問を 1 つ貼って、出力の形（【下書き】【スタッフ向けメモ】）を確認。
+1. Gemini アプリ（gemini.google.com）→ 左の「Gem」→「Gem を作成」。
+2. 名前：FELIPE AI v1。
+3. **指示** に `gem-instructions.txt` の中身を貼る。
+4. **知識** に `FELIPE-AI-knowledge.txt` をアップロード（運営の Drive に保管してあるもの。GitHub には置かない）。
+5. 保存。右上の共有で運営メンバーにリンクを渡す。
+6. `test-questions.md` の質問を 1 つ貼って、出力の形（【下書き】【スタッフ向けメモ】）を確認。
 
-AI Studio は同じ Google アカウントなら誰でも開けるので、運営の共有アカウントで作ると楽。
+AI Studio（有料になりうる）は使わない。Gem は Gemini の通常プランの範囲で動く。
 
 ## 毎日の流れ
 
@@ -40,7 +43,7 @@ AI Studio は同じ Google アカウントなら誰でも開けるので、運�
 - 修正が「言い方」なら → `system-prompt.md` の「5. Felipe の言い回し」か「6. やってはいけない書き方」に 1 行足す。
 - 修正が「判断の中身」なら → `knowledge-core.md` の該当する章に 1 行足す。
 - 新しい授業が公開されたら → 文字起こしを `source/` に入れる。
-- 直したら `build-bundle.sh` を実行して `bundle.txt` を作り直し、AI Studio の System instructions を貼り直す。
+- 直したら `build-bundle.sh` を実行して `bundle.txt` を作り直し、その「知識ファイル A」以降を `FELIPE-AI-knowledge.txt` として Gem の知識に再アップロードする。
 
 ## ルール（最初に Felipe と確認する）
 
