@@ -66,7 +66,7 @@ body { margin: 0; background: var(--bg); color: var(--ink); font-family: 'Noto S
 .inc b { color: var(--gold); }
 
 /* carousel */
-.car { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; margin: 0 -20px; padding: 4px 20px 10px; scrollbar-width: none; }
+.car { display: flex; align-items: flex-start; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; margin: 0 -20px; padding: 4px 20px 10px; scrollbar-width: none; }
 .car::-webkit-scrollbar { display: none; }
 .car > * { flex: 0 0 82%; scroll-snap-align: center; }
 .hint { font-size: 12px; color: var(--ink-3); text-align: center; margin: 6px 0 0; letter-spacing: .1em; font-family: 'Barlow Condensed', sans-serif; }
@@ -80,7 +80,7 @@ body { margin: 0; background: var(--bg); color: var(--ink); font-family: 'Noto S
 .tr figcaption b { color: var(--gold); }
 .tr .fine { font-size: 12px; color: var(--ink-3); text-align: center; margin: 10px 0 0; }
 /* voice screenshots */
-.vshot { margin: 0; background: #E9E9EB; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); }
+.vshot { margin: 0; background: #E9E9EB; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); line-height: 0; align-self: flex-start; }
 .vshot img { width: 100%; height: auto; display: block; }
 .vshot figcaption { background: var(--card); padding: 12px 14px; font-size: 13px; line-height: 1.6; color: var(--ink-2); }
 .vshot figcaption b { display: block; color: var(--gold); font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: .2em; margin-top: 4px; }
