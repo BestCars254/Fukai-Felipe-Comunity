@@ -93,6 +93,18 @@ body { margin: 0; background: var(--bg); color: var(--ink); font-family: 'Noto S
 .note { background: rgba(212,169,79,.08); border: 1px solid rgba(212,169,79,.35); border-radius: 10px; padding: 12px 14px; font-size: 14px; color: var(--ink-2); margin: 16px 0 0; }
 .note b { color: var(--gold); }
 
+/* reviews */
+.rev { display: grid; gap: 14px; }
+.rev blockquote { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px 18px 16px; position: relative; }
+.rev blockquote::before { content: "“"; position: absolute; left: 14px; top: 2px; font-family: 'Playfair Display', serif; font-size: 54px; line-height: 1; color: var(--gold); opacity: .6; }
+.rev p { margin: 0 0 10px; font-size: 15px; line-height: 1.85; color: var(--ink-2); padding-top: 14px; }
+.rev p b { color: #fff; font-weight: 900; background: linear-gradient(transparent 60%, rgba(156,48,46,.55) 60%); }
+.rev footer { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: .2em; color: var(--gold); }
+.rev .more { display: none; }
+.rev blockquote.open .more { display: inline; }
+.rev button { background: none; border: 0; color: var(--ink-3); font: inherit; font-size: 13px; padding: 0; cursor: pointer; text-decoration: underline; margin-bottom: 8px; }
+.rev blockquote.open button { display: none; }
+
 /* curriculum accordion */
 .acc { border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: var(--card); }
 .acc details { border-top: 1px solid var(--line); }
@@ -241,6 +253,20 @@ fbq('track', 'ViewContent', {content_name: 'uniao-ad-lp'});
     <p class="note"><b>オープン時に公開した 7 本のうちの 1 本です。</b> 残り 6 本（背中 4 本・腕 1 本・アクティベーション）は、入会した日からすべて見られます。</p>
   </div>
   <div style="margin-top:22px"><a class="btn" href="#price" data-track="ToPrice">UNIÃO の内容・料金を見る<i>↓</i></a></div>
+</div></section>
+
+<!-- reviews -->
+<section class="s" id="voice"><div class="w">
+  <p class="eyebrow pc">MEMBER VOICES</p>
+  <h2 class="h2">入会した人の、<em>最初の感想</em>。</h2>
+  <p class="p pc">オープン初週に、7 本の授業を見終えたメンバーから届いた声です。</p>
+  <div class="rev">
+    <blockquote><p>トレーニング歴は長いですが、<b>改めて学ぶことが多くて驚きました。</b>なんとなく正しいと思っていたフォームに対して『なぜその形にするのか』がしっかり説明されているので、理解の質が全然違います。<span class="more"> 感覚だけに頼らず、身体の構造や動きから落とし込んで説明してくれるので、かなり納得しながら見られました。実際に動画の内容を意識して取り組むだけで、普段のトレーニングの集中度も変わってきたと思います。</span></p><button type="button">続きを読む</button><footer>トレーニング歴 10 年以上 ・ メンバー</footer></blockquote>
+    <blockquote><p>まず感じたのは、説明の深さです。ただ種目を紹介するだけではなく、<b>どの筋肉にどう負荷が乗るのか、どこを意識すべきかまで</b>丁寧に解説されていて、とても勉強になりました。<span class="more"> 動画を見たあとに実際にトレーニングしてみると、今までよりも狙いたい部位に集中しやすくなった感覚があります。自己流でやるより圧倒的に質が上がると思います。</span></p><button type="button">続きを読む</button><footer>メンバー</footer></blockquote>
+    <blockquote><p>アナトミーの観点から筋肉の起始と停止で解説してくださって、とても分かりやすいです。こうすれば効くと説明する方たちがいる中で、<b>体の使い方、ケガをしないやり方をしっかり説明して</b>トレーニング方法を教える形に、入会して本当に良かったと既に感じています。<span class="more"> 自分のトレーニングのクオリティが上がる事間違いなしです。</span></p><button type="button">続きを読む</button><footer>パーソナルトレーナー ・ メンバー</footer></blockquote>
+    <blockquote><p>種目ごとの説明が感覚論だけではなく、<b>なぜそうなるのかまで言語化されていて</b>、とても理解しやすかったです。特にフォームや体の使い方の説明が丁寧で、普段なんとなくやっていた部分がかなり整理されました。<span class="more"> 自分でトレーニングする時にも活かせますし、指導する立場としても伝え方の勉強になります。内容に納得感があって、入って良かったと感じています。</span></p><button type="button">続きを読む</button><footer>指導者 ・ メンバー</footer></blockquote>
+  </div>
+  <p class="cta-note">※ 個人の感想です。メンバーからのメッセージを、本人の了承のもと掲載しています。</p>
 </div></section>
 
 <!-- 03 seven decisions -->
@@ -426,13 +452,15 @@ fbq('track', 'ViewContent', {content_name: 'uniao-ad-lp'});
     });
   });
 
+  document.querySelectorAll('.rev button').forEach(function (b) { b.addEventListener('click', function () { b.closest('blockquote').classList.add('open'); track('ReviewExpand'); }); });
+
   /* ---------- section reach ---------- */
   var reached = {};
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (es) {
       es.forEach(function (e) { if (e.isIntersecting && !reached[e.target.id]) { reached[e.target.id] = 1; track('Reach_' + e.target.id); } });
     }, { threshold: 0.3 });
-    ['lesson', 'seven', 'price'].forEach(function (id) { var el = document.getElementById(id); if (el) io.observe(el); });
+    ['lesson', 'voice', 'seven', 'price'].forEach(function (id) { var el = document.getElementById(id); if (el) io.observe(el); });
   }
 
   /* ---------- video: YouTube IFrame API, no autoplay, progress tracking ---------- */
