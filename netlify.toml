@@ -51,12 +51,6 @@
   to = "/lesson.html"
   status = 200
 
-# Free lesson 2: dumbbell side raise
-[[redirects]]
-  from = "/lesson-raise"
-  to = "/lesson-raise.html"
-  status = 200
-
 [[redirects]]
   from = "/lesson/"
   to = "/lesson.html"
