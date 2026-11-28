@@ -8,8 +8,10 @@
 |---|---|---|
 | `bundle.txt` | システム指示 + 判断の原則 + 全文字起こし を 1 本にしたもの | **これを AI Studio の System instructions に丸ごと貼る** |
 | `system-prompt.md` | 人格・判断の型・禁止事項・出力フォーマット | 口調を直すときはここ |
-| `knowledge-core.md` | 授業から抜き出した「判断の原則」 | Felipe の修正を足すときはここ |
-| `source/*.txt` | 授業の文字起こし（原文） | 新しい授業が出たら追加 |
+| `knowledge-core.md` | 授業から抜き出した「判断の原則」（知識 A） | Felipe の修正を足すときはここ |
+| `knowledge-ff-method.md`（**GitHub には置かない**） | FF 法・部位別キュー・既往歴の型・特典の扱い（知識 C） | Felipe の Gemini プロファイル由来。運営の Drive に保管し、このフォルダに置いてから build-bundle.sh を実行 |
+| `source/*.txt` | 授業の文字起こし（原文、知識 B） | 新しい授業が出たら追加 |
+| `source/gemini-profile-2026-11-28.md`（**GitHub には置かない**） | Felipe の Gemini が出した人物・理論プロファイル | 本人の個人情報を含むため Drive 保管。このサイトは GitHub から公開されるので、リポジトリに入れない |
 | `test-questions.md` | 最初に試す質問 12 問 | Felipe に見てもらう用 |
 | `approval-log.md` | 承認・修正の記録テンプレ | 毎回ここに残す |
 | `build-bundle.sh` | bundle.txt を作り直すスクリプト | ファイルを直したら実行 |
