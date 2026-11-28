@@ -73,6 +73,17 @@
   to = "/join.html"
   status = 200
 
+# Meta ads landing page (free lesson → 7 decisions → pricing → /join)
+[[redirects]]
+  from = "/ad"
+  to = "/ad.html"
+  status = 200
+
+[[redirects]]
+  from = "/ad/"
+  to = "/ad.html"
+  status = 200
+
 # Terms of service (referenced by Stripe Checkout consent)
 [[redirects]]
   from = "/terms"

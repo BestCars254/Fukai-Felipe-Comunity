@@ -185,6 +185,11 @@ fbq('init','2606382796526025');fbq('track','PageView');fbq('track','ViewContent'
   go.addEventListener('click',sm);document.getElementById('go0').addEventListener('click',sm);bar.querySelector('a').addEventListener('click',sm);
   function chk(){var r=go.getBoundingClientRect(),p=plans.getBoundingClientRect();var on=window.scrollY>320&&!(r.top<window.innerHeight&&r.bottom>0)&&p.top>window.innerHeight*0.6;bar.classList.toggle('on',on);}
   window.addEventListener('scroll',chk,{passive:true});chk();
+  /* carry ad attribution into Stripe as client_reference_id (utm_source-utm_campaign-utm_content) */
+  try{var q=new URLSearchParams(location.search);var parts=['utm_source','utm_campaign','utm_content'].map(function(k){return q.get(k)||''}).filter(Boolean);
+  if(parts.length){var ref=parts.join('-').replace(/[^A-Za-z0-9_-]/g,'_').slice(0,200);
+  document.querySelectorAll('a.buy[href^="https://buy.stripe.com/"]').forEach(function(a){a.href+=(a.href.indexOf('?')>-1?'&':'?')+'client_reference_id='+encodeURIComponent(ref);});
+  if(window.fbq)fbq('trackCustom','JoinPageFromAd',{ref:ref});}}catch(e){}
 })();
 </script>
 </body>
